@@ -5,7 +5,7 @@
  */
 package Actividades;
 
-import GUI.ListaThreads;
+import GUI.ListaNiños;
 
 /**
  *
@@ -13,9 +13,9 @@ import GUI.ListaThreads;
  */
 public class Merienda {
     
-    private ListaThreads colaEspera;
+    private ListaNiños colaEspera;
 
-    public Merienda(ListaThreads cola) {
+    public Merienda(ListaNiños cola) {
         this.colaEspera = cola;
     }
     

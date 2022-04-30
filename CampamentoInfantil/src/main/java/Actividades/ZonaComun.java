@@ -5,9 +5,16 @@
  */
 package Actividades;
 
-import GUI.ListaThreads;
+import GUI.ListaMonitores;
+import GUI.ListaNiños;
+import Threads.Monitor;
 import Threads.Niño;
+import static java.lang.Thread.sleep;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -16,9 +23,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class ZonaComun {
     //albaricoque
     
-    private ListaThreads dentro;
+    private ListaNiños dentro;
+    private ListaMonitores monitores;
+    private Lock cerrojo= new ReentrantLock();
 
-    public ZonaComun(ListaThreads dentro) {
+    public ZonaComun(ListaNiños dentro) {
         this.dentro = dentro;
     }
     
@@ -30,6 +39,16 @@ public class ZonaComun {
     public synchronized void salir(Niño n)
     {
         dentro.sacar(n);     
+    }
+    
+    public void paseo (Monitor m){
+        monitores.meter(m);
+        try {
+            sleep(1000+(int)(1001*Math.random()));
+        } catch (InterruptedException ex) {
+            Logger.getLogger(ZonaComun.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        monitores.sacar(m);
     }
     
     public int tamaño()
