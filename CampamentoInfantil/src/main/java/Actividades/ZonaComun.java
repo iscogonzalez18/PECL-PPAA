@@ -23,22 +23,23 @@ import java.util.logging.Logger;
 public class ZonaComun {
     //albaricoque
     
-    private ListaNiños dentro;
+    private ListaNiños niños;
     private ListaMonitores monitores;
     private Lock cerrojo= new ReentrantLock();
 
-    public ZonaComun(ListaNiños dentro) {
-        this.dentro = dentro;
+    public ZonaComun(ListaNiños niños, ListaMonitores monitores) {
+        this.niños = niños;
+        this.monitores = monitores;
     }
     
     public synchronized void entrar(Niño n)
     {
-        dentro.meter(n);   
+        niños.meter(n);   
     }
     
     public synchronized void salir(Niño n)
     {
-        dentro.sacar(n);     
+        niños.sacar(n);     
     }
     
     public void paseo (Monitor m){
@@ -51,8 +52,13 @@ public class ZonaComun {
         monitores.sacar(m);
     }
     
-    public int tamaño()
+    public int tamañoNiños()
     {
-        return dentro.tamaño();
+        return niños.tamaño();
+    }
+    
+    public int tamañoMonitores()
+    {
+        return monitores.tamaño();
     }
 }

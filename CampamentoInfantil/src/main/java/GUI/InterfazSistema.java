@@ -666,7 +666,7 @@ public class InterfazSistema extends javax.swing.JFrame {
         //Zona Comun
         ListaNiños niñosZonaComun = new ListaNiños(jLabelNiñosZonaComun);
         ListaMonitores monitoresZonaComun = new ListaMonitores(jLabelMonitoresZonaComun);
-        ZonaComun zonaComun = new ZonaComun(niñosZonaComun);
+        ZonaComun zonaComun = new ZonaComun(niñosZonaComun, monitoresZonaComun);
         
         for (int m = 1; m <= 4; m++)
         {
