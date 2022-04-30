@@ -16,6 +16,7 @@ public class Monitor extends Thread{
     private String identificador; //MX
     private int num;
     private Campamento camp;
+    private int contador=0;
     
     public Monitor( int num )
     {
@@ -30,5 +31,11 @@ public class Monitor extends Thread{
     public int getNum() {
         return num;
     }    
-    
+
+    public int getContador() {
+        return contador;
+    }
+    public synchronized void sumaActividad(){
+        contador++;
+    }
 }

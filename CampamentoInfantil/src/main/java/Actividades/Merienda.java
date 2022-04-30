@@ -6,6 +6,7 @@
 package Actividades;
 
 import GUI.ListaNiños;
+import Threads.Monitor;
 import Threads.Niño;
 import static java.lang.Thread.sleep;
 import java.util.concurrent.Semaphore;
@@ -25,7 +26,7 @@ public class Merienda {
     private Semaphore sem= new Semaphore(20,true);
     private Lock cerrojo=new ReentrantLock();
     private Condition vacio=cerrojo.newCondition();
-    private int bandejasLimpias=0, bandejasSucias=25;
+    private int bandejasLimpias=0, bandejasSucias=25,contador=0;
     
     public Merienda(ListaNiños cola) 
     {
@@ -79,8 +80,36 @@ public class Merienda {
             merendero.sacar(n);
             sem.release();
             
+            if (n.getActividades()>=3){
+                n.sumaActividad(1);
+                n.setActividades(0);
+            }
+            
         } catch (InterruptedException ex) {
             Logger.getLogger(Merienda.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void limpiarYcocinar(Monitor m){
+        while (true){
+            if (bandejasSucias>0){
+                cerrojo.lock();
+                try{
+                    bandejasSucias--;
+                    bandejasLimpias++;
+                    m.sumaActividad();
+                }finally{
+                    cerrojo.unlock();
+                }
+                try {
+                    sleep(2000+(int)(Math.random()*3001));
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(Merienda.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                if (m.getContador()==10){
+                    //Se va de paseo
+                }
+            }
         }
     }
          
