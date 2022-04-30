@@ -40,6 +40,11 @@ public class Niño extends Thread {
         return contador;
     }     
     
+    
+    public synchronized void sumaActividad(int n){
+        contador+=n;
+    }
+    
     public void run(){
         
     }

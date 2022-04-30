@@ -36,6 +36,10 @@ public class ListaThreads {
         imprimir();
     }
     
+    public synchronized Niño mirar(int n){
+        return lista.get(n);
+    }
+    
     public void imprimir()
     {
         String contenido="";
