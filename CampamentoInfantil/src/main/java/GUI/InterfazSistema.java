@@ -5,6 +5,9 @@
  */
 package GUI;
 
+import Actividades.Merienda;
+import Actividades.Soga;
+import Actividades.ZonaComun;
 import Clases.Campamento;
 import Threads.Monitor;
 import java.awt.Color;
@@ -654,9 +657,16 @@ public class InterfazSistema extends javax.swing.JFrame {
     private void jPanelRunnearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRunnearMouseClicked
         // TODO add your handling code here:
         
-        
-        
+        //Soga
+        ListaNiños colaSoga = new ListaNiños(jLabelColaSoga);
+        ListaNiños equipo1Soga = new ListaNiños(jLabelEquipo1Soga);
+        ListaNiños equipo2Soga = new ListaNiños(jLabelEquipo2Soga);
+        Soga soga = new Soga(colaSoga, equipo1Soga, equipo2Soga);
         Campamento CampamentoInfantil = new Campamento();
+        //Zona Comun
+        ListaNiños niñosZonaComun = new ListaNiños(jLabelNiñosZonaComun);
+        ListaMonitores monitoresZonaComun = new ListaMonitores(jLabelMonitoresZonaComun);
+        ZonaComun zonaComun = new ZonaComun(niñosZonaComun);
         
         for (int m = 1; m <= 4; m++)
         {
