@@ -9,8 +9,6 @@ import GUI.ListaNiños;
 import Threads.Monitor;
 import Threads.Niño;
 import static java.lang.Thread.sleep;
-import java.util.concurrent.BrokenBarrierException;
-import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
