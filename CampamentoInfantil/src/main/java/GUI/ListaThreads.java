@@ -36,8 +36,12 @@ public class ListaThreads {
         imprimir();
     }
     
-    public synchronized Niño mirar(int n){
+    public Niño mirar(int n){
         return lista.get(n);
+    }
+    
+    public boolean esta(Niño n){
+        return lista.contains(n);
     }
     
     public void imprimir()
