@@ -658,10 +658,10 @@ public class InterfazSistema extends javax.swing.JFrame {
         
         Campamento CampamentoInfantil = new Campamento();
         
-                for (int m = 1; m <= 4; m++)
-                {
-                    Monitor monitor = new Monitor(m);
-                }
+        for (int m = 1; m <= 4; m++)
+        {
+            Monitor monitor = new Monitor(m);
+        }
         
     }//GEN-LAST:event_jPanelRunnearMouseClicked
 

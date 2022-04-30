@@ -22,8 +22,6 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class Campamento {
     
-    private boolean abiertoNorte; //entradas abiertas o cerradas
-    private boolean abiertoSur;
     private int capacidadDisponible;
     private int capacidadActual;
     private Merienda merienda;
@@ -31,8 +29,8 @@ public class Campamento {
     private Tirolina tirolina;
     private ZonaComun zonaComun;
     
-    private ListaNiños colaNorte;
-    private ListaNiños colaSur;
+    private EntradaNorte Norte;
+    private EntradaSur Sur;
     
     Lock cerrojo = new ReentrantLock();
     Condition norte = cerrojo.newCondition();
@@ -42,58 +40,12 @@ public class Campamento {
     
     public Campamento()
     {
-        this.abiertoNorte = false;
-        this.abiertoSur = false;
         this.capacidadDisponible = 50;
         this.capacidadActual = 0;
     }
     
-    public void entradaNorte(Niño n)
-    {
-        cerrojo.lock();
-        try{
-            colaNorte.meter(n);
-            while(!abiertoNorte)
-            {
-                Norteabierto.await();
-            }
-            while(this.capacidadActual == this.capacidadDisponible)
-            {
-                norte.await();
-            }
-            colaNorte.sacar(n);
-            zonaComun.entrar(n);
-            System.out.println("Persona noseque entrando por NORTE. Ocupación: " + capacidadActual + "Colas: " + colaNorte.tamaño()+ ";"+ colaSur.tamaño());
-            
-        }
-        catch(InterruptedException e){}
-        finally{
-            cerrojo.unlock();
-        }
-    }
     
-    public void entradaSur(Niño n)
-    {
-        cerrojo.lock();
-        try{
-            colaSur.meter(n);
-            while(!abiertoSur)
-            {
-                Surabierto.await();
-            }
-            while(this.capacidadActual == this.capacidadDisponible)
-            {
-                norte.await();
-            }
-            colaSur.sacar(n);
-            zonaComun.entrar(n);
-            System.out.println("Persona noseque entrando por SUR. Ocupación: " + capacidadActual + "Colas: " + colaNorte.tamaño()+ ";"+ colaSur.tamaño());
-            
-        }
-        catch(InterruptedException e){}
-        finally{
-            cerrojo.unlock();
-        }
-    }
+    
+   
     
 }
