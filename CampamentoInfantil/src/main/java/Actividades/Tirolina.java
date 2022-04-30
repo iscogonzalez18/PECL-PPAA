@@ -5,10 +5,15 @@
  */
 package Actividades;
 
+import GUI.ListaThreads;
+
 /**
  *
  * @author Francisco
  */
 public class Tirolina {
+    
+    private ListaThreads cola;
+    
     
 }
