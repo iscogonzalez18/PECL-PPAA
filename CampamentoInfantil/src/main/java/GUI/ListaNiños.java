@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import Threads.Monitor;
 import Threads.Niño;
 import java.util.ArrayList;
 import javax.swing.JTextField;
@@ -13,12 +14,12 @@ import javax.swing.JTextField;
  *
  * @author Francisco
  */
-public class ListaThreads {
+public class ListaNiños {
     
     ArrayList<Niño> lista;
     JTextField tf;
     
-    public ListaThreads(JTextField tf)
+    public ListaNiños(JTextField tf)
     {
         lista=new ArrayList<Niño>();
         this.tf=tf;

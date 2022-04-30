@@ -5,7 +5,7 @@
  */
 package Actividades;
 
-import GUI.ListaThreads;
+import GUI.ListaNiños;
 
 /**
  *
@@ -13,7 +13,7 @@ import GUI.ListaThreads;
  */
 public class Tirolina {
     
-    private ListaThreads colaEspera;
+    private ListaNiños colaEspera;
     
     
 }

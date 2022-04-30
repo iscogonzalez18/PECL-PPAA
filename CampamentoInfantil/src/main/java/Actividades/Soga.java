@@ -5,7 +5,7 @@
  */
 package Actividades;
 
-import GUI.ListaThreads;
+import GUI.ListaNiños;
 import Threads.Monitor;
 import Threads.Niño;
 import static java.lang.Thread.sleep;
@@ -23,15 +23,15 @@ import java.util.logging.Logger;
  */
 public class Soga {
     
-    private ListaThreads cola;
-    private ListaThreads equipo1;
-    private ListaThreads equipo2;
+    private ListaNiños cola;
+    private ListaNiños equipo1;
+    private ListaNiños equipo2;
     private int contador=0,cont_1=0,cont_2=0; //Contador de niños en la actividadn en equipo 1 y equipo 2
     private Lock cerrojo=new ReentrantLock();
     private Condition lleno=cerrojo.newCondition();
-    private CyclicBarrier barrera=new CyclicBarrier(10);
 
-    public Soga(ListaThreads cola, ListaThreads equipo1, ListaThreads equipo2) {
+    public Soga(ListaNiños cola, ListaNiños equipo1, ListaNiños equipo2) {
+        this.cola=cola;
         this.equipo1 = equipo1;
         this.equipo2 = equipo2;
     }

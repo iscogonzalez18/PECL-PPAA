@@ -9,7 +9,7 @@ import Actividades.Merienda;
 import Actividades.Soga;
 import Actividades.Tirolina;
 import Actividades.ZonaComun;
-import GUI.ListaThreads;
+import GUI.ListaNiños;
 import Threads.Niño;
 import java.util.ArrayList;
 import java.util.concurrent.locks.Condition;
@@ -31,8 +31,8 @@ public class Campamento {
     private Tirolina tirolina;
     private ZonaComun zonaComun;
     
-    private ListaThreads colaNorte;
-    private ListaThreads colaSur;
+    private ListaNiños colaNorte;
+    private ListaNiños colaSur;
     
     Lock cerrojo = new ReentrantLock();
     Condition norte = cerrojo.newCondition();
