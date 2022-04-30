@@ -5,6 +5,11 @@
  */
 package Clases;
 
+import Actividades.Merienda;
+import Actividades.Soga;
+import Actividades.Tirolina;
+import Actividades.ZonaComun;
+import GUI.ListaThreads;
 import Threads.Niño;
 import java.util.ArrayList;
 import java.util.concurrent.locks.Condition;
@@ -19,25 +24,46 @@ public class Campamento {
     
     private boolean entradaNorte; //entradas abiertas o cerradas
     private boolean entradaSur;
-    private int capacidad;
+    private int capacidadDisponible;
+    private int capacidadActual;
+    private Merienda merienda;
+    private Soga soga;
+    private Tirolina tirolina;
+    private ZonaComun zonaComun;
     
-    private ArrayList<Niño> entradaEste = new ArrayList<>();
-    private ArrayList<Niño> entradaOeste = new ArrayList<>();
+    private ListaThreads colaNorte;
+    private ListaThreads colaSur;
     
-    Lock lock = new ReentrantLock();
-    Condition oeste = lock.newCondition();
-    Condition este = lock.newCondition();
+    Lock cerrojo = new ReentrantLock();
+    Condition norte = cerrojo.newCondition();
+    Condition sur = cerrojo.newCondition();
     
     public Campamento()
     {
         this.entradaNorte = false;
         this.entradaSur = false;
-        this.capacidad = 50;
+        this.capacidadDisponible = 50;
+        this.capacidadActual = 0;
     }
     
-    public void entradaNorte(boolean monitor)
+    public void entradaNorte(Niño n)
     {
-        
+        cerrojo.lock();
+        try{
+            colaNorte.meter(n);
+            while(this.capacidadActual == this.capacidadDisponible)
+            {
+                norte.await();
+            }
+            colaNorte.sacar(n);
+            //meter en actividad
+            System.out.println("Persona noseque entrando por NORTE. Ocupación: " + capacidadActual + "Colas: " + colaNorte.tamaño()+ ";"+ colaSur.tamaño());
+            
+        }
+        catch(InterruptedException e){}
+        finally{
+            cerrojo.unlock();
+        }
     }
     
     public void entradaSur(boolean monitor)

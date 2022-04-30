@@ -46,4 +46,9 @@ public class ListaThreads {
         tf.setText(contenido);
     }
     
+    public int tamaño()
+    {
+        return lista.size();
+    }
+    
 }
