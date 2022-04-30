@@ -6,6 +6,7 @@ package GUI;
 
 import Threads.Monitor;
 import java.util.ArrayList;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 /**
@@ -14,12 +15,12 @@ import javax.swing.JTextField;
  */
 public class ListaMonitores {
     ArrayList<Monitor> lista;
-    JTextField tf;
+    JLabel label;
     
-    public ListaMonitores(JTextField tf)
+    public ListaMonitores(JLabel label)
     {
         lista=new ArrayList<Monitor>();
-        this.tf=tf;
+        this.label=label;
     }
     
     public synchronized void meter(Monitor m)
@@ -39,9 +40,9 @@ public class ListaMonitores {
         String contenido="";
         for(int i=0; i<lista.size(); i++)
         {
-           //contenido=contenido+lista.get(i).getid()+" ";
+           contenido=contenido+lista.get(i).getIdentificador()+" ";
         }
-        tf.setText(contenido);
+        label.setText(contenido);
     }
     
     public int tamaño()
