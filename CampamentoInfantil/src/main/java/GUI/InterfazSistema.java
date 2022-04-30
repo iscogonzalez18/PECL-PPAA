@@ -47,8 +47,70 @@ public class InterfazSistema extends javax.swing.JFrame {
         jPanelDatos = new javax.swing.JPanel();
         jPanelEntradaNorte = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jPanel19 = new javax.swing.JPanel();
+        jLabelNiñosZonaComun = new javax.swing.JLabel();
+        jPanel20 = new javax.swing.JPanel();
+        jLabelMonitoresZonaComun = new javax.swing.JLabel();
         jPanelEntradaSur = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jPanel22 = new javax.swing.JPanel();
+        jLabelEntradaSur = new javax.swing.JLabel();
+        jPanelActividades1 = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
+        jPanelEntradaNorte4 = new javax.swing.JPanel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jPanel10 = new javax.swing.JPanel();
+        jLabelNiñosComiendoMerendero = new javax.swing.JLabel();
+        jPanel11 = new javax.swing.JPanel();
+        jLabelColaMerendero = new javax.swing.JLabel();
+        jPanel12 = new javax.swing.JPanel();
+        jLabelBandejasLimpiasMerendero = new javax.swing.JLabel();
+        jPanel13 = new javax.swing.JPanel();
+        jLabelBandejasSuciasMerendero = new javax.swing.JLabel();
+        jPanel14 = new javax.swing.JPanel();
+        jLabelMonitoresMerendero = new javax.swing.JLabel();
+        jPanelEntradaNorte5 = new javax.swing.JPanel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jPanel15 = new javax.swing.JPanel();
+        jLabelColaSoga = new javax.swing.JLabel();
+        jPanel16 = new javax.swing.JPanel();
+        jLabelMonitorSoga = new javax.swing.JLabel();
+        jPanel17 = new javax.swing.JPanel();
+        jLabelEquipo1Soga = new javax.swing.JLabel();
+        jPanel18 = new javax.swing.JPanel();
+        jLabelEquipo2Soga = new javax.swing.JLabel();
+        jPanelEntradaNorte6 = new javax.swing.JPanel();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jPanel23 = new javax.swing.JPanel();
+        jLabelFinalizacionTirolina = new javax.swing.JLabel();
+        jPanel24 = new javax.swing.JPanel();
+        jLabelColaTirolina = new javax.swing.JLabel();
+        jPanel25 = new javax.swing.JPanel();
+        jLabelTirolina = new javax.swing.JLabel();
+        jPanel26 = new javax.swing.JPanel();
+        jLabelPreparacionTirolina = new javax.swing.JLabel();
+        jPanel27 = new javax.swing.JPanel();
+        jLabelMonitorTirolina = new javax.swing.JLabel();
+        jPanelEntradaNorte1 = new javax.swing.JPanel();
+        jLabel45 = new javax.swing.JLabel();
+        jPanel21 = new javax.swing.JPanel();
+        jLabelEntradaNorte = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -165,10 +227,42 @@ public class InterfazSistema extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("ENTRADA NORTE");
-        jPanelEntradaNorte.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 180, 30));
+        jLabel2.setText("ZONA COMÚN");
+        jPanelEntradaNorte.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1030, 30));
 
-        jPanelDatos.add(jPanelEntradaNorte, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 200, 260));
+        jLabel46.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        jLabel46.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel46.setText("Niños");
+        jPanelEntradaNorte.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 790, 30));
+
+        jLabel47.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        jLabel47.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel47.setText("Monitores");
+        jPanelEntradaNorte.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 200, 30));
+
+        jPanel19.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel19.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
+        jPanel19.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelNiñosZonaComun.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel19.add(jLabelNiñosZonaComun, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 770, 10));
+
+        jPanelEntradaNorte.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, 790, 30));
+
+        jPanel20.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel20.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
+        jPanel20.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelMonitoresZonaComun.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel20.add(jLabelMonitoresZonaComun, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 180, 10));
+
+        jPanelEntradaNorte.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 200, 30));
+
+        jPanelDatos.add(jPanelEntradaNorte, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 1050, 110));
 
         jPanelEntradaSur.setBackground(new java.awt.Color(39, 43, 51));
         jPanelEntradaSur.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(122, 130, 142)));
@@ -178,9 +272,314 @@ public class InterfazSistema extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("ENTRADA SUR");
-        jPanelEntradaSur.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 180, 30));
+        jPanelEntradaSur.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 500, 40));
 
-        jPanelDatos.add(jPanelEntradaSur, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 200, 260));
+        jPanel22.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel22.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
+        jPanel22.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel22.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelEntradaSur.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel22.add(jLabelEntradaSur, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 480, 10));
+
+        jPanelEntradaSur.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 500, 30));
+
+        jPanelDatos.add(jPanelEntradaSur, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, 520, 80));
+
+        jPanelActividades1.setBackground(new java.awt.Color(39, 43, 51));
+        jPanelActividades1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(122, 130, 142)));
+        jPanelActividades1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanelActividades1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel24.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel24.setText("ACTIVIDADES");
+        jPanelActividades1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1030, 40));
+
+        jPanelEntradaNorte4.setBackground(new java.awt.Color(39, 43, 51));
+        jPanelEntradaNorte4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(122, 130, 142)));
+        jPanelEntradaNorte4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel25.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel25.setText("Niños Comiendo");
+        jPanelEntradaNorte4.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 120, 610, 30));
+
+        jLabel26.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel26.setText("MERENDERO");
+        jPanelEntradaNorte4.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1010, 40));
+
+        jLabel27.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel27.setText("Cola");
+        jPanelEntradaNorte4.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 50, 30));
+
+        jLabel28.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel28.setText("Monitores");
+        jPanelEntradaNorte4.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 80, 30));
+
+        jLabel29.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel29.setText("Bandejas Limpias");
+        jPanelEntradaNorte4.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 100, 30));
+
+        jLabel30.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel30.setText("Bandejas Sucias");
+        jPanelEntradaNorte4.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 100, 30));
+
+        jPanel10.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
+        jPanel10.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelNiñosComiendoMerendero.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel10.add(jLabelNiñosComiendoMerendero, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 590, 10));
+
+        jPanelEntradaNorte4.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 610, 30));
+
+        jPanel11.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel11.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
+        jPanel11.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelColaMerendero.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel11.add(jLabelColaMerendero, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 930, 10));
+
+        jPanelEntradaNorte4.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 950, 30));
+
+        jPanel12.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel12.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
+        jPanel12.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelBandejasLimpiasMerendero.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel12.add(jLabelBandejasLimpiasMerendero, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 10));
+
+        jPanelEntradaNorte4.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 80, 30));
+
+        jPanel13.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel13.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
+        jPanel13.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelBandejasSuciasMerendero.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel13.add(jLabelBandejasSuciasMerendero, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 10));
+
+        jPanelEntradaNorte4.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, 80, 30));
+
+        jPanel14.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel14.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
+        jPanel14.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelMonitoresMerendero.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel14.add(jLabelMonitoresMerendero, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 10));
+
+        jPanelEntradaNorte4.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 80, 30));
+
+        jPanelActividades1.add(jPanelEntradaNorte4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 1030, 150));
+
+        jPanelEntradaNorte5.setBackground(new java.awt.Color(39, 43, 51));
+        jPanelEntradaNorte5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(122, 130, 142)));
+        jPanelEntradaNorte5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel36.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel36.setText("SOGA");
+        jPanelEntradaNorte5.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 490, 40));
+
+        jLabel37.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel37.setText("Cola");
+        jPanelEntradaNorte5.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 50, 30));
+
+        jLabel38.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        jLabel38.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel38.setText("Monitor");
+        jPanelEntradaNorte5.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 70, 30));
+
+        jLabel39.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel39.setText("Equipo 2");
+        jPanelEntradaNorte5.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 120, 180, 30));
+
+        jLabel40.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel40.setText("Equipo 1");
+        jPanelEntradaNorte5.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 180, 30));
+
+        jPanel15.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel15.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
+        jPanel15.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelColaSoga.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel15.add(jLabelColaSoga, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 410, 10));
+
+        jPanelEntradaNorte5.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 430, 30));
+
+        jPanel16.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel16.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
+        jPanel16.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelMonitorSoga.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel16.add(jLabelMonitorSoga, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 50, 10));
+
+        jPanelEntradaNorte5.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 70, 30));
+
+        jPanel17.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel17.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
+        jPanel17.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelEquipo1Soga.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel17.add(jLabelEquipo1Soga, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 160, 10));
+
+        jPanelEntradaNorte5.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 180, 30));
+
+        jPanel18.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel18.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
+        jPanel18.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelEquipo2Soga.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel18.add(jLabelEquipo2Soga, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 160, 10));
+
+        jPanelEntradaNorte5.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, 180, 30));
+
+        jPanelActividades1.add(jPanelEntradaNorte5, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 60, 510, 160));
+
+        jPanelEntradaNorte6.setBackground(new java.awt.Color(39, 43, 51));
+        jPanelEntradaNorte6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(122, 130, 142)));
+        jPanelEntradaNorte6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel52.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        jLabel52.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel52.setText("Finalizacion");
+        jPanelEntradaNorte6.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 120, 80, 30));
+
+        jLabel53.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel53.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel53.setText("TIROLINA");
+        jPanelEntradaNorte6.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 490, 40));
+
+        jLabel54.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        jLabel54.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel54.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel54.setText("Cola");
+        jPanelEntradaNorte6.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 50, 30));
+
+        jLabel55.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        jLabel55.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel55.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel55.setText("Monitor");
+        jPanelEntradaNorte6.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 80, 30));
+
+        jLabel56.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        jLabel56.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel56.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel56.setText("Tirolina");
+        jPanelEntradaNorte6.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 80, 30));
+
+        jLabel57.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
+        jLabel57.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel57.setText("Preparación");
+        jPanelEntradaNorte6.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 80, 30));
+
+        jPanel23.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel23.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
+        jPanel23.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel23.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelFinalizacionTirolina.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel23.add(jLabelFinalizacionTirolina, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 10));
+
+        jPanelEntradaNorte6.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 90, 80, 30));
+
+        jPanel24.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel24.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
+        jPanel24.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel24.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelColaTirolina.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel24.add(jLabelColaTirolina, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 410, 10));
+
+        jPanelEntradaNorte6.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 430, 30));
+
+        jPanel25.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel25.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
+        jPanel25.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel25.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelTirolina.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel25.add(jLabelTirolina, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 10));
+
+        jPanelEntradaNorte6.add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 80, 30));
+
+        jPanel26.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel26.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
+        jPanel26.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel26.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelPreparacionTirolina.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel26.add(jLabelPreparacionTirolina, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 10));
+
+        jPanelEntradaNorte6.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 80, 30));
+
+        jPanel27.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel27.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
+        jPanel27.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel27.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelMonitorTirolina.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel27.add(jLabelMonitorTirolina, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 10));
+
+        jPanelEntradaNorte6.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 80, 30));
+
+        jPanelActividades1.add(jPanelEntradaNorte6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 510, 160));
+
+        jPanelDatos.add(jPanelActividades1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 1050, 390));
+
+        jPanelEntradaNorte1.setBackground(new java.awt.Color(39, 43, 51));
+        jPanelEntradaNorte1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(122, 130, 142)));
+        jPanelEntradaNorte1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel45.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel45.setText("ENTRADA NORTE");
+        jPanelEntradaNorte1.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 500, 40));
+
+        jPanel21.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel21.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
+        jPanel21.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel21.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelEntradaNorte.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel21.add(jLabelEntradaNorte, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 480, 10));
+
+        jPanelEntradaNorte1.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 500, 30));
+
+        jPanelDatos.add(jPanelEntradaNorte1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 520, 80));
 
         javax.swing.GroupLayout jPanelVentanaLayout = new javax.swing.GroupLayout(jPanelVentana);
         jPanelVentana.setLayout(jPanelVentanaLayout);
@@ -194,7 +593,7 @@ public class InterfazSistema extends javax.swing.JFrame {
             .addGroup(jPanelVentanaLayout.createSequentialGroup()
                 .addComponent(jPanelControlVentana, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelDatos, javax.swing.GroupLayout.DEFAULT_SIZE, 682, Short.MAX_VALUE))
+                .addComponent(jPanelDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 619, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -205,7 +604,9 @@ public class InterfazSistema extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelVentana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanelVentana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1, Short.MAX_VALUE))
         );
 
         pack();
@@ -321,13 +722,75 @@ public class InterfazSistema extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabelBandejasLimpiasMerendero;
+    private javax.swing.JLabel jLabelBandejasSuciasMerendero;
     private javax.swing.JLabel jLabelCerrar;
+    private javax.swing.JLabel jLabelColaMerendero;
+    private javax.swing.JLabel jLabelColaSoga;
+    private javax.swing.JLabel jLabelColaTirolina;
+    private javax.swing.JLabel jLabelEntradaNorte;
+    private javax.swing.JLabel jLabelEntradaSur;
+    private javax.swing.JLabel jLabelEquipo1Soga;
+    private javax.swing.JLabel jLabelEquipo2Soga;
+    private javax.swing.JLabel jLabelFinalizacionTirolina;
     private javax.swing.JLabel jLabelMinimizar;
     private javax.swing.JLabel jLabelMinimizar1;
+    private javax.swing.JLabel jLabelMonitorSoga;
+    private javax.swing.JLabel jLabelMonitorTirolina;
+    private javax.swing.JLabel jLabelMonitoresMerendero;
+    private javax.swing.JLabel jLabelMonitoresZonaComun;
+    private javax.swing.JLabel jLabelNiñosComiendoMerendero;
+    private javax.swing.JLabel jLabelNiñosZonaComun;
+    private javax.swing.JLabel jLabelPreparacionTirolina;
+    private javax.swing.JLabel jLabelTirolina;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
+    private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel21;
+    private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
+    private javax.swing.JPanel jPanel24;
+    private javax.swing.JPanel jPanel25;
+    private javax.swing.JPanel jPanel26;
+    private javax.swing.JPanel jPanel27;
+    private javax.swing.JPanel jPanelActividades1;
     private javax.swing.JPanel jPanelCerrar;
     private javax.swing.JPanel jPanelControlVentana;
     private javax.swing.JPanel jPanelDatos;
     private javax.swing.JPanel jPanelEntradaNorte;
+    private javax.swing.JPanel jPanelEntradaNorte1;
+    private javax.swing.JPanel jPanelEntradaNorte4;
+    private javax.swing.JPanel jPanelEntradaNorte5;
+    private javax.swing.JPanel jPanelEntradaNorte6;
     private javax.swing.JPanel jPanelEntradaSur;
     private javax.swing.JPanel jPanelEspaciado;
     private javax.swing.JPanel jPanelMinimizar;
