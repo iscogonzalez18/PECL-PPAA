@@ -11,9 +11,9 @@ package Threads;
  */   
 public class Niño extends Thread {
     
-    private String identificador; //MX
+    private String identificador; //NXXXX
     private int num;
-    private int contador=0; //Contador de actividades
+    private int contador=0,actividades=0; //Contador de actividades
 
     public Niño(int num) 
     {
@@ -40,6 +40,14 @@ public class Niño extends Thread {
         return id;
     }
 
+    public int getActividades() {
+        return actividades;
+    }
+
+    public void setActividades(int actividades) {
+        this.actividades = actividades;
+    }
+
     public int getContador() 
     {
         return contador;
@@ -53,6 +61,7 @@ public class Niño extends Thread {
     public synchronized void sumaActividad(int n)
     {
         contador+=n;
+        actividades+=n;
     }
     
     public void run()
