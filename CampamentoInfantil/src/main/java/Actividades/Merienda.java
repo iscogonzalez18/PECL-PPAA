@@ -13,10 +13,10 @@ import GUI.ListaThreads;
  */
 public class Merienda {
     
-    private ListaThreads cola;
+    private ListaThreads colaEspera;
 
     public Merienda(ListaThreads cola) {
-        this.cola = cola;
+        this.colaEspera = cola;
     }
     
         

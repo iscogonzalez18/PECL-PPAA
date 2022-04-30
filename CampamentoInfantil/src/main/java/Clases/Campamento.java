@@ -22,8 +22,8 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class Campamento {
     
-    private boolean entradaNorte; //entradas abiertas o cerradas
-    private boolean entradaSur;
+    private boolean abiertoNorte; //entradas abiertas o cerradas
+    private boolean abiertoSur;
     private int capacidadDisponible;
     private int capacidadActual;
     private Merienda merienda;
@@ -37,11 +37,13 @@ public class Campamento {
     Lock cerrojo = new ReentrantLock();
     Condition norte = cerrojo.newCondition();
     Condition sur = cerrojo.newCondition();
+    Condition Norteabierto = cerrojo.newCondition();
+    Condition Surabierto = cerrojo.newCondition();
     
     public Campamento()
     {
-        this.entradaNorte = false;
-        this.entradaSur = false;
+        this.abiertoNorte = false;
+        this.abiertoSur = false;
         this.capacidadDisponible = 50;
         this.capacidadActual = 0;
     }
@@ -51,12 +53,16 @@ public class Campamento {
         cerrojo.lock();
         try{
             colaNorte.meter(n);
+            while(!abiertoNorte)
+            {
+                Norteabierto.await();
+            }
             while(this.capacidadActual == this.capacidadDisponible)
             {
                 norte.await();
             }
             colaNorte.sacar(n);
-            //meter en actividad
+            zonaComun.entrar(n);
             System.out.println("Persona noseque entrando por NORTE. Ocupación: " + capacidadActual + "Colas: " + colaNorte.tamaño()+ ";"+ colaSur.tamaño());
             
         }
@@ -71,12 +77,16 @@ public class Campamento {
         cerrojo.lock();
         try{
             colaSur.meter(n);
+            while(!abiertoSur)
+            {
+                Surabierto.await();
+            }
             while(this.capacidadActual == this.capacidadDisponible)
             {
                 norte.await();
             }
             colaSur.sacar(n);
-            //meter en actividad
+            zonaComun.entrar(n);
             System.out.println("Persona noseque entrando por SUR. Ocupación: " + capacidadActual + "Colas: " + colaNorte.tamaño()+ ";"+ colaSur.tamaño());
             
         }

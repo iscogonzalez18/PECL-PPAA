@@ -13,7 +13,7 @@ import GUI.ListaThreads;
  */
 public class Tirolina {
     
-    private ListaThreads cola;
+    private ListaThreads colaEspera;
     
     
 }
