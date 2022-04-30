@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Clases;
+package Entradas;
 
 import GUI.ListaNiños;
 import Threads.Niño;

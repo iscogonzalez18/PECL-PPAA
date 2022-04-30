@@ -5,6 +5,8 @@
  */
 package Clases;
 
+import Entradas.EntradaSur;
+import Entradas.EntradaNorte;
 import Actividades.Merienda;
 import Actividades.Soga;
 import Actividades.Tirolina;
