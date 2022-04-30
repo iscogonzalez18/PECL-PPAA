@@ -5,10 +5,20 @@
  */
 package Actividades;
 
+import GUI.ListaThreads;
+
 /**
  *
  * @author Francisco
  */
 public class Merienda {
+    
+    private ListaThreads cola;
+
+    public Merienda(ListaThreads cola) {
+        this.cola = cola;
+    }
+    
+        
     
 }

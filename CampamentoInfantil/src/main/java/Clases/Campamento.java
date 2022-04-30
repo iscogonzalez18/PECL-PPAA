@@ -66,9 +66,24 @@ public class Campamento {
         }
     }
     
-    public void entradaSur(boolean monitor)
+    public void entradaSur(Niño n)
     {
-        
+        cerrojo.lock();
+        try{
+            colaSur.meter(n);
+            while(this.capacidadActual == this.capacidadDisponible)
+            {
+                norte.await();
+            }
+            colaSur.sacar(n);
+            //meter en actividad
+            System.out.println("Persona noseque entrando por SUR. Ocupación: " + capacidadActual + "Colas: " + colaNorte.tamaño()+ ";"+ colaSur.tamaño());
+            
+        }
+        catch(InterruptedException e){}
+        finally{
+            cerrojo.unlock();
+        }
     }
     
 }
