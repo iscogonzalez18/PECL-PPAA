@@ -10,7 +10,7 @@ package Threads;
  * @author Francisco
  */   
 public class Niño extends Thread {
-    private int contador=0;
+    private int contador=0; //Contador de actividades
     private String id;
 
     public Niño() {
