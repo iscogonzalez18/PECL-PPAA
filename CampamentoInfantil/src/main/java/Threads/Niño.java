@@ -10,16 +10,20 @@ package Threads;
  * @author Francisco
  */   
 public class Niño extends Thread {
+    
+    private String identificador; //MX
+    private int num;
     private int contador=0; //Contador de actividades
-    private String id;
 
-    public Niño() {
-        this.id=generaNombre();
+    public Niño(int num) 
+    {
+        this.num = num;
+        this.identificador = generaNombre(num);
     }
     
-    public String generaNombre(){
+    public String generaNombre(int n)
+    {
         String id;
-        int n=(int) (Math.random()*10000);
         if (n<10){
             Integer.toString(n);
             id="N000"+n;
@@ -36,16 +40,23 @@ public class Niño extends Thread {
         return id;
     }
 
-    public int getContador() {
+    public int getContador() 
+    {
         return contador;
     }     
     
+    public String getIdentificador()
+    {
+        return identificador;
+    }
     
-    public synchronized void sumaActividad(int n){
+    public synchronized void sumaActividad(int n)
+    {
         contador+=n;
     }
     
-    public void run(){
+    public void run()
+    {
         
     }
     

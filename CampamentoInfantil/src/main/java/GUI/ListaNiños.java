@@ -8,6 +8,7 @@ package GUI;
 import Threads.Monitor;
 import Threads.Niño;
 import java.util.ArrayList;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 /**
@@ -17,12 +18,12 @@ import javax.swing.JTextField;
 public class ListaNiños {
     
     ArrayList<Niño> lista;
-    JTextField tf;
+    JLabel label;
     
-    public ListaNiños(JTextField tf)
+    public ListaNiños(JLabel label)
     {
         lista=new ArrayList<Niño>();
-        this.tf=tf;
+        this.label=label;
     }
     
     public synchronized void meter(Niño n)
@@ -37,7 +38,8 @@ public class ListaNiños {
         imprimir();
     }
     
-    public Niño mirar(int n){
+    public Niño mirar(int n)
+    {
         return lista.get(n);
     }
     
@@ -50,9 +52,9 @@ public class ListaNiños {
         String contenido="";
         for(int i=0; i<lista.size(); i++)
         {
-           //contenido=contenido+lista.get(i).getid()+" ";
+           contenido=contenido+lista.get(i).getIdentificador()+" ";
         }
-        tf.setText(contenido);
+        label.setText(contenido);
     }
     
     public int tamaño()
