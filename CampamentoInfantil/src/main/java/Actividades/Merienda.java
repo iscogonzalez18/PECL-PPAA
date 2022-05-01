@@ -39,7 +39,7 @@ public class Merienda {
         try
         {
             colaEspera.meter(n);
-            System.out.println("El niño "+n.getName()+" ha entrado en la cola de merienda");
+            System.out.println("El niño "+n.getIdentificador()+" ha entrado en la cola de merienda");
         }
         finally
         {
@@ -64,7 +64,7 @@ public class Merienda {
         {
             sem.acquire();
             colaEspera.sacar(n);
-            System.out.println("El niño "+n.getName()+" comienza a merendar");
+            System.out.println("El niño "+n.getIdentificador()+" comienza a merendar");
             merendero.meter(n);
             sleep(7000);
             cerrojo.lock();
@@ -76,7 +76,7 @@ public class Merienda {
             {
                 cerrojo.unlock();
             }
-            System.out.println("El niño "+n.getName()+" termina de merendar");
+            System.out.println("El niño "+n.getIdentificador()+" termina de merendar");
             merendero.sacar(n);
             sem.release();
             
