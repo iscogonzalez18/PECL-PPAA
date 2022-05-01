@@ -10,7 +10,6 @@ import GUI.ListaNiños;
 import Threads.Monitor;
 import Threads.Niño;
 import static java.lang.Thread.sleep;
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
@@ -21,15 +20,14 @@ import java.util.logging.Logger;
  * @author Francisco
  */
 public class ZonaComun {
-    //albaricoque
     
-    private ListaNiños niños;
     private ListaMonitores monitores;
+    private ListaNiños niños;
     private Lock cerrojo= new ReentrantLock();
 
-    public ZonaComun(ListaNiños niños, ListaMonitores monitores) {
-        this.niños = niños;
+    public ZonaComun(ListaMonitores monitores, ListaNiños niños) {
         this.monitores = monitores;
+        this.niños = niños;
     }
     
     public synchronized void entrar(Niño n)

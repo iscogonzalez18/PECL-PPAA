@@ -7,6 +7,7 @@ package GUI;
 
 import Actividades.Merienda;
 import Actividades.Soga;
+import Actividades.Tirolina;
 import Actividades.ZonaComun;
 import Clases.Campamento;
 import Threads.Monitor;
@@ -70,15 +71,15 @@ public class InterfazSistema extends javax.swing.JFrame {
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
-        jLabelNiñosComiendoMerendero = new javax.swing.JLabel();
+        jLabelNiñosComiendoMerienda = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
-        jLabelColaMerendero = new javax.swing.JLabel();
+        jLabelColaMerienda = new javax.swing.JLabel();
         jPanel12 = new javax.swing.JPanel();
-        jLabelBandejasLimpiasMerendero = new javax.swing.JLabel();
+        jLabelBandejasLimpiasMerienda = new javax.swing.JLabel();
         jPanel13 = new javax.swing.JPanel();
-        jLabelBandejasSuciasMerendero = new javax.swing.JLabel();
+        jLabelBandejasSuciasMerienda = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
-        jLabelMonitoresMerendero = new javax.swing.JLabel();
+        jLabelMonitoresMerienda = new javax.swing.JLabel();
         jPanelEntradaNorte5 = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
@@ -261,6 +262,7 @@ public class InterfazSistema extends javax.swing.JFrame {
         jPanel20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelMonitoresZonaComun.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelMonitoresZonaComun.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jPanel20.add(jLabelMonitoresZonaComun, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 180, 10));
 
         jPanelEntradaNorte.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 200, 30));
@@ -345,8 +347,8 @@ public class InterfazSistema extends javax.swing.JFrame {
         jPanel10.setForeground(new java.awt.Color(255, 255, 255));
         jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelNiñosComiendoMerendero.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel10.add(jLabelNiñosComiendoMerendero, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 590, 10));
+        jLabelNiñosComiendoMerienda.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel10.add(jLabelNiñosComiendoMerienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 590, 10));
 
         jPanelEntradaNorte4.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 610, 30));
 
@@ -355,8 +357,8 @@ public class InterfazSistema extends javax.swing.JFrame {
         jPanel11.setForeground(new java.awt.Color(255, 255, 255));
         jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelColaMerendero.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel11.add(jLabelColaMerendero, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 930, 10));
+        jLabelColaMerienda.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel11.add(jLabelColaMerienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 930, 10));
 
         jPanelEntradaNorte4.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 950, 30));
 
@@ -365,8 +367,9 @@ public class InterfazSistema extends javax.swing.JFrame {
         jPanel12.setForeground(new java.awt.Color(255, 255, 255));
         jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelBandejasLimpiasMerendero.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel12.add(jLabelBandejasLimpiasMerendero, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 10));
+        jLabelBandejasLimpiasMerienda.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelBandejasLimpiasMerienda.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel12.add(jLabelBandejasLimpiasMerienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 10));
 
         jPanelEntradaNorte4.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 80, 30));
 
@@ -375,8 +378,9 @@ public class InterfazSistema extends javax.swing.JFrame {
         jPanel13.setForeground(new java.awt.Color(255, 255, 255));
         jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelBandejasSuciasMerendero.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel13.add(jLabelBandejasSuciasMerendero, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 10));
+        jLabelBandejasSuciasMerienda.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelBandejasSuciasMerienda.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel13.add(jLabelBandejasSuciasMerienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 10));
 
         jPanelEntradaNorte4.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, 80, 30));
 
@@ -385,8 +389,9 @@ public class InterfazSistema extends javax.swing.JFrame {
         jPanel14.setForeground(new java.awt.Color(255, 255, 255));
         jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelMonitoresMerendero.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel14.add(jLabelMonitoresMerendero, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 10));
+        jLabelMonitoresMerienda.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelMonitoresMerienda.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel14.add(jLabelMonitoresMerienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 10));
 
         jPanelEntradaNorte4.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 80, 30));
 
@@ -442,6 +447,7 @@ public class InterfazSistema extends javax.swing.JFrame {
         jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelMonitorSoga.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelMonitorSoga.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jPanel16.add(jLabelMonitorSoga, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 50, 10));
 
         jPanelEntradaNorte5.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 70, 30));
@@ -514,6 +520,7 @@ public class InterfazSistema extends javax.swing.JFrame {
         jPanel23.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelFinalizacionTirolina.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelFinalizacionTirolina.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jPanel23.add(jLabelFinalizacionTirolina, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 10));
 
         jPanelEntradaNorte6.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 90, 80, 30));
@@ -534,6 +541,7 @@ public class InterfazSistema extends javax.swing.JFrame {
         jPanel25.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelTirolina.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelTirolina.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jPanel25.add(jLabelTirolina, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 10));
 
         jPanelEntradaNorte6.add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 80, 30));
@@ -544,6 +552,7 @@ public class InterfazSistema extends javax.swing.JFrame {
         jPanel26.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelPreparacionTirolina.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPreparacionTirolina.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jPanel26.add(jLabelPreparacionTirolina, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 10));
 
         jPanelEntradaNorte6.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 80, 30));
@@ -554,6 +563,7 @@ public class InterfazSistema extends javax.swing.JFrame {
         jPanel27.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelMonitorTirolina.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelMonitorTirolina.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jPanel27.add(jLabelMonitorTirolina, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 10));
 
         jPanelEntradaNorte6.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 80, 30));
@@ -657,16 +667,35 @@ public class InterfazSistema extends javax.swing.JFrame {
     private void jPanelRunnearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRunnearMouseClicked
         // TODO add your handling code here:
         
+        //Merienda
+        ListaMonitores monitoresMerienda = new ListaMonitores(jLabelMonitoresMerienda);
+        ListaNiños colaMerienda = new ListaNiños(jLabelColaMerienda);
+        ListaNiños comiendoMerienda = new ListaNiños(jLabelNiñosComiendoMerienda);
+        Merienda merienda = new Merienda(monitoresMerienda, colaMerienda, comiendoMerienda, jLabelBandejasSuciasMerienda, jLabelBandejasLimpiasMerienda);
         //Soga
         ListaNiños colaSoga = new ListaNiños(jLabelColaSoga);
         ListaNiños equipo1Soga = new ListaNiños(jLabelEquipo1Soga);
         ListaNiños equipo2Soga = new ListaNiños(jLabelEquipo2Soga);
-        Soga soga = new Soga(colaSoga, equipo1Soga, equipo2Soga);
-        Campamento CampamentoInfantil = new Campamento();
+        ListaMonitores monitorSoga = new ListaMonitores(jLabelMonitorSoga);
+        Soga soga = new Soga(monitorSoga, colaSoga, equipo1Soga, equipo2Soga);
+        //Tirolina
+        ListaMonitores monitorTirolina = new ListaMonitores(jLabelMonitorTirolina);
+        ListaNiños colaTirolina = new ListaNiños(jLabelColaTirolina);
+        ListaNiños preparacionTirolina = new ListaNiños(jLabelPreparacionTirolina);
+        ListaNiños entirolina = new ListaNiños(jLabelTirolina);
+        ListaNiños finalizacionTirolina = new ListaNiños(jLabelFinalizacionTirolina);     
+        Tirolina tirolina = new Tirolina(monitorTirolina, colaTirolina, preparacionTirolina, entirolina, finalizacionTirolina);
         //Zona Comun
-        ListaNiños niñosZonaComun = new ListaNiños(jLabelNiñosZonaComun);
         ListaMonitores monitoresZonaComun = new ListaMonitores(jLabelMonitoresZonaComun);
-        ZonaComun zonaComun = new ZonaComun(niñosZonaComun, monitoresZonaComun);
+        ListaNiños niñosZonaComun = new ListaNiños(jLabelNiñosZonaComun);  
+        ZonaComun zonaComun = new ZonaComun(monitoresZonaComun, niñosZonaComun);
+        
+        //EntradaNorte
+        
+        //EntradaSur
+        
+        //Campamento
+        //Campamento campamento = new Campamento(merienda, soga, tirolina, zonaComun);//faltan las entradas
         
         for (int m = 1; m <= 4; m++)
         {
@@ -753,10 +782,10 @@ public class InterfazSistema extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabelBandejasLimpiasMerendero;
-    private javax.swing.JLabel jLabelBandejasSuciasMerendero;
+    private javax.swing.JLabel jLabelBandejasLimpiasMerienda;
+    private javax.swing.JLabel jLabelBandejasSuciasMerienda;
     private javax.swing.JLabel jLabelCerrar;
-    private javax.swing.JLabel jLabelColaMerendero;
+    private javax.swing.JLabel jLabelColaMerienda;
     private javax.swing.JLabel jLabelColaSoga;
     private javax.swing.JLabel jLabelColaTirolina;
     private javax.swing.JLabel jLabelEntradaNorte;
@@ -768,9 +797,9 @@ public class InterfazSistema extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelMinimizar1;
     private javax.swing.JLabel jLabelMonitorSoga;
     private javax.swing.JLabel jLabelMonitorTirolina;
-    private javax.swing.JLabel jLabelMonitoresMerendero;
+    private javax.swing.JLabel jLabelMonitoresMerienda;
     private javax.swing.JLabel jLabelMonitoresZonaComun;
-    private javax.swing.JLabel jLabelNiñosComiendoMerendero;
+    private javax.swing.JLabel jLabelNiñosComiendoMerienda;
     private javax.swing.JLabel jLabelNiñosZonaComun;
     private javax.swing.JLabel jLabelPreparacionTirolina;
     private javax.swing.JLabel jLabelTirolina;

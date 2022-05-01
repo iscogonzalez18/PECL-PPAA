@@ -23,18 +23,22 @@ import java.util.logging.Logger;
  */
 public class Tirolina {
     
-    private ListaNiños colaEspera;
-    private ListaNiños enTirolina;
     private ListaMonitores monitor;
+    private ListaNiños colaEspera;
+    private ListaNiños preparacion;
+    private ListaNiños tirolina;
+    private ListaNiños finalizacion;
     private Lock cerrojo =new ReentrantLock();
     private Condition espera=cerrojo.newCondition();
     private Condition listo=cerrojo.newCondition();
     private Semaphore sem=new Semaphore(1,true);
 
-    public Tirolina(ListaNiños colaEspera, ListaNiños enTirolina, ListaMonitores monitor) {
-        this.colaEspera = colaEspera;
-        this.enTirolina = enTirolina;
+    public Tirolina(ListaMonitores monitor, ListaNiños colaEspera, ListaNiños preparacion, ListaNiños tirolina, ListaNiños finalizacion ) {
         this.monitor = monitor;
+        this.colaEspera = colaEspera;
+        this.preparacion = preparacion;
+        this.tirolina = tirolina;
+        this.finalizacion = finalizacion;
     }
             
     public void entrar(Niño n){
@@ -44,7 +48,7 @@ public class Tirolina {
             sem.acquire();
             colaEspera.sacar(n);
             System.out.println("Llega el niño "+n.getIdentificador()+" a la tirolina");
-            enTirolina.meter(n);
+            tirolina.meter(n);
             espera.signal();
             System.out.println("El niño "+n.getIdentificador()+" espera a que el monitor lo prepare");
             listo.await();
@@ -52,7 +56,7 @@ public class Tirolina {
             sleep(3500);
             n.sumaActividad(1);
             System.out.println("El niño "+n.getIdentificador()+" se va de la tirolina");
-            enTirolina.sacar(n);
+            tirolina.sacar(n);
             sem.release();
         } catch (InterruptedException ex) {
             Logger.getLogger(Tirolina.class.getName()).log(Level.SEVERE, null, ex);

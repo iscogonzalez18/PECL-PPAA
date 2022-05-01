@@ -5,6 +5,7 @@
  */
 package Actividades;
 
+import GUI.ListaMonitores;
 import GUI.ListaNiños;
 import Threads.Monitor;
 import Threads.Niño;
@@ -21,6 +22,7 @@ import java.util.logging.Logger;
  */
 public class Soga {
     
+    private ListaMonitores monitor; // Solo un monitor
     private ListaNiños cola;
     private ListaNiños equipo1;
     private ListaNiños equipo2;
@@ -28,7 +30,8 @@ public class Soga {
     private Lock cerrojo=new ReentrantLock();
     private Condition lleno=cerrojo.newCondition();
 
-    public Soga(ListaNiños cola, ListaNiños equipo1, ListaNiños equipo2) {
+    public Soga(ListaMonitores monitor, ListaNiños cola, ListaNiños equipo1, ListaNiños equipo2) {
+        this.monitor = monitor;
         this.cola=cola;
         this.equipo1 = equipo1;
         this.equipo2 = equipo2;

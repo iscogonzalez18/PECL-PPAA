@@ -39,12 +39,18 @@ public class Campamento {
     Condition sur = cerrojo.newCondition();
     Condition Norteabierto = cerrojo.newCondition();
     Condition Surabierto = cerrojo.newCondition();
-    
-    public Campamento()
-    {
+
+    public Campamento(Merienda merienda, Soga soga, Tirolina tirolina, ZonaComun zonaComun, EntradaNorte norte, EntradaSur sur) {
+        this.merienda = merienda;
+        this.soga = soga;
+        this.tirolina = tirolina;
+        this.zonaComun = zonaComun;
+        this.Norte = norte;
+        this.Sur = sur;
         this.capacidadDisponible = 50;
         this.capacidadActual = 0;
     }
+    
     
     
     

@@ -17,8 +17,8 @@ import javax.swing.JTextField;
  */
 public class ListaNiños {
     
-    ArrayList<Niño> lista;
-    JLabel label;
+    private ArrayList<Niño> lista;
+    private JLabel label;
     
     public ListaNiños(JLabel label)
     {
