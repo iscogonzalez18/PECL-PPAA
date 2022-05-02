@@ -49,11 +49,13 @@ public class InterfazSistema extends javax.swing.JFrame {
         jPanelControlVentana = new javax.swing.JPanel();
         jPanelCerrar = new javax.swing.JPanel();
         jLabelCerrar = new javax.swing.JLabel();
-        jPanelRunnear = new javax.swing.JPanel();
-        jLabelMinimizar = new javax.swing.JLabel();
+        jPanelStop = new javax.swing.JPanel();
+        jLabelStop = new javax.swing.JLabel();
         jPanelEspaciado = new javax.swing.JPanel();
         jPanelMinimizar = new javax.swing.JPanel();
-        jLabelMinimizar1 = new javax.swing.JLabel();
+        jLabelMinimizar = new javax.swing.JLabel();
+        jPanelRunnear = new javax.swing.JPanel();
+        jLabelRunnear = new javax.swing.JLabel();
         jPanelDatos = new javax.swing.JPanel();
         jPanelEntradaNorte = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -164,29 +166,29 @@ public class InterfazSistema extends javax.swing.JFrame {
 
         jPanelControlVentana.add(jPanelCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 5, 60, 25));
 
-        jPanelRunnear.setBackground(new java.awt.Color(39, 43, 51));
-        jPanelRunnear.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
-        jPanelRunnear.setPreferredSize(new java.awt.Dimension(60, 30));
-        jPanelRunnear.addMouseListener(new java.awt.event.MouseAdapter() {
+        jPanelStop.setBackground(new java.awt.Color(39, 43, 51));
+        jPanelStop.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
+        jPanelStop.setPreferredSize(new java.awt.Dimension(60, 30));
+        jPanelStop.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanelRunnearMouseClicked(evt);
+                jPanelStopMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jPanelRunnearMouseEntered(evt);
+                jPanelStopMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jPanelRunnearMouseExited(evt);
+                jPanelStopMouseExited(evt);
             }
         });
-        jPanelRunnear.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanelStop.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelMinimizar.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        jLabelMinimizar.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelMinimizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelMinimizar.setText("RUN");
-        jPanelRunnear.add(jLabelMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 25));
+        jLabelStop.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabelStop.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelStop.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelStop.setText("STOP");
+        jPanelStop.add(jLabelStop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 25));
 
-        jPanelControlVentana.add(jPanelRunnear, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 5, 60, 25));
+        jPanelControlVentana.add(jPanelStop, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 5, 60, 25));
 
         jPanelEspaciado.setBackground(new java.awt.Color(39, 43, 51));
 
@@ -219,13 +221,37 @@ public class InterfazSistema extends javax.swing.JFrame {
         });
         jPanelMinimizar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelMinimizar1.setFont(new java.awt.Font("Magneto", 0, 18)); // NOI18N
-        jLabelMinimizar1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelMinimizar1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelMinimizar1.setText("_");
-        jPanelMinimizar.add(jLabelMinimizar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 20));
+        jLabelMinimizar.setFont(new java.awt.Font("Magneto", 0, 18)); // NOI18N
+        jLabelMinimizar.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelMinimizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelMinimizar.setText("_");
+        jPanelMinimizar.add(jLabelMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 20));
 
         jPanelControlVentana.add(jPanelMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 5, 60, 25));
+
+        jPanelRunnear.setBackground(new java.awt.Color(39, 43, 51));
+        jPanelRunnear.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
+        jPanelRunnear.setPreferredSize(new java.awt.Dimension(60, 30));
+        jPanelRunnear.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelRunnearMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jPanelRunnearMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jPanelRunnearMouseExited(evt);
+            }
+        });
+        jPanelRunnear.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelRunnear.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabelRunnear.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelRunnear.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelRunnear.setText("RUN");
+        jPanelRunnear.add(jLabelRunnear, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 25));
+
+        jPanelControlVentana.add(jPanelRunnear, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 5, 60, 25));
 
         jPanelDatos.setBackground(new java.awt.Color(0, 0, 0));
         jPanelDatos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -660,17 +686,17 @@ public class InterfazSistema extends javax.swing.JFrame {
         setLocation(point.x - x, point.y - y);
     }//GEN-LAST:event_jPanelControlVentanaMouseDragged
 
-    private void jPanelRunnearMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRunnearMouseEntered
+    private void jPanelStopMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelStopMouseEntered
         // TODO add your handling code here:
-        jPanelRunnear.setBackground( new Color(122,130,142));
-    }//GEN-LAST:event_jPanelRunnearMouseEntered
+        jPanelStop.setBackground( new Color(122,130,142));
+    }//GEN-LAST:event_jPanelStopMouseEntered
 
-    private void jPanelRunnearMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRunnearMouseExited
+    private void jPanelStopMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelStopMouseExited
         // TODO add your handling code here:
-        jPanelRunnear.setBackground( new Color(39,43,51));
-    }//GEN-LAST:event_jPanelRunnearMouseExited
+        jPanelStop.setBackground( new Color(39,43,51));
+    }//GEN-LAST:event_jPanelStopMouseExited
 
-    private void jPanelRunnearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRunnearMouseClicked
+    private void jPanelStopMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelStopMouseClicked
         // TODO add your handling code here:
         
         //Merienda
@@ -718,7 +744,7 @@ public class InterfazSistema extends javax.swing.JFrame {
             Monitor monitor = new Monitor(m, campamento);
         }
         
-    }//GEN-LAST:event_jPanelRunnearMouseClicked
+    }//GEN-LAST:event_jPanelStopMouseClicked
 
     private void jPanelMinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelMinimizarMouseClicked
         // TODO add your handling code here:
@@ -734,6 +760,18 @@ public class InterfazSistema extends javax.swing.JFrame {
         // TODO add your handling code here:
         jPanelMinimizar.setBackground( new Color(39,43,51));
     }//GEN-LAST:event_jPanelMinimizarMouseExited
+
+    private void jPanelRunnearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRunnearMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanelRunnearMouseClicked
+
+    private void jPanelRunnearMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRunnearMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanelRunnearMouseEntered
+
+    private void jPanelRunnearMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRunnearMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanelRunnearMouseExited
 
     /**
      * @param args the command line arguments
@@ -810,7 +848,6 @@ public class InterfazSistema extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelEquipo2Soga;
     private javax.swing.JLabel jLabelFinalizacionTirolina;
     private javax.swing.JLabel jLabelMinimizar;
-    private javax.swing.JLabel jLabelMinimizar1;
     private javax.swing.JLabel jLabelMonitorSoga;
     private javax.swing.JLabel jLabelMonitorTirolina;
     private javax.swing.JLabel jLabelMonitoresMerienda;
@@ -818,6 +855,8 @@ public class InterfazSistema extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelNiñosComiendoMerienda;
     private javax.swing.JLabel jLabelNiñosZonaComun;
     private javax.swing.JLabel jLabelPreparacionTirolina;
+    private javax.swing.JLabel jLabelRunnear;
+    private javax.swing.JLabel jLabelStop;
     private javax.swing.JLabel jLabelTirolina;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -850,6 +889,7 @@ public class InterfazSistema extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelEspaciado;
     private javax.swing.JPanel jPanelMinimizar;
     private javax.swing.JPanel jPanelRunnear;
+    private javax.swing.JPanel jPanelStop;
     private javax.swing.JPanel jPanelVentana;
     // End of variables declaration//GEN-END:variables
 }
