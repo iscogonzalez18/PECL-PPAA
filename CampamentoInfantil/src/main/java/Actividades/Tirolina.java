@@ -10,6 +10,8 @@ import GUI.ListaNiños;
 import Threads.Monitor;
 import Threads.Niño;
 import static java.lang.Thread.sleep;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -33,6 +35,7 @@ public class Tirolina {
     private Condition listo=cerrojo.newCondition();
     private Semaphore sem=new Semaphore(1,true);
     private ZonaComun zona;
+    private CyclicBarrier barrera=new CyclicBarrier(2);
 
     public Tirolina(ListaMonitores monitor, ListaNiños colaEspera, ListaNiños preparacion, ListaNiños tirolina, ListaNiños finalizacion ) {
         this.monitor = monitor;
@@ -49,17 +52,24 @@ public class Tirolina {
             sem.acquire();
             colaEspera.sacar(n);
             System.out.println("Llega el niño "+n.getIdentificador()+" a la tirolina");
-            tirolina.meter(n);
-            espera.signal();
+            preparacion.meter(n);
+            barrera.await();
             System.out.println("El niño "+n.getIdentificador()+" espera a que el monitor lo prepare");
             listo.await();
+            preparacion.sacar(n);
+            tirolina.meter(n);
             System.out.println("El niño "+n.getIdentificador()+" se tira en tirolina");
-            sleep(3500);
+            tirolina.sacar(n);
+            sleep(3000);
+            finalizacion.meter(n);
+            sleep(500);
             n.sumaActividad(1);
             System.out.println("El niño "+n.getIdentificador()+" se va de la tirolina");
-            tirolina.sacar(n);
+            finalizacion.sacar(n);
             sem.release();
         } catch (InterruptedException ex) {
+            Logger.getLogger(Tirolina.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (BrokenBarrierException ex) {
             Logger.getLogger(Tirolina.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -81,7 +91,7 @@ public class Tirolina {
     public void preparar(Monitor m){
         while(true){
             try {
-                espera.await();
+                barrera.await();
                 System.out.println("El monitor "+m.getIdentificador()+" prepara la tirolina");
                 sleep(1000);
                 listo.signal();
@@ -92,6 +102,8 @@ public class Tirolina {
                     zona.paseo(m);
                 }
             } catch (InterruptedException ex) {
+                Logger.getLogger(Tirolina.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (BrokenBarrierException ex) {
                 Logger.getLogger(Tirolina.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
