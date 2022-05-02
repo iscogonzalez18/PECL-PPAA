@@ -116,6 +116,7 @@ public class Merienda {
             if (bandejasSucias>0){
                 cerrojo.lock();
                 try{
+                    //Lo de las bandejas lo podemos hacer con un semaforo
                     bandejasSucias--;
                     sucias.setText(Integer.toString(bandejasSucias));
                     sleep(2000+(int)(Math.random()*3001));

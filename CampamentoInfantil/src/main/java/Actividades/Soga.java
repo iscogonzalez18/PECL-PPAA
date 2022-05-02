@@ -44,7 +44,7 @@ public class Soga {
         cerrojo.lock();
         try{
             cola.meter(n);
-            System.out.println("El niño "+n.getName()+" entra en la cola de soga");
+            System.out.println("El niño "+n.getIdentificador()+" entra en la cola de soga");
             while (contador==10){
                 lleno.await();          //Se quedan en la cola si ya hay 10 niños para jugar
             }
@@ -55,6 +55,7 @@ public class Soga {
             cerrojo.unlock();
         }
         try {
+            barrera.await();
             barrera.await();
         } catch (InterruptedException ex) {
             Logger.getLogger(Soga.class.getName()).log(Level.SEVERE, null, ex);
@@ -75,10 +76,12 @@ public class Soga {
         }
         while (m.getContador()<10){
             try {
+                barrera.await();
                 if(contador==10){
                     for (int i=0;i<10;i++){
                        if (cont_1!=5&&cont_2!=5){
                            if ((int) (Math.random()*2)==0){
+                                //Error aqui   
                                equipo1.meter(cola.mirar(i));
                                System.out.println("El niño "+cola.mirar(i).getIdentificador()+" sale de la cola");
                                cont_1++;
