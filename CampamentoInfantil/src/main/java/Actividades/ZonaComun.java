@@ -30,6 +30,9 @@ public class ZonaComun {
     private ListaNiños colaNorte;
     private ListaNiños colaSur;
     private int alternancia; 
+    private Merienda merienda;
+    private Soga soga;
+    private Tirolina tirolina;
 
     public ZonaComun(ListaMonitores monitores, ListaNiños niños, Condition norte, Condition sur, ListaNiños colaNorte, ListaNiños colaSur) 
     {
@@ -45,6 +48,31 @@ public class ZonaComun {
     public synchronized void entrarNiño(Niño n)
     {
         niños.meter(n);   
+        try {
+            sleep(2000+(int) (2001*Math.random()));
+        } catch (InterruptedException ex) {
+            Logger.getLogger(ZonaComun.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        if (n.getActividades()>=15){
+            salirNiñoCampamento(n);
+        }else{
+            int x=(int) (3*Math.random());
+            switch (x){
+                case 0:
+                    niños.sacar(n);
+                    merienda.entrarNiño(n);
+                    break;
+                case 1:
+                    niños.sacar(n);
+                    soga.entrarNiño(n);
+                    break;
+                case 2:
+                    niños.sacar(n);
+                    tirolina.entrarNiño(n);
+                    break;     
+            }       
+        }
+        
     }
     
     public synchronized void salirNiño(Niño n)
