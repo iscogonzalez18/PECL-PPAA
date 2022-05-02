@@ -85,7 +85,26 @@ public class ZonaComun {
     
     public synchronized void entrarMonitor(Monitor m)
     {
-        monitores.meter(m);   
+        monitores.meter(m);  
+        String nombre=m.getIdentificador();
+        switch (nombre){
+            case "M1":
+                monitores.sacar(m);
+                merienda.entrarMonitor(m);
+                break;
+            case "M2":
+                monitores.sacar(m);
+                merienda.entrarMonitor(m);
+                break;
+            case "M3":
+                monitores.sacar(m);
+                tirolina.entrarMonitor(m);
+                break;
+            case "M4":
+                monitores.sacar(m);
+                soga.entrarMonitor(m);
+                break;
+        }
     }
     
     public synchronized void salirMonitor(Monitor m)

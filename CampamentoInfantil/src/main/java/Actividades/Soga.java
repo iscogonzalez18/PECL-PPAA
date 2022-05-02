@@ -64,6 +64,7 @@ public class Soga {
         finally{
             cerrojo.unlock();
         }
+        jugar(m);
     }
     
     public void jugar(Monitor m){

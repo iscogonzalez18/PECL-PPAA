@@ -72,6 +72,7 @@ public class Merienda {
         {
             cerrojo.unlock();
         }
+        limpiarYcocinar(m);
     }
     
     public void comer(Niño n)

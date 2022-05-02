@@ -51,15 +51,14 @@ public class EntradaNorte {
                 norte.await(); 
             }
             cola.sacar(n);
-            zonaComun.entrarNiño(n);
             ocupacion.incrementAndGet();
             System.out.println("Niño " + n.getIdentificador() +" entra por NORTE. Ocupación: " + ocupacion.get() + "\nCola Norte --> " + cola.tamaño());
-            
         }
         catch(InterruptedException e){}
         finally{
             cerrojo.unlock();
         }
+        zonaComun.entrarNiño(n);
     }
     
     public void entrarMonitor(Monitor m)
@@ -82,5 +81,6 @@ public class EntradaNorte {
         finally{
             cerrojo.unlock();
         }
+        
     }
 }

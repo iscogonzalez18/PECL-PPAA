@@ -86,6 +86,7 @@ public class Tirolina {
         {
             cerrojo.unlock();
         }
+        preparar(m);
     }
     
     public void preparar(Monitor m){
