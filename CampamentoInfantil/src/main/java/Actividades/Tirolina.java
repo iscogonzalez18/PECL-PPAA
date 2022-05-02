@@ -32,6 +32,7 @@ public class Tirolina {
     private Condition espera=cerrojo.newCondition();
     private Condition listo=cerrojo.newCondition();
     private Semaphore sem=new Semaphore(1,true);
+    private ZonaComun zona;
 
     public Tirolina(ListaMonitores monitor, ListaNiños colaEspera, ListaNiños preparacion, ListaNiños tirolina, ListaNiños finalizacion ) {
         this.monitor = monitor;
@@ -87,7 +88,8 @@ public class Tirolina {
                 m.sumaActividad();
                 if (m.getContador()==10){
                     System.out.println("El monitor "+m.getIdentificador()+" se va de paseo");
-                    //se va de paseo
+                    m.setContador(0);
+                    zona.paseo(m);
                 }
             } catch (InterruptedException ex) {
                 Logger.getLogger(Tirolina.class.getName()).log(Level.SEVERE, null, ex);

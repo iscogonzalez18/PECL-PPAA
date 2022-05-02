@@ -50,6 +50,11 @@ public class Monitor extends Thread{
     public int getContador() {
         return contador;
     }
+
+    public void setContador(int contador) {
+        this.contador = contador;
+    }
+    
     public synchronized void sumaActividad(){
         contador++;
     }
