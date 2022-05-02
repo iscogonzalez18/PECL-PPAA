@@ -34,7 +34,6 @@ public class Tirolina {
     private Condition espera=cerrojo.newCondition();
     private Condition listo=cerrojo.newCondition();
     private Semaphore sem=new Semaphore(1,true);
-    private ZonaComun zona;
     private CyclicBarrier barrera=new CyclicBarrier(2);
 
     public Tirolina(ListaMonitores monitor, ListaNiños colaEspera, ListaNiños preparacion, ListaNiños tirolina, ListaNiños finalizacion ) {

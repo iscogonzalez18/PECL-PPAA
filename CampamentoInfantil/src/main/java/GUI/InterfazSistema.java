@@ -717,7 +717,8 @@ public class InterfazSistema extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanelMinimizarMouseExited
 
     private void jPanelRunnearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRunnearMouseClicked
-        // TODO add your handling code here:
+        // TODO add your handling code here
+        
         //Merienda
         ListaMonitores monitoresMerienda = new ListaMonitores(jLabelMonitoresMerienda);
         ListaNiños colaMerienda = new ListaNiños(jLabelColaMerienda);
@@ -743,7 +744,6 @@ public class InterfazSistema extends javax.swing.JFrame {
         Lock cerrojo = new ReentrantLock();
         Condition norte = cerrojo.newCondition();
         Condition sur = cerrojo.newCondition();
-        Condition paso = cerrojo.newCondition(); // puertas cerradas
         
         //Zona Comun, Niños y monitores entran primero a la zona comun, y salen desde la zona comun
         ListaNiños colaNorte = new ListaNiños(jLabelEntradaNorte);

@@ -29,7 +29,6 @@ public class Soga {
     private int contador=0,cont_1=0,cont_2=0; //Contador de niños en la actividadn en equipo 1 y equipo 2
     private Lock cerrojo=new ReentrantLock();
     private Condition lleno=cerrojo.newCondition();
-    private ZonaComun zona;
 
     public Soga(ListaMonitores monitor, ListaNiños cola, ListaNiños equipo1, ListaNiños equipo2) {
         this.monitor = monitor;
@@ -128,7 +127,7 @@ public class Soga {
                     if (m.getContador()==10){
                         System.out.println("El monitor "+m.getIdentificador()+" se va de paseo");
                         m.setContador(0);
-                        zona.paseo(m);
+                        zonaComun.paseo(m);
                     }
                 }   
             } catch (InterruptedException ex) {

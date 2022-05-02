@@ -32,7 +32,6 @@ public class Merienda {
     private Lock cerrojo=new ReentrantLock();
     private Condition vacio=cerrojo.newCondition();
     private int bandejasLimpias=0, bandejasSucias=25,contador=0;
-    private ZonaComun zona;
 
     public Merienda(ListaMonitores monitores, ListaNiños colaEspera, ListaNiños comiendo, JLabel sucias, JLabel limpias) {
         this.monitores = monitores;
