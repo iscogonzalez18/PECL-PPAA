@@ -18,10 +18,11 @@ public class Monitor extends Thread{
     private Campamento camp;
     private int contador=0;
     
-    public Monitor( int num )
+    public Monitor( int num, Campamento camp)
     {
-        this.identificador = "M" + Integer.toString(num); //MX
         this.num = num;
+        this.identificador = "M" + Integer.toString(num); //MX
+        this.camp = camp;
     }
 
     public String getIdentificador() {

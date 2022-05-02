@@ -5,8 +5,11 @@
  */
 package Entradas;
 
+import Actividades.ZonaComun;
+import Clases.Campamento;
 import GUI.ListaNiños;
 import Threads.Niño;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -17,18 +20,22 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class EntradaNorte {
     
+    private AtomicInteger ocupacion;
     private boolean abierto;
     private ListaNiños cola;
-    private Lock cerrojo = new ReentrantLock();
+    private ZonaComun zonaComun;
+    private Lock cerrojo;
     private Condition norte;
-    private Condition paso = cerrojo.newCondition();
-    
-    public EntradaNorte(ListaNiños cola, Condition norte)
-    {
-        this.abierto = false;
+
+    public EntradaNorte(AtomicInteger ocupacion, ListaNiños cola, ZonaComun zonaComun, Lock cerrojo, Condition norte) {
+        this.ocupacion = ocupacion;
         this.cola = cola;
+        this.zonaComun= zonaComun;
+        this.cerrojo = cerrojo;
         this.norte = norte;
     }
+    
+    
     /**
     public void entradaNorte(Niño n)
     {

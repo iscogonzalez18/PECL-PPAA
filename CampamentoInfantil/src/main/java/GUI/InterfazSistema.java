@@ -10,10 +10,16 @@ import Actividades.Soga;
 import Actividades.Tirolina;
 import Actividades.ZonaComun;
 import Clases.Campamento;
+import Entradas.EntradaNorte;
+import Entradas.EntradaSur;
 import Threads.Monitor;
 import java.awt.Color;
 import java.awt.MouseInfo;
 import java.awt.Point;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  *
@@ -690,16 +696,26 @@ public class InterfazSistema extends javax.swing.JFrame {
         ListaNiños niñosZonaComun = new ListaNiños(jLabelNiñosZonaComun);  
         ZonaComun zonaComun = new ZonaComun(monitoresZonaComun, niñosZonaComun);
         
-        //EntradaNorte
+        //Lock explícito y condicion
+        Lock cerrojo = new ReentrantLock();
+        Condition norte = cerrojo.newCondition();
+        Condition sur = cerrojo.newCondition();
         
+        //Ocupacion
+        AtomicInteger ocupacion = new AtomicInteger(0);
+        //EntradaNorte
+        ListaNiños colaNorte = new ListaNiños(jLabelEntradaNorte);
+        EntradaNorte entradaNorte = new EntradaNorte(ocupacion, colaNorte, zonaComun, cerrojo, norte);
         //EntradaSur
+        ListaNiños colaSur = new ListaNiños(jLabelEntradaSur);
+        EntradaSur entradaSur = new EntradaSur(ocupacion, colaSur, zonaComun, cerrojo, norte);
         
         //Campamento
-        //Campamento campamento = new Campamento(merienda, soga, tirolina, zonaComun);//faltan las entradas
+        Campamento campamento = new Campamento(merienda, soga, tirolina, zonaComun, entradaNorte, entradaSur, ocupacion);
         
         for (int m = 1; m <= 4; m++)
         {
-            Monitor monitor = new Monitor(m);
+            Monitor monitor = new Monitor(m, campamento);
         }
         
     }//GEN-LAST:event_jPanelRunnearMouseClicked

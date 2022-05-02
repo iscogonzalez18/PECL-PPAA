@@ -14,6 +14,7 @@ import Actividades.ZonaComun;
 import GUI.ListaNiños;
 import Threads.Niño;
 import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -25,7 +26,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Campamento {
     
     private int capacidadDisponible;
-    private int capacidadActual;
+    private AtomicInteger capacidadActual;
     private Merienda merienda;
     private Soga soga;
     private Tirolina tirolina;
@@ -40,7 +41,7 @@ public class Campamento {
     Condition Norteabierto = cerrojo.newCondition();
     Condition Surabierto = cerrojo.newCondition();
 
-    public Campamento(Merienda merienda, Soga soga, Tirolina tirolina, ZonaComun zonaComun, EntradaNorte norte, EntradaSur sur) {
+    public Campamento(Merienda merienda, Soga soga, Tirolina tirolina, ZonaComun zonaComun, EntradaNorte norte, EntradaSur sur, AtomicInteger capacidadActual) {
         this.merienda = merienda;
         this.soga = soga;
         this.tirolina = tirolina;
@@ -48,7 +49,7 @@ public class Campamento {
         this.Norte = norte;
         this.Sur = sur;
         this.capacidadDisponible = 50;
-        this.capacidadActual = 0;
+        this.capacidadActual = capacidadActual;
     }
     
     

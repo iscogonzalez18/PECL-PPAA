@@ -5,6 +5,8 @@
  */
 package Threads;
 
+import Clases.Campamento;
+
 /**
  *
  * @author Francisco
@@ -13,12 +15,14 @@ public class Niño extends Thread {
     
     private String identificador; //NXXXX
     private int num;
+    private Campamento camp;
     private int contador=0,actividades=0; //Contador de actividades
 
-    public Niño(int num) 
+    public Niño(int num, Campamento camp) 
     {
         this.num = num;
         this.identificador = generaNombre(num);
+        this.camp = camp;
     }
     
     public String generaNombre(int n)
