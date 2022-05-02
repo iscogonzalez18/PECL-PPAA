@@ -8,11 +8,15 @@ package Entradas;
 import Actividades.ZonaComun;
 import Clases.Campamento;
 import GUI.ListaNiños;
+import Threads.Monitor;
 import Threads.Niño;
+import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -35,29 +39,44 @@ public class EntradaNorte {
         this.norte = norte;
     }
     
-    
-    /**
-    public void entradaNorte(Niño n)
+    public void entrarNiño(Niño n)
     {
         cerrojo.lock();
-        try{
-            colaNorte.meter(n);
-            while(!abiertoNorte)
+        try
+        {
+            while(this.ocupacion.get()== 50 || !abierto)
             {
-                Norteabierto.await();
+                cola.meter(n);
+                norte.await(); 
             }
-            while(this.capacidadActual == this.capacidadDisponible)
-            {
-                norte.await();
-            }
-            colaNorte.sacar(n);
-            zonaComun.entrar(n);
-            System.out.println("Persona noseque entrando por NORTE. Ocupación: " + capacidadActual + "Colas: " + colaNorte.tamaño()+ ";"+ colaSur.tamaño());
+            cola.sacar(n);
+            zonaComun.entrarNiño(n);
+            System.out.println("Persona noseque entrando por NORTE. Ocupación: " + ocupacion.get() + "\nCola Norte --> " + cola.tamaño());
             
         }
         catch(InterruptedException e){}
         finally{
             cerrojo.unlock();
         }
-    }**/
+    }
+    
+    public void entrarMonitor(Monitor m)
+    {
+        cerrojo.lock();
+        try
+        {
+            if(!abierto)
+            {
+                Random r = new Random();
+                Thread.sleep(500+ r.nextInt(1000));
+                abierto = true;
+                norte.signalAll();
+            }
+            zonaComun.entrarMonitor(m);
+        }
+        catch(InterruptedException e){}
+        finally{
+            cerrojo.unlock();
+        }
+    }
 }

@@ -698,18 +698,20 @@ public class InterfazSistema extends javax.swing.JFrame {
 
     private void jPanelStopMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelStopMouseClicked
         // TODO add your handling code here:
-        
+            
         //Merienda
         ListaMonitores monitoresMerienda = new ListaMonitores(jLabelMonitoresMerienda);
         ListaNiños colaMerienda = new ListaNiños(jLabelColaMerienda);
         ListaNiños comiendoMerienda = new ListaNiños(jLabelNiñosComiendoMerienda);
         Merienda merienda = new Merienda(monitoresMerienda, colaMerienda, comiendoMerienda, jLabelBandejasSuciasMerienda, jLabelBandejasLimpiasMerienda);
+        
         //Soga
         ListaNiños colaSoga = new ListaNiños(jLabelColaSoga);
         ListaNiños equipo1Soga = new ListaNiños(jLabelEquipo1Soga);
         ListaNiños equipo2Soga = new ListaNiños(jLabelEquipo2Soga);
         ListaMonitores monitorSoga = new ListaMonitores(jLabelMonitorSoga);
         Soga soga = new Soga(monitorSoga, colaSoga, equipo1Soga, equipo2Soga);
+        
         //Tirolina
         ListaMonitores monitorTirolina = new ListaMonitores(jLabelMonitorTirolina);
         ListaNiños colaTirolina = new ListaNiños(jLabelColaTirolina);
@@ -717,24 +719,30 @@ public class InterfazSistema extends javax.swing.JFrame {
         ListaNiños entirolina = new ListaNiños(jLabelTirolina);
         ListaNiños finalizacionTirolina = new ListaNiños(jLabelFinalizacionTirolina);     
         Tirolina tirolina = new Tirolina(monitorTirolina, colaTirolina, preparacionTirolina, entirolina, finalizacionTirolina);
-        //Zona Comun
-        ListaMonitores monitoresZonaComun = new ListaMonitores(jLabelMonitoresZonaComun);
-        ListaNiños niñosZonaComun = new ListaNiños(jLabelNiñosZonaComun);  
-        ZonaComun zonaComun = new ZonaComun(monitoresZonaComun, niñosZonaComun);
         
         //Lock explícito y condicion
         Lock cerrojo = new ReentrantLock();
         Condition norte = cerrojo.newCondition();
         Condition sur = cerrojo.newCondition();
+        Condition paso = cerrojo.newCondition(); // puertas cerradas
+        
+        //Zona Comun, Niños y monitores entran primero a la zona comun, y salen desde la zona comun
+        ListaNiños colaNorte = new ListaNiños(jLabelEntradaNorte);
+        ListaNiños colaSur = new ListaNiños(jLabelEntradaSur);
+        ListaMonitores monitoresZonaComun = new ListaMonitores(jLabelMonitoresZonaComun);
+        ListaNiños niñosZonaComun = new ListaNiños(jLabelNiñosZonaComun);  
+        ZonaComun zonaComun = new ZonaComun(monitoresZonaComun, niñosZonaComun, norte, sur, colaNorte, colaSur);
         
         //Ocupacion
         AtomicInteger ocupacion = new AtomicInteger(0);
-        //EntradaNorte
-        ListaNiños colaNorte = new ListaNiños(jLabelEntradaNorte);
+        
+        //EntradaNorte 
         EntradaNorte entradaNorte = new EntradaNorte(ocupacion, colaNorte, zonaComun, cerrojo, norte);
-        //EntradaSur
-        ListaNiños colaSur = new ListaNiños(jLabelEntradaSur);
+        
+        //EntradaSur 
         EntradaSur entradaSur = new EntradaSur(ocupacion, colaSur, zonaComun, cerrojo, norte);
+        
+        
         
         //Campamento
         Campamento campamento = new Campamento(merienda, soga, tirolina, zonaComun, entradaNorte, entradaSur, ocupacion);

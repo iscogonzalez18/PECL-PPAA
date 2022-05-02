@@ -10,6 +10,7 @@ import GUI.ListaNiños;
 import Threads.Monitor;
 import Threads.Niño;
 import static java.lang.Thread.sleep;
+import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
@@ -24,20 +25,41 @@ public class ZonaComun {
     private ListaMonitores monitores;
     private ListaNiños niños;
     private Lock cerrojo= new ReentrantLock();
+    private Condition norte;
+    private Condition sur;
+    private ListaNiños colaNorte;
+    private ListaNiños colaSur;
+    private int alternancia; 
 
-    public ZonaComun(ListaMonitores monitores, ListaNiños niños) {
+    public ZonaComun(ListaMonitores monitores, ListaNiños niños, Condition norte, Condition sur, ListaNiños colaNorte, ListaNiños colaSur) 
+    {
         this.monitores = monitores;
         this.niños = niños;
+        this.norte = norte;
+        this.sur = sur;
+        this.colaNorte = colaNorte;
+        this.colaSur = colaSur;
+        this.alternancia = 0;
     }
-    
-    public synchronized void entrar(Niño n)
+
+    public synchronized void entrarNiño(Niño n)
     {
         niños.meter(n);   
     }
     
-    public synchronized void salir(Niño n)
+    public synchronized void salirNiño(Niño n)
     {
         niños.sacar(n);     
+    }
+    
+    public synchronized void entrarMonitor(Monitor m)
+    {
+        monitores.meter(m);   
+    }
+    
+    public synchronized void salirMonitor(Monitor m)
+    {
+        monitores.sacar(m);     
     }
     
     public void paseo (Monitor m){
@@ -58,5 +80,34 @@ public class ZonaComun {
     public int tamañoMonitores()
     {
         return monitores.tamaño();
+    }
+    
+    public void salirCampamento(Niño n)
+    {
+        cerrojo.lock();
+        try {
+            niños.sacar(n);
+            System.out.println("Persona " + n.getIdentificador() + " SALIENDO.");
+            if(colaNorte.tamaño() > 0 && colaSur.tamaño() > 0){
+                //personas esperando en las dos entradas (alternancia)
+                if(alternancia == 0)
+                {
+                    sur.signal();
+                    alternancia = 1;
+                }
+                else{
+                    norte.signal();
+                    alternancia = 0;
+                }
+            }
+            else{
+                if(colaNorte.tamaño() > 0)
+                    norte.signal();
+                else if (colaSur.tamaño() > 0)
+                    sur.signal();
+            }
+        } finally {
+            cerrojo.unlock();
+        }
     }
 }

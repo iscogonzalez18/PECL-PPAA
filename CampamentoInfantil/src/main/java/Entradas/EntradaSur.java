@@ -8,7 +8,9 @@ package Entradas;
 import Actividades.ZonaComun;
 import Clases.Campamento;
 import GUI.ListaNiños;
+import Threads.Monitor;
 import Threads.Niño;
+import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -24,39 +26,53 @@ public class EntradaSur {
     private ListaNiños cola;
     private ZonaComun zonaComun;
     private Lock cerrojo;
-    private Condition norte;
+    private Condition sur;
 
-    public EntradaSur(AtomicInteger ocupacion, ListaNiños cola, ZonaComun zonaComun, Lock cerrojo, Condition norte) {
+    public EntradaSur(AtomicInteger ocupacion, ListaNiños cola, ZonaComun zonaComun, Lock cerrojo, Condition sur) {
         this.ocupacion = ocupacion;
         this.cola = cola;
         this.zonaComun = zonaComun;
         this.cerrojo = cerrojo;
-        this.norte = norte;
+        this.sur = sur;
     }
     
-    
-    /**
-     public void entradaSur(Niño n)
+     public void entrarNiño(Niño n)
     {
         cerrojo.lock();
         try{
-            colaSur.meter(n);
-            while(!abiertoSur)
+            while(this.ocupacion.get()== 50 || !abierto)
             {
-                Surabierto.await();
+                cola.meter(n);
+                sur.await(); 
             }
-            while(this.capacidadActual == this.capacidadDisponible)
-            {
-                norte.await();
-            }
-            colaSur.sacar(n);
-            zonaComun.entrar(n);
-            System.out.println("Persona noseque entrando por SUR. Ocupación: " + capacidadActual + "Colas: " + colaNorte.tamaño()+ ";"+ colaSur.tamaño());
+            cola.sacar(n);
+            zonaComun.entrarNiño(n);
+            System.out.println("Persona noseque entrando por SUR. Ocupación: " + ocupacion.get() + "\nCola SUR --> " + cola.tamaño());
             
         }
         catch(InterruptedException e){}
         finally{
             cerrojo.unlock();
         }
-    }**/
+    }
+     
+    public void entrarMonitor(Monitor m)
+    {
+        cerrojo.lock();
+        try
+        {
+            if(!abierto)
+            {
+                Random r = new Random();
+                Thread.sleep(500+ r.nextInt(1000));
+                abierto = true;
+                sur.signalAll();
+            }
+            zonaComun.entrarMonitor(m);
+        }
+        catch(InterruptedException e){}
+        finally{
+            cerrojo.unlock();
+        }
+    }
 }
