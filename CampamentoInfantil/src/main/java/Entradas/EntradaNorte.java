@@ -33,6 +33,7 @@ public class EntradaNorte {
 
     public EntradaNorte(AtomicInteger ocupacion, ListaNiños cola, ZonaComun zonaComun, Lock cerrojo, Condition norte) {
         this.ocupacion = ocupacion;
+        this.abierto = false;
         this.cola = cola;
         this.zonaComun= zonaComun;
         this.cerrojo = cerrojo;
@@ -51,7 +52,8 @@ public class EntradaNorte {
             }
             cola.sacar(n);
             zonaComun.entrarNiño(n);
-            System.out.println("Persona noseque entrando por NORTE. Ocupación: " + ocupacion.get() + "\nCola Norte --> " + cola.tamaño());
+            ocupacion.incrementAndGet();
+            System.out.println("Niño " + n.getIdentificador() +" entra por NORTE. Ocupación: " + ocupacion.get() + "\nCola Norte --> " + cola.tamaño());
             
         }
         catch(InterruptedException e){}
@@ -68,11 +70,13 @@ public class EntradaNorte {
             if(!abierto)
             {
                 Random r = new Random();
+                System.out.println("Puerta NORTE cerrada, monitor "+m.getIdentificador()+" abriendo...");
                 Thread.sleep(500+ r.nextInt(1000));
                 abierto = true;
                 norte.signalAll();
             }
             zonaComun.entrarMonitor(m);
+            System.out.println("Monitor "+m.getIdentificador()+" entra por NORTE");
         }
         catch(InterruptedException e){}
         finally{

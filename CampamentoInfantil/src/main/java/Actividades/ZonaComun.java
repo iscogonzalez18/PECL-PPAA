@@ -82,7 +82,7 @@ public class ZonaComun {
         return monitores.tamaño();
     }
     
-    public void salirCampamento(Niño n)
+    public void salirNiñoCampamento(Niño n)
     {
         cerrojo.lock();
         try {

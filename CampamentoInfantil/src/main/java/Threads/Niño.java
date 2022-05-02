@@ -6,6 +6,9 @@
 package Threads;
 
 import Clases.Campamento;
+import Entradas.EntradaNorte;
+import Entradas.EntradaSur;
+import java.util.Random;
 
 /**
  *
@@ -17,12 +20,16 @@ public class Niño extends Thread {
     private int num;
     private Campamento camp;
     private int contador=0,actividades=0; //Contador de actividades
+    private EntradaNorte entradaNorte;
+    private EntradaSur entradaSur;
 
-    public Niño(int num, Campamento camp) 
+    public Niño(int num, Campamento camp,EntradaNorte entradaNorte, EntradaSur entradaSur) 
     {
         this.num = num;
         this.identificador = generaNombre(num);
         this.camp = camp;
+        this.entradaNorte = entradaNorte;
+        this.entradaSur = entradaSur;
     }
     
     public String generaNombre(int n)
@@ -70,7 +77,14 @@ public class Niño extends Thread {
     
     public void run()
     {
-        
+        Random r = new Random();
+        if(r.nextDouble()<0.5)
+        {
+            entradaNorte.entrarNiño(this);
+        }
+        else{
+            entradaSur.entrarNiño(this);
+        }
     }
     
     

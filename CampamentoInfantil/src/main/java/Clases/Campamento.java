@@ -12,6 +12,7 @@ import Actividades.Soga;
 import Actividades.Tirolina;
 import Actividades.ZonaComun;
 import GUI.ListaNiños;
+import Threads.Monitor;
 import Threads.Niño;
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -50,6 +51,46 @@ public class Campamento {
         this.Sur = sur;
         this.capacidadDisponible = 50;
         this.capacidadActual = capacidadActual;
+    }
+    
+    public void entrarNiñoMerienda(Niño n)
+    {
+        merienda.entrarNiño(n);
+    }
+    
+    public void entrarNiñoSoga(Niño n)
+    {
+        soga.entrarNiño(n);
+    }
+    
+    public void entrarNiñoTirolina(Niño n)
+    {
+        tirolina.entrarNiño(n);
+    }
+    
+    public void entrarNiñoZonaComun(Niño n)
+    {
+        zonaComun.entrarNiño(n);
+    }
+    
+    public void entrarMonitorMerienda(Monitor m)
+    {
+        merienda.entrarMonitor(m);
+    }
+    
+    public void entrarMonitorSoga(Monitor m)
+    {
+        soga.entrarMonitor(m);
+    }
+    
+    public void entrarMonitorTirolina(Monitor m)
+    {
+        tirolina.entrarMonitor(m);
+    }
+    
+    public void entrarMonitorZonaComun(Monitor m)
+    {
+        zonaComun.entrarMonitor(m);
     }
     
     

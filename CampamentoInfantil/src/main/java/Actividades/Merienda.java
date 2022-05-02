@@ -25,6 +25,7 @@ import javax.swing.JLabel;
 public class Merienda {
     
     private ListaMonitores monitores;
+    private int contadorServidas;
     private ListaNiños colaEspera,comiendo;
     private JLabel sucias,limpias;
     private Semaphore sem= new Semaphore(20,true);
@@ -44,13 +45,27 @@ public class Merienda {
     
     
     
-    public void entrar(Niño n)
+    public void entrarNiño(Niño n)
     {
         cerrojo.lock();
         try
         {
             colaEspera.meter(n);
             System.out.println("El niño "+n.getIdentificador()+" ha entrado en la cola de merienda");
+        }
+        finally
+        {
+            cerrojo.unlock();
+        }
+    }
+    
+    public void entrarMonitor(Monitor m)
+    {
+        cerrojo.lock();
+        try
+        {
+            monitores.meter(m);
+            System.out.println("El monitor "+m.getIdentificador()+" ha entrado en merienda");
         }
         finally
         {

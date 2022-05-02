@@ -47,7 +47,8 @@ public class EntradaSur {
             }
             cola.sacar(n);
             zonaComun.entrarNiño(n);
-            System.out.println("Persona noseque entrando por SUR. Ocupación: " + ocupacion.get() + "\nCola SUR --> " + cola.tamaño());
+            ocupacion.incrementAndGet();
+            System.out.println("Niño " + n.getIdentificador() +" entra por SUR. Ocupación: " + ocupacion.get() + "\nCola SUR --> " + cola.tamaño());
             
         }
         catch(InterruptedException e){}
@@ -64,11 +65,13 @@ public class EntradaSur {
             if(!abierto)
             {
                 Random r = new Random();
+                System.out.println("Puerta SUR cerrada, monitor "+m.getIdentificador()+" abriendo...");
                 Thread.sleep(500+ r.nextInt(1000));
                 abierto = true;
                 sur.signalAll();
             }
             zonaComun.entrarMonitor(m);
+            System.out.println("Monitor "+m.getIdentificador()+" entra por SUR");
         }
         catch(InterruptedException e){}
         finally{

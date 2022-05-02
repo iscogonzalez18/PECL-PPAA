@@ -41,7 +41,7 @@ public class Tirolina {
         this.finalizacion = finalizacion;
     }
             
-    public void entrar(Niño n){
+    public void entrarNiño(Niño n){
         try {
             System.out.println("Llega el niño "+n.getIdentificador()+" a la cola de la tirolina");
             colaEspera.meter(n);
@@ -60,6 +60,20 @@ public class Tirolina {
             sem.release();
         } catch (InterruptedException ex) {
             Logger.getLogger(Tirolina.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void entrarMonitor(Monitor m)
+    {
+        cerrojo.lock();
+        try
+        {
+            monitor.meter(m);
+            System.out.println("El monitor "+m.getIdentificador()+" ha entrado en tirolina");
+        }
+        finally
+        {
+            cerrojo.unlock();
         }
     }
     

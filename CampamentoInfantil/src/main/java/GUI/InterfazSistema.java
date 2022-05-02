@@ -13,6 +13,7 @@ import Clases.Campamento;
 import Entradas.EntradaNorte;
 import Entradas.EntradaSur;
 import Threads.Monitor;
+import Threads.Niño;
 import java.awt.Color;
 import java.awt.MouseInfo;
 import java.awt.Point;
@@ -698,7 +699,25 @@ public class InterfazSistema extends javax.swing.JFrame {
 
     private void jPanelStopMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelStopMouseClicked
         // TODO add your handling code here:
-            
+    }//GEN-LAST:event_jPanelStopMouseClicked
+
+    private void jPanelMinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelMinimizarMouseClicked
+        // TODO add your handling code here:
+        this.setState(this.ICONIFIED);
+    }//GEN-LAST:event_jPanelMinimizarMouseClicked
+
+    private void jPanelMinimizarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelMinimizarMouseEntered
+        // TODO add your handling code here:
+        jPanelMinimizar.setBackground( new Color(122,130,142));
+    }//GEN-LAST:event_jPanelMinimizarMouseEntered
+
+    private void jPanelMinimizarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelMinimizarMouseExited
+        // TODO add your handling code here:
+        jPanelMinimizar.setBackground( new Color(39,43,51));
+    }//GEN-LAST:event_jPanelMinimizarMouseExited
+
+    private void jPanelRunnearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRunnearMouseClicked
+        // TODO add your handling code here:
         //Merienda
         ListaMonitores monitoresMerienda = new ListaMonitores(jLabelMonitoresMerienda);
         ListaNiños colaMerienda = new ListaNiños(jLabelColaMerienda);
@@ -741,44 +760,34 @@ public class InterfazSistema extends javax.swing.JFrame {
         
         //EntradaSur 
         EntradaSur entradaSur = new EntradaSur(ocupacion, colaSur, zonaComun, cerrojo, norte);
-        
-        
-        
+            
         //Campamento
         Campamento campamento = new Campamento(merienda, soga, tirolina, zonaComun, entradaNorte, entradaSur, ocupacion);
         
-        for (int m = 1; m <= 4; m++)
+        for (int n = 1; n <=10; n++)
         {
-            Monitor monitor = new Monitor(m, campamento);
+            Niño niño = new Niño(n, campamento, entradaNorte, entradaSur);
+            niño.start();
         }
         
-    }//GEN-LAST:event_jPanelStopMouseClicked
-
-    private void jPanelMinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelMinimizarMouseClicked
-        // TODO add your handling code here:
-        this.setState(this.ICONIFIED);
-    }//GEN-LAST:event_jPanelMinimizarMouseClicked
-
-    private void jPanelMinimizarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelMinimizarMouseEntered
-        // TODO add your handling code here:
-        jPanelMinimizar.setBackground( new Color(122,130,142));
-    }//GEN-LAST:event_jPanelMinimizarMouseEntered
-
-    private void jPanelMinimizarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelMinimizarMouseExited
-        // TODO add your handling code here:
-        jPanelMinimizar.setBackground( new Color(39,43,51));
-    }//GEN-LAST:event_jPanelMinimizarMouseExited
-
-    private void jPanelRunnearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRunnearMouseClicked
-        // TODO add your handling code here:
+        //AlternanciaMonitoresEntrada
+        AtomicInteger alternanciaMonitores = new AtomicInteger(0);
+        
+        for (int m = 1; m <= 4; m++)
+        {
+            Monitor monitor = new Monitor(m, campamento, entradaNorte, entradaSur, alternanciaMonitores);
+            monitor.start();
+        }
     }//GEN-LAST:event_jPanelRunnearMouseClicked
 
     private void jPanelRunnearMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRunnearMouseEntered
         // TODO add your handling code here:
+        jPanelRunnear.setBackground( new Color(122,130,142));
     }//GEN-LAST:event_jPanelRunnearMouseEntered
 
     private void jPanelRunnearMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRunnearMouseExited
         // TODO add your handling code here:
+        jPanelRunnear.setBackground( new Color(39,43,51));
     }//GEN-LAST:event_jPanelRunnearMouseExited
 
     /**

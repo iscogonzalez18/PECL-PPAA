@@ -37,7 +37,7 @@ public class Soga {
         this.equipo2 = equipo2;
     }
     
-    public void entrar(Niño n){
+    public void entrarNiño(Niño n){
         cerrojo.lock();
         try{
             cola.meter(n);
@@ -49,6 +49,17 @@ public class Soga {
             
         }
         catch(InterruptedException e){}
+        finally{
+            cerrojo.unlock();
+        }
+    }
+    
+    public void entrarMonitor(Monitor m){
+        cerrojo.lock();
+        try{
+            monitor.meter(m);
+            System.out.println("El monitor "+m.getIdentificador()+" entra en soga");            
+        }
         finally{
             cerrojo.unlock();
         }
