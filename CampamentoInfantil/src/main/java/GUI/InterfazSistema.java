@@ -750,7 +750,7 @@ public class InterfazSistema extends javax.swing.JFrame {
         ListaNiños colaSur = new ListaNiños(jLabelEntradaSur);
         ListaMonitores monitoresZonaComun = new ListaMonitores(jLabelMonitoresZonaComun);
         ListaNiños niñosZonaComun = new ListaNiños(jLabelNiñosZonaComun);  
-        ZonaComun zonaComun = new ZonaComun(monitoresZonaComun, niñosZonaComun, norte, sur, colaNorte, colaSur);
+        ZonaComun zonaComun = new ZonaComun(monitoresZonaComun, niñosZonaComun, norte, sur, colaNorte, colaSur, merienda, soga, tirolina);
         
         //Ocupacion
         AtomicInteger ocupacion = new AtomicInteger(0);
