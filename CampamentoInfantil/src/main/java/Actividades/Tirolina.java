@@ -54,12 +54,12 @@ public class Tirolina {
             preparacion.meter(n);
             barrera.await();
             System.out.println("El niño "+n.getIdentificador()+" espera a que el monitor lo prepare");
-            listo.await();
+            barrera.await();
             preparacion.sacar(n);
             tirolina.meter(n);
             System.out.println("El niño "+n.getIdentificador()+" se tira en tirolina");
-            tirolina.sacar(n);
             sleep(3000);
+            tirolina.sacar(n);
             finalizacion.meter(n);
             sleep(500);
             n.sumaActividad(1);
@@ -85,16 +85,12 @@ public class Tirolina {
         {
             cerrojo.unlock();
         }
-        preparar(m);
-    }
-    
-    public void preparar(Monitor m){
         while(m.getContador()<10){
             try {
                 barrera.await();
                 System.out.println("El monitor "+m.getIdentificador()+" prepara la tirolina");
                 sleep(1000);
-                listo.signal();
+                barrera.await();
                 m.sumaActividad();
                 if (m.getContador()==10){
                     System.out.println("El monitor "+m.getIdentificador()+" se va de paseo");
@@ -105,6 +101,6 @@ public class Tirolina {
                 Logger.getLogger(Tirolina.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-    }
-    
+        monitor.sacar(m);
+    }    
 }

@@ -44,7 +44,6 @@ public class Merienda {
     }
     
     
-    
     public void entrarNiño(Niño n)
     {
         cerrojo.lock();
@@ -57,35 +56,16 @@ public class Merienda {
         {
             cerrojo.unlock();
         }
-    }
-    
-    public void entrarMonitor(Monitor m)
-    {
-        cerrojo.lock();
-        try
-        {
-            monitores.meter(m);
-            System.out.println("El monitor "+m.getIdentificador()+" ha entrado en merienda");
-        }
-        finally
-        {
-            cerrojo.unlock();
-        }
-        limpiarYcocinar(m);
-    }
-    
-    public void comer(Niño n)
-    {
         while (bandejasLimpias==0)
         {
-            try
+            /*try
             {
-                vacio.await();
+                // aqui error wait();
             } 
-            catch (InterruptedException ex) 
+            /*catch (InterruptedException ex) 
             {
                 Logger.getLogger(Merienda.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            }*/
         }
         try 
         {
@@ -97,6 +77,8 @@ public class Merienda {
             cerrojo.lock();
             try
             {
+                bandejasLimpias--;
+                limpias.setText(Integer.toString(bandejasLimpias));
                 bandejasSucias++;
                 sucias.setText(Integer.toString(bandejasSucias));
             }
@@ -118,29 +100,39 @@ public class Merienda {
         }
     }
     
-    public void limpiarYcocinar(Monitor m){
+    public void entrarMonitor(Monitor m)
+    {
+        cerrojo.lock();
+        try
+        {
+            monitores.meter(m);
+            System.out.println("El monitor "+m.getIdentificador()+" ha entrado en merienda");
+        }
+        finally
+        {
+            cerrojo.unlock();
+        }
         while (m.getContador()<10){
             if (bandejasSucias>0){
                 cerrojo.lock();
                 try{
                     bandejasSucias--;
                     sucias.setText(Integer.toString(bandejasSucias));
+                    sleep(2000+(int)(Math.random()*3001));
                     bandejasLimpias++;
                     limpias.setText(Integer.toString(bandejasLimpias));
                     m.sumaActividad();
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(Merienda.class.getName()).log(Level.SEVERE, null, ex);
                 }finally{
                     cerrojo.unlock();
                 }
-                try {
-                    sleep(2000+(int)(Math.random()*3001));
-                } catch (InterruptedException ex) {
-                    Logger.getLogger(Merienda.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                //aqui error 
                 if (m.getContador()==10){
                     System.out.println("El monitor "+m.getIdentificador()+" se va de paseo");
                 }
             }
         }
-    }
-         
+        monitores.sacar(m);
+    }         
 }

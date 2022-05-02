@@ -5,6 +5,10 @@
  */
 package Threads;
 
+import Actividades.Merienda;
+import Actividades.Soga;
+import Actividades.Tirolina;
+import Actividades.ZonaComun;
 import Clases.Campamento;
 import Entradas.EntradaNorte;
 import Entradas.EntradaSur;
@@ -22,15 +26,23 @@ public class Niño extends Thread {
     private int contador=0,actividades=0; //Contador de actividades
     private EntradaNorte entradaNorte;
     private EntradaSur entradaSur;
+    private ZonaComun zonaComun;
+    private Merienda merienda;
+    private Tirolina tirolina;
+    private Soga soga;
 
-    public Niño(int num, Campamento camp,EntradaNorte entradaNorte, EntradaSur entradaSur) 
-    {
-        this.num = num;
+    public Niño(int num, Campamento camp, EntradaNorte entradaNorte, EntradaSur entradaSur, ZonaComun zonaComun, Merienda merienda, Tirolina tirolina, Soga soga) {
         this.identificador = generaNombre(num);
+        this.num = num;
         this.camp = camp;
         this.entradaNorte = entradaNorte;
         this.entradaSur = entradaSur;
+        this.zonaComun = zonaComun;
+        this.merienda = merienda;
+        this.tirolina = tirolina;
+        this.soga = soga;
     }
+    
     
     public String generaNombre(int n)
     {
@@ -86,9 +98,16 @@ public class Niño extends Thread {
             entradaSur.entrarNiño(this);
         }
         while(contador<15){
-            //Meter en la zona común x timepo zonaComun.elegiractividad()
-            //X actividad
+            String act=zonaComun.entrarNiño(this);
+            if (act.equals("Tirolina")){
+                tirolina.entrarNiño(this);
+            }else if(act.equals("Soga")){
+                soga.entrarNiño(this);
+            }else{
+                merienda.entrarNiño(this);
+            }
         }
+       zonaComun.salirNiñoCampamento(this);
     }
     
     

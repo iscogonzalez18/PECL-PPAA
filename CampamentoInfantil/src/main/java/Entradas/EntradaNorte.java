@@ -58,7 +58,6 @@ public class EntradaNorte {
         finally{
             cerrojo.unlock();
         }
-        zonaComun.entrarNiño(n);
     }
     
     public void entrarMonitor(Monitor m)
@@ -74,7 +73,6 @@ public class EntradaNorte {
                 abierto = true;
                 norte.signalAll();
             }
-            zonaComun.entrarMonitor(m);
             System.out.println("Monitor "+m.getIdentificador()+" entra por NORTE");
         }
         catch(InterruptedException e){}

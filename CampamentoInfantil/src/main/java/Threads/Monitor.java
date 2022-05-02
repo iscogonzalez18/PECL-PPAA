@@ -5,6 +5,10 @@
  */
 package Threads;
 
+import Actividades.Merienda;
+import Actividades.Soga;
+import Actividades.Tirolina;
+import Actividades.ZonaComun;
 import Clases.Campamento;
 import Entradas.EntradaNorte;
 import Entradas.EntradaSur;
@@ -27,17 +31,26 @@ public class Monitor extends Thread{
     private EntradaSur entradaSur;
     private Lock cerrojo;
     private AtomicInteger alternanciaMonitores;
-    
-    public Monitor( int num, Campamento camp, EntradaNorte entradaNorte, EntradaSur entradaSur, AtomicInteger alternanciaMonitores)
-    {
-        this.num = num;
+    private ZonaComun zonaComun;
+    private Soga soga;
+    private Tirolina tirolina;
+    private Merienda merienda;
+
+    public Monitor(int num, Campamento camp, EntradaNorte entradaNorte, EntradaSur entradaSur, AtomicInteger alternanciaMonitores, ZonaComun zonaComun, Soga soga, Tirolina tirolina, Merienda merienda) {
         this.identificador = "M" + Integer.toString(num); //MX
+        this.num = num;
         this.camp = camp;
         this.entradaNorte = entradaNorte;
         this.entradaSur = entradaSur;
         this.cerrojo = new ReentrantLock();
         this.alternanciaMonitores = alternanciaMonitores;
+        this.zonaComun = zonaComun;
+        this.soga = soga;
+        this.tirolina = tirolina;
+        this.merienda = merienda;
     }
+    
+    
 
     public String getIdentificador() {
         return identificador;
@@ -78,7 +91,18 @@ public class Monitor extends Thread{
         finally
         {
             cerrojo.unlock();
-        }      
+        }     
+        
+        while (true){
+            String act=zonaComun.entrarMonitor(this);
+            if (act.equals("Tirolina")){
+                tirolina.entrarMonitor(this);
+            }else if(act.equals("Soga")){
+                soga.entrarMonitor(this);
+            }else{
+                merienda.entrarMonitor(this);
+            }
+        }
         
     }
 }

@@ -766,7 +766,7 @@ public class InterfazSistema extends javax.swing.JFrame {
         
         for (int n = 1; n <=10; n++)
         {
-            Niño niño = new Niño(n, campamento, entradaNorte, entradaSur);
+            Niño niño = new Niño(n, campamento, entradaNorte, entradaSur,zonaComun,merienda,tirolina,soga);
             niño.start();
         }
         
@@ -775,7 +775,7 @@ public class InterfazSistema extends javax.swing.JFrame {
         
         for (int m = 1; m <= 4; m++)
         {
-            Monitor monitor = new Monitor(m, campamento, entradaNorte, entradaSur, alternanciaMonitores);
+            Monitor monitor = new Monitor(m, campamento, entradaNorte, entradaSur, alternanciaMonitores,zonaComun,soga,tirolina,merienda);
             monitor.start();
         }
     }//GEN-LAST:event_jPanelRunnearMouseClicked

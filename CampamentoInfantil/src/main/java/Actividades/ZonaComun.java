@@ -48,9 +48,10 @@ public class ZonaComun {
         this.tirolina = tirolina;
     }
 
-    public synchronized void entrarNiño(Niño n)
+    public synchronized String entrarNiño(Niño n)
     {
-        niños.meter(n);   
+        niños.meter(n);  
+        String actividad = " ";
         try {
             sleep(2000+(int) (2001*Math.random()));
         } catch (InterruptedException ex) {
@@ -63,19 +64,19 @@ public class ZonaComun {
             switch (x){
                 case 0:
                     niños.sacar(n);
-                    merienda.entrarNiño(n);
+                    actividad= "Tirolina";
                     break;
                 case 1:
                     niños.sacar(n);
-                    soga.entrarNiño(n);
+                    actividad="Soga";
                     break;
                 case 2:
                     niños.sacar(n);
-                    tirolina.entrarNiño(n);
-                    break;     
+                    actividad= "Merienda";    
+                    break;
             }       
         }
-        
+        return actividad;
     }
     
     public synchronized void salirNiño(Niño n)
@@ -83,8 +84,9 @@ public class ZonaComun {
         niños.sacar(n);     
     }
     
-    public synchronized void entrarMonitor(Monitor m)
+    public synchronized String entrarMonitor(Monitor m)
     {
+        String act="";
         monitores.meter(m);
         m.setContador(0);
          try {
@@ -96,21 +98,22 @@ public class ZonaComun {
         switch (nombre){
             case "M1":
                 monitores.sacar(m);
-                merienda.entrarMonitor(m);
+                act="Merienda";
                 break;
             case "M2":
                 monitores.sacar(m);
-                merienda.entrarMonitor(m);
+                act="Merienda";
                 break;
             case "M3":
                 monitores.sacar(m);
-                tirolina.entrarMonitor(m);
+                act="Tirolina";
                 break;
             case "M4":
                 monitores.sacar(m);
-                soga.entrarMonitor(m);
+                act="Soga";
                 break;
         }
+        return act;
     }
     
     public synchronized void salirMonitor(Monitor m)
