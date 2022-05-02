@@ -34,7 +34,7 @@ public class ZonaComun {
     private Soga soga;
     private Tirolina tirolina;
 
-    public ZonaComun(ListaMonitores monitores, ListaNiños niños, Condition norte, Condition sur, ListaNiños colaNorte, ListaNiños colaSur) 
+    public ZonaComun(ListaMonitores monitores, ListaNiños niños, Condition norte, Condition sur, ListaNiños colaNorte, ListaNiños colaSur, Merienda merienda, Soga soga, Tirolina tirolina) 
     {
         this.monitores = monitores;
         this.niños = niños;
@@ -43,6 +43,9 @@ public class ZonaComun {
         this.colaNorte = colaNorte;
         this.colaSur = colaSur;
         this.alternancia = 0;
+        this.merienda = merienda;
+        this.soga = soga;
+        this.tirolina = tirolina;
     }
 
     public synchronized void entrarNiño(Niño n)
