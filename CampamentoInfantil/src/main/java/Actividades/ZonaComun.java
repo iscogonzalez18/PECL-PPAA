@@ -85,7 +85,13 @@ public class ZonaComun {
     
     public synchronized void entrarMonitor(Monitor m)
     {
-        monitores.meter(m);  
+        monitores.meter(m);
+        m.setContador(0);
+         try {
+            sleep(1000+(int)(1001*Math.random()));
+        } catch (InterruptedException ex) {
+            Logger.getLogger(ZonaComun.class.getName()).log(Level.SEVERE, null, ex);
+        }
         String nombre=m.getIdentificador();
         switch (nombre){
             case "M1":
@@ -111,17 +117,7 @@ public class ZonaComun {
     {
         monitores.sacar(m);     
     }
-    
-    public void paseo (Monitor m){
-        monitores.meter(m);
-        try {
-            sleep(1000+(int)(1001*Math.random()));
-        } catch (InterruptedException ex) {
-            Logger.getLogger(ZonaComun.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        monitores.sacar(m);
-    }
-    
+   
     public int tamañoNiños()
     {
         return niños.tamaño();

@@ -67,7 +67,7 @@ public class Soga {
     }
     
     public void jugar(Monitor m){
-        while (true){
+        while (m.getContador()<10){
             try {
                 if(contador==10){
                     for (int i=0;i<10;i++){
@@ -126,8 +126,6 @@ public class Soga {
                     m.sumaActividad();
                     if (m.getContador()==10){
                         System.out.println("El monitor "+m.getIdentificador()+" se va de paseo");
-                        m.setContador(0);
-                        zonaComun.paseo(m);
                     }
                 }   
             } catch (InterruptedException ex) {

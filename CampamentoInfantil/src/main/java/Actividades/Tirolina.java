@@ -89,7 +89,7 @@ public class Tirolina {
     }
     
     public void preparar(Monitor m){
-        while(true){
+        while(m.getContador()<10){
             try {
                 barrera.await();
                 System.out.println("El monitor "+m.getIdentificador()+" prepara la tirolina");
@@ -98,8 +98,6 @@ public class Tirolina {
                 m.sumaActividad();
                 if (m.getContador()==10){
                     System.out.println("El monitor "+m.getIdentificador()+" se va de paseo");
-                    m.setContador(0);
-                    zona.paseo(m);
                 }
             } catch (InterruptedException ex) {
                 Logger.getLogger(Tirolina.class.getName()).log(Level.SEVERE, null, ex);

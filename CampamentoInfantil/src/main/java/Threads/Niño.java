@@ -85,6 +85,10 @@ public class Niño extends Thread {
         else{
             entradaSur.entrarNiño(this);
         }
+        while(contador<15){
+            //Meter en la zona común x timepo zonaComun.elegiractividad()
+            //X actividad
+        }
     }
     
     

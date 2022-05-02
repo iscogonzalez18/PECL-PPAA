@@ -78,6 +78,7 @@ public class Monitor extends Thread{
         finally
         {
             cerrojo.unlock();
-        }       
+        }      
+        
     }
 }

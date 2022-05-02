@@ -119,7 +119,7 @@ public class Merienda {
     }
     
     public void limpiarYcocinar(Monitor m){
-        while (true){
+        while (m.getContador()<10){
             if (bandejasSucias>0){
                 cerrojo.lock();
                 try{
@@ -138,8 +138,6 @@ public class Merienda {
                 }
                 if (m.getContador()==10){
                     System.out.println("El monitor "+m.getIdentificador()+" se va de paseo");
-                    m.setContador(0);
-                    zona.paseo(m);
                 }
             }
         }
