@@ -31,7 +31,8 @@ public class Merienda {
     private Semaphore sem= new Semaphore(20,true);
     private Lock cerrojo=new ReentrantLock();
     private Condition vacio=cerrojo.newCondition();
-    private int bandejasLimpias=0, bandejasSucias=25,contador=0;
+    private Semaphore bandejasSucias=new Semaphore(25,true);
+    private Semaphore bandejasLimpias=new Semaphore(0,true);
 
     public Merienda(ListaMonitores monitores, ListaNiños colaEspera, ListaNiños comiendo, JLabel sucias, JLabel limpias) {
         this.monitores = monitores;
@@ -39,57 +40,30 @@ public class Merienda {
         this.comiendo = comiendo;
         this.sucias = sucias;
         this.limpias = limpias;
-        sucias.setText(Integer.toString(bandejasSucias));
-        limpias.setText(Integer.toString(bandejasLimpias));
+        sucias.setText(Integer.toString(bandejasSucias.availablePermits()));
+        limpias.setText(Integer.toString(bandejasLimpias.availablePermits()));
     }
     
     
     public void entrarNiño(Niño n)
     {
-        cerrojo.lock();
-        try
-        {
-            colaEspera.meter(n);
-            System.out.println("El niño "+n.getIdentificador()+" ha entrado en la cola de merienda");
-        }
-        finally
-        {
-            cerrojo.unlock();
-        }
-        while (bandejasLimpias==0)
-        {
-            /*try
-            {
-                // aqui error wait();
-            } 
-            /*catch (InterruptedException ex) 
-            {
-                Logger.getLogger(Merienda.class.getName()).log(Level.SEVERE, null, ex);
-            }*/
-        }
+        colaEspera.meter(n);
+        System.out.println("El niño "+n.getIdentificador()+" ha entrado en la cola de merienda");
+        
         try 
         {
+            bandejasLimpias.acquire();
+            limpias.setText(Integer.toString(bandejasLimpias.availablePermits()));
             sem.acquire();
             colaEspera.sacar(n);
             System.out.println("El niño "+n.getIdentificador()+" comienza a merendar");
             comiendo.meter(n);
             sleep(7000);
-            cerrojo.lock();
-            try
-            {
-                bandejasLimpias--;
-                limpias.setText(Integer.toString(bandejasLimpias));
-                bandejasSucias++;
-                sucias.setText(Integer.toString(bandejasSucias));
-            }
-            finally
-            {
-                cerrojo.unlock();
-            }
             System.out.println("El niño "+n.getIdentificador()+" termina de merendar");
             comiendo.sacar(n);
             sem.release();
-            
+            bandejasSucias.release();
+            sucias.setText(Integer.toString(bandejasSucias.availablePermits()));
             if (n.getActividades()>=3){
                 n.sumaActividad(1);
                 n.setActividades(0);
@@ -102,38 +76,25 @@ public class Merienda {
     
     public void entrarMonitor(Monitor m)
     {
-        cerrojo.lock();
-        try
-        {
-            monitores.meter(m);
-            System.out.println("El monitor "+m.getIdentificador()+" ha entrado en merienda");
-        }
-        finally
-        {
-            cerrojo.unlock();
-        }
+        monitores.meter(m);
+        System.out.println("El monitor "+m.getIdentificador()+" ha entrado en merienda");
+        
         while (m.getContador()<10){
-            if (bandejasSucias>0){
-                cerrojo.lock();
-                try{
-                    //Lo de las bandejas lo podemos hacer con un semaforo
-                    bandejasSucias--;
-                    sucias.setText(Integer.toString(bandejasSucias));
-                    sleep(2000+(int)(Math.random()*3001));
-                    bandejasLimpias++;
-                    limpias.setText(Integer.toString(bandejasLimpias));
-                    m.sumaActividad();
-                } catch (InterruptedException ex) {
-                    Logger.getLogger(Merienda.class.getName()).log(Level.SEVERE, null, ex);
-                }finally{
-                    cerrojo.unlock();
-                }
-                //aqui error 
-                if (m.getContador()==10){
+            try {
+                bandejasSucias.acquire();
+                sucias.setText(Integer.toString(bandejasSucias.availablePermits()));
+                sleep(2000+(int)(Math.random()*3001));
+                bandejasLimpias.release();
+                limpias.setText(Integer.toString(bandejasLimpias.availablePermits()));
+                m.sumaActividad();
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Merienda.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            if (m.getContador()==10){
                     System.out.println("El monitor "+m.getIdentificador()+" se va de paseo");
-                }
             }
         }
         monitores.sacar(m);
-    }         
+    }
+             
 }

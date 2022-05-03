@@ -764,7 +764,7 @@ public class InterfazSistema extends javax.swing.JFrame {
         //Campamento
         Campamento campamento = new Campamento(merienda, soga, tirolina, zonaComun, entradaNorte, entradaSur, ocupacion);
         
-        for (int n = 1; n <=10; n++)
+        for (int n = 1; n <=50; n++)
         {
             Niño niño = new Niño(n, campamento, entradaNorte, entradaSur,zonaComun,merienda,tirolina,soga);
             niño.start();

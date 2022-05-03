@@ -12,6 +12,7 @@ import Threads.Niño;
 import static java.lang.Thread.sleep;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -32,6 +33,7 @@ public class Soga {
     private Lock cerrojo=new ReentrantLock();
     private Condition lleno=cerrojo.newCondition();
     private CyclicBarrier barrera=new CyclicBarrier(11);
+    private Semaphore capacidad=new Semaphore(10,true);
 
     public Soga(ListaMonitores monitor, ListaNiños cola, ListaNiños equipo1, ListaNiños equipo2) {
         this.monitor = monitor;
@@ -41,109 +43,94 @@ public class Soga {
     }
     
     public void entrarNiño(Niño n){
-        cerrojo.lock();
+        cola.meter(n);
         try{
-            cola.meter(n);
             System.out.println("El niño "+n.getIdentificador()+" entra en la cola de soga");
-            while (contador==10){
-                lleno.await();          //Se quedan en la cola si ya hay 10 niños para jugar
-            }
-            contador++;     
+            capacidad.acquire();
+            barrera.await();//Espera a que haya 10 niños y el monitor esté listo
+            barrera.await();//Acaba el juego
+            capacidad.release();
         }
-        catch(InterruptedException e){}
-        finally{
-            cerrojo.unlock();
-        }
-        try {
-            barrera.await();
-            barrera.await();
-        } catch (InterruptedException ex) {
-            Logger.getLogger(Soga.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (BrokenBarrierException ex) {
+        catch(InterruptedException e){} catch (BrokenBarrierException ex) {
             Logger.getLogger(Soga.class.getName()).log(Level.SEVERE, null, ex);
         }
-        cola.sacar(n);
     }
     
     public void entrarMonitor(Monitor m){
-        cerrojo.lock();
-        try{
-            monitor.meter(m);
-            System.out.println("El monitor "+m.getIdentificador()+" entra en soga");            
-        }
-        finally{
-            cerrojo.unlock();
-        }
+        monitor.meter(m);
+        System.out.println("El monitor "+m.getIdentificador()+" entra en soga");            
         while (m.getContador()<10){
             try {
-                barrera.await();
-                if(contador==10){
-                    for (int i=0;i<10;i++){
-                       if (cont_1!=5&&cont_2!=5){
-                           if ((int) (Math.random()*2)==0){
-                                //Error aqui   
-                               equipo1.meter(cola.mirar(i));
-                               System.out.println("El niño "+cola.mirar(i).getIdentificador()+" sale de la cola");
-                               cont_1++;
-                               cola.sacar(cola.mirar(i));
-                               System.out.println("El niño "+cola.mirar(i).getIdentificador()+" esta en el equipo 1");
-                           }else{
-                               equipo2.meter(cola.mirar(i));
-                               System.out.println("El niño "+cola.mirar(i).getIdentificador()+" sale de la cola");
-                               cont_2++;
-                               cola.sacar(cola.mirar(i));
-                               System.out.println("El niño "+cola.mirar(i).getIdentificador()+" esta en el equipo 2");
-                           }
-                       }else if(cont_1==5){
-                           equipo2.meter(cola.mirar(i));
-                           System.out.println("El niño "+cola.mirar(i).getIdentificador()+" sale de la cola");
-                           cont_2++;
-                           cola.sacar(cola.mirar(i));
-                           System.out.println("El niño "+cola.mirar(i).getIdentificador()+" esta en el equipo 2");
-                       }else if(cont_2==5){
-                           equipo1.meter(cola.mirar(i));
-                           System.out.println("El niño "+cola.mirar(i).getIdentificador()+" sale de la cola");
-                           cont_1++;
-                           cola.sacar(cola.mirar(i));
-                           System.out.println("El niño "+cola.mirar(i).getIdentificador()+" esta en el equipo 1");
-                       }
-                    }
-
-                    System.out.println("El monitor "+m.getIdentificador()+" comienza la actividad de soga");
-                    sleep(7000);
-                    if ((int) (Math.random()*2)==0){
-                        System.out.println("En la soga ha ganado el equipo1");
-                        for (int i=0;i<5;i++){
-                            Niño n=equipo1.mirar(i);
-                            System.out.println("Al niño "+cola.mirar(i).getIdentificador()+" se le suman 2 actividades");
-                            n.sumaActividad(2);
-                            n=equipo2.mirar(i);
-                            System.out.println("Al niño "+cola.mirar(i).getIdentificador()+" se le suma 1 actividad");
-                            n.sumaActividad(1);
-                        }  
-                    }else{
-                        System.out.println("En la soga ha ganado el equipo2");
-                        for (int i=0;i<5;i++){
-                            Niño n=equipo1.mirar(i);
-                            System.out.println("Al niño "+cola.mirar(i).getIdentificador()+" se le suma 1 actividad");
-                            n.sumaActividad(1);
-                            n=equipo2.mirar(i);
-                            System.out.println("Al niño "+cola.mirar(i).getIdentificador()+" se le suman 2 actividades");
-                            n.sumaActividad(2);
+                barrera.await();//El monitor comienza a asignar a los niños de forma aleatoria en los equipos
+                for (int i=0;i<10;i++){
+                    if (cont_1!=5&&cont_2!=5){
+                        if ((int) (Math.random()*2)==0){ 
+                            System.out.println("El niño "+cola.mirar(0).getIdentificador()+" sale de la cola");
+                            System.out.println("El niño "+cola.mirar(0).getIdentificador()+" esta en el equipo 1");
+                            equipo1.meter(cola.mirar(0));
+                            cola.sacar(cola.mirar(0));
+                            cont_1++; 
+                        }else{
+                            System.out.println("El niño "+cola.mirar(0).getIdentificador()+" sale de la cola");
+                            System.out.println("El niño "+cola.mirar(0).getIdentificador()+" esta en el equipo 2");
+                            equipo2.meter(cola.mirar(0));
+                            cola.sacar(cola.mirar(0));
+                            cont_2++;
                         }
+                    }else if(cont_1==5){
+                        System.out.println("El niño "+cola.mirar(0).getIdentificador()+" sale de la cola");
+                        System.out.println("El niño "+cola.mirar(0).getIdentificador()+" esta en el equipo 2");
+                        equipo2.meter(cola.mirar(0));
+                        cola.sacar(cola.mirar(0));
+                        cont_2++;
+                    }else if(cont_2==5){
+                        System.out.println("El niño "+cola.mirar(0).getIdentificador()+" sale de la cola");
+                        System.out.println("El niño "+cola.mirar(0).getIdentificador()+" esta en el equipo 1");
+                        equipo1.meter(cola.mirar(0));
+                        cola.sacar(cola.mirar(0));
+                        cont_1++; 
                     }
-                    barrera.await();
-                    m.sumaActividad();
-                    if (m.getContador()==10){
-                        System.out.println("El monitor "+m.getIdentificador()+" se va de paseo");
+                }
+                //Fin de asignar equipos
+                System.out.println("El monitor "+m.getIdentificador()+" comienza la actividad de soga");
+                //Comienza el juego
+                sleep(7000);
+                //Fin de juego
+                //Aleatorio el equipo ganador
+                if ((int) (Math.random()*2)==0){
+                    System.out.println("En la soga ha ganado el equipo1");
+                    for (int i=0;i<5;i++){
+                        System.out.println("Al niño "+equipo1.mirar(0).getIdentificador()+" se le suman 2 actividades");
+                        System.out.println("Al niño "+equipo2.mirar(0).getIdentificador()+" se le suma 1 actividad");
+                        equipo1.mirar(0).sumaActividad(2);
+                        equipo2.mirar(0).sumaActividad(1);
+                        equipo1.sacar(equipo1.mirar(0));
+                        equipo2.sacar(equipo2.mirar(0));
+                        cont_1--;
+                        cont_2--;
+                    }  
+                }else{
+                    System.out.println("En la soga ha ganado el equipo2");
+                    for (int i=0;i<5;i++){
+                        System.out.println("Al niño "+equipo1.mirar(0).getIdentificador()+" se le suma 1 actividades");
+                        System.out.println("Al niño "+equipo2.mirar(0).getIdentificador()+" se le suman 2 actividades");
+                        equipo1.mirar(0).sumaActividad(1);
+                        equipo2.mirar(0).sumaActividad(2);
+                        equipo1.sacar(equipo1.mirar(0));
+                        equipo2.sacar(equipo2.mirar(0));
+                        cont_1--;
+                        cont_2--;
                     }
-                }   
+                }
+                barrera.await();
+                m.sumaActividad(); 
             } catch (InterruptedException ex) {
                 Logger.getLogger(Soga.class.getName()).log(Level.SEVERE, null, ex);
             } catch (BrokenBarrierException ex) {
                 Logger.getLogger(Soga.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+        System.out.println("El monitor "+m.getIdentificador()+" se va de paseo");
         monitor.sacar(m);
     }
 }

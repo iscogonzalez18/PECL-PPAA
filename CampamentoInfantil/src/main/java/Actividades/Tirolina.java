@@ -75,16 +75,8 @@ public class Tirolina {
     
     public void entrarMonitor(Monitor m)
     {
-        cerrojo.lock();
-        try
-        {
-            monitor.meter(m);
-            System.out.println("El monitor "+m.getIdentificador()+" ha entrado en tirolina");
-        }
-        finally
-        {
-            cerrojo.unlock();
-        }
+        monitor.meter(m);
+        System.out.println("El monitor "+m.getIdentificador()+" ha entrado en tirolina");
         while(m.getContador()<10){
             try {
                 barrera.await();

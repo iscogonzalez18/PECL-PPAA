@@ -48,10 +48,10 @@ public class ZonaComun {
         this.tirolina = tirolina;
     }
 
-    public synchronized String entrarNiño(Niño n)
+    public String entrarNiño(Niño n)
     {
         niños.meter(n);  
-        String actividad = " ";
+        String actividad = "";
         try {
             sleep(2000+(int) (2001*Math.random()));
         } catch (InterruptedException ex) {
@@ -79,12 +79,12 @@ public class ZonaComun {
         return actividad;
     }
     
-    public synchronized void salirNiño(Niño n)
+    public void salirNiño(Niño n)
     {
         niños.sacar(n);     
     }
     
-    public synchronized String entrarMonitor(Monitor m)
+    public String entrarMonitor(Monitor m)
     {
         String act="";
         monitores.meter(m);
@@ -116,7 +116,7 @@ public class ZonaComun {
         return act;
     }
     
-    public synchronized void salirMonitor(Monitor m)
+    public void salirMonitor(Monitor m)
     {
         monitores.sacar(m);     
     }

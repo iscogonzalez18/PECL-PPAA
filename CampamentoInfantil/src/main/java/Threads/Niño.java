@@ -89,7 +89,7 @@ public class Niño extends Thread {
     
     public void run()
     {
-        int r = (int) Math.random()*2;
+        int r = (int) (Math.random()*2);
         if(r==1)
         {
             entradaNorte.entrarNiño(this);
@@ -107,8 +107,8 @@ public class Niño extends Thread {
                 merienda.entrarNiño(this);
             }
         }
-        System.out.println("El niño"+this.identificador+ "se va del campamento");
-       zonaComun.salirNiñoCampamento(this);
+        System.out.println("El niño "+this.identificador+ " se va del campamento");
+        zonaComun.salirNiñoCampamento(this);
     }
     
     
