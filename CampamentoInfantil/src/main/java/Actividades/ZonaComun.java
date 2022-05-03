@@ -10,6 +10,7 @@ import GUI.ListaNiños;
 import Threads.Monitor;
 import Threads.Niño;
 import static java.lang.Thread.sleep;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -33,8 +34,9 @@ public class ZonaComun {
     private Merienda merienda;
     private Soga soga;
     private Tirolina tirolina;
+    private AtomicInteger ocupacion;
 
-    public ZonaComun(ListaMonitores monitores, ListaNiños niños, Condition norte, Condition sur, ListaNiños colaNorte, ListaNiños colaSur, Merienda merienda, Soga soga, Tirolina tirolina) 
+    public ZonaComun(ListaMonitores monitores, ListaNiños niños, Condition norte, Condition sur, ListaNiños colaNorte, ListaNiños colaSur, Merienda merienda, Soga soga, Tirolina tirolina, AtomicInteger ocupacion) 
     {
         this.monitores = monitores;
         this.niños = niños;
@@ -46,6 +48,7 @@ public class ZonaComun {
         this.merienda = merienda;
         this.soga = soga;
         this.tirolina = tirolina;
+        this.ocupacion = ocupacion;
     }
 
     public String entrarNiño(Niño n)
@@ -133,10 +136,11 @@ public class ZonaComun {
     
     public void salirNiñoCampamento(Niño n)
     {
+        niños.sacar(n);
         cerrojo.lock();
-        try {
-            niños.sacar(n);
+        try {       
             System.out.println("Persona " + n.getIdentificador() + " SALIENDO.");
+            ocupacion.decrementAndGet();
             if(colaNorte.tamaño() > 0 && colaSur.tamaño() > 0){
                 //personas esperando en las dos entradas (alternancia)
                 if(alternancia == 0)
