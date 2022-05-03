@@ -719,6 +719,9 @@ public class InterfazSistema extends javax.swing.JFrame {
     private void jPanelRunnearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRunnearMouseClicked
         // TODO add your handling code here
         
+        //Ocupacion
+        AtomicInteger ocupacion = new AtomicInteger(0);
+        
         //Merienda
         ListaMonitores monitoresMerienda = new ListaMonitores(jLabelMonitoresMerienda);
         ListaNiños colaMerienda = new ListaNiños(jLabelColaMerienda);
@@ -750,11 +753,8 @@ public class InterfazSistema extends javax.swing.JFrame {
         ListaNiños colaSur = new ListaNiños(jLabelEntradaSur);
         ListaMonitores monitoresZonaComun = new ListaMonitores(jLabelMonitoresZonaComun);
         ListaNiños niñosZonaComun = new ListaNiños(jLabelNiñosZonaComun);  
-        ZonaComun zonaComun = new ZonaComun(monitoresZonaComun, niñosZonaComun, norte, sur, colaNorte, colaSur, merienda, soga, tirolina);
-        
-        //Ocupacion
-        AtomicInteger ocupacion = new AtomicInteger(0);
-        
+        ZonaComun zonaComun = new ZonaComun(monitoresZonaComun, niñosZonaComun, norte, sur, colaNorte, colaSur, merienda, soga, tirolina, ocupacion);
+                
         //EntradaNorte 
         EntradaNorte entradaNorte = new EntradaNorte(ocupacion, colaNorte, zonaComun, cerrojo, norte);
         
