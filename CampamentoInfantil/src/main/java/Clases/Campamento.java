@@ -12,6 +12,7 @@ import Actividades.Soga;
 import Actividades.Tirolina;
 import Actividades.ZonaComun;
 import GUI.ListaNiños;
+import GUI.Plazas;
 import Threads.Monitor;
 import Threads.Niño;
 import java.util.ArrayList;
@@ -26,8 +27,7 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class Campamento {
     
-    private int capacidadDisponible;
-    private AtomicInteger ocupacion;
+    private Plazas plazas;
     private Merienda merienda;
     private Soga soga;
     private Tirolina tirolina;
@@ -42,15 +42,14 @@ public class Campamento {
     Condition Norteabierto = cerrojo.newCondition();
     Condition Surabierto = cerrojo.newCondition();
 
-    public Campamento(Merienda merienda, Soga soga, Tirolina tirolina, ZonaComun zonaComun, EntradaNorte norte, EntradaSur sur, AtomicInteger ocupacion) {
+    public Campamento(Merienda merienda, Soga soga, Tirolina tirolina, ZonaComun zonaComun, EntradaNorte norte, EntradaSur sur, Plazas plazas) {
         this.merienda = merienda;
         this.soga = soga;
         this.tirolina = tirolina;
         this.zonaComun = zonaComun;
         this.Norte = norte;
         this.Sur = sur;
-        this.capacidadDisponible = 50;
-        this.ocupacion = ocupacion;
+        this.plazas = plazas;
     }
     
     public void entrarNiñoMerienda(Niño n)

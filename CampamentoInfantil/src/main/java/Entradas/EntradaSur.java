@@ -8,6 +8,7 @@ package Entradas;
 import Actividades.ZonaComun;
 import Clases.Campamento;
 import GUI.ListaNiños;
+import GUI.Plazas;
 import Threads.Monitor;
 import Threads.Niño;
 import java.util.Random;
@@ -21,15 +22,15 @@ import java.util.concurrent.locks.Lock;
  */
 public class EntradaSur {
     
-    private AtomicInteger ocupacion;
+    private Plazas plazas;
     private boolean abierto;
     private ListaNiños cola;
     private ZonaComun zonaComun;
     private Lock cerrojo;
     private Condition sur;
 
-    public EntradaSur(AtomicInteger ocupacion, ListaNiños cola, ZonaComun zonaComun, Lock cerrojo, Condition sur) {
-        this.ocupacion = ocupacion;
+    public EntradaSur(Plazas plazas, ListaNiños cola, ZonaComun zonaComun, Lock cerrojo, Condition sur) {
+        this.plazas = plazas;
         this.cola = cola;
         this.zonaComun = zonaComun;
         this.cerrojo = cerrojo;
@@ -40,15 +41,14 @@ public class EntradaSur {
     {
         cerrojo.lock();
         try{
-            while(this.ocupacion.get()== 50 || !abierto)
+            while(plazas.getOcupacion()== 50 || !abierto)
             {
                 cola.meter(n);
                 sur.await(); 
             }
             cola.sacar(n);
-            zonaComun.entrarNiño(n);
-            ocupacion.incrementAndGet();
-            System.out.println("Niño " + n.getIdentificador() +" entra por SUR. Ocupación: " + ocupacion.get() + "\nCola SUR --> " + cola.tamaño());
+            plazas.incrementar();
+            System.out.println("Niño " + n.getIdentificador() +" entra por SUR. Ocupación: " + plazas.getOcupacion() + "\nCola SUR --> " + cola.tamaño());
             
         }
         catch(InterruptedException e){}
