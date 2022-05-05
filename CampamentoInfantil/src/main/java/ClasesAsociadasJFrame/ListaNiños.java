@@ -3,13 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GUI;
+package ClasesAsociadasJFrame;
 
-import Threads.Monitor;
 import Threads.Niño;
 import java.util.ArrayList;
 import javax.swing.JLabel;
-import javax.swing.JTextField;
 
 /**
  *

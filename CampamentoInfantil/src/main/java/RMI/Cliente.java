@@ -3,8 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GUI;
+package RMI;
 
+import ClasesAsociadasJFrame.ListaNiños;
+import ClasesAsociadasJFrame.ListaMonitores;
+import ClasesAsociadasJFrame.Plazas;
 import Actividades.Merienda;
 import Actividades.Soga;
 import Actividades.Tirolina;
@@ -29,14 +32,14 @@ import java.util.logging.Logger;
  *
  * @author Francisco
  */
-public class InterfazSistema extends javax.swing.JFrame {
+public class Cliente extends javax.swing.JFrame {
 
     /**
      * Creates new form InterfazSistema
      */
     private int x, y;
     
-    public InterfazSistema() {
+    public Cliente() {
         initComponents();
     }
 
@@ -860,20 +863,21 @@ public class InterfazSistema extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InterfazSistema.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InterfazSistema.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InterfazSistema.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InterfazSistema.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                InterfazSistema interfaz = new InterfazSistema();
+                Cliente interfaz = new Cliente();
                 interfaz.setLocationRelativeTo(null);
                 interfaz.setVisible(true);
                 interfaz.x = interfaz.getX();

@@ -7,8 +7,8 @@ package Entradas;
 
 import Actividades.ZonaComun;
 import Clases.Campamento;
-import GUI.ListaNiños;
-import GUI.Plazas;
+import ClasesAsociadasJFrame.ListaNiños;
+import ClasesAsociadasJFrame.Plazas;
 import Threads.Monitor;
 import Threads.Niño;
 import java.util.Random;

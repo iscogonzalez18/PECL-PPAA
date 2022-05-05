@@ -5,8 +5,8 @@
  */
 package Actividades;
 
-import GUI.ListaMonitores;
-import GUI.ListaNiños;
+import ClasesAsociadasJFrame.ListaMonitores;
+import ClasesAsociadasJFrame.ListaNiños;
 import Threads.Monitor;
 import Threads.Niño;
 import static java.lang.Thread.sleep;

@@ -5,13 +5,12 @@
  */
 package Actividades;
 
-import GUI.ListaMonitores;
-import GUI.ListaNiños;
-import GUI.Plazas;
+import ClasesAsociadasJFrame.ListaMonitores;
+import ClasesAsociadasJFrame.ListaNiños;
+import ClasesAsociadasJFrame.Plazas;
 import Threads.Monitor;
 import Threads.Niño;
 import static java.lang.Thread.sleep;
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
