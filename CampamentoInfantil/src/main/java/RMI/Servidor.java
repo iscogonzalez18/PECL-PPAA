@@ -786,73 +786,79 @@ public class Servidor extends javax.swing.JFrame {
     private void jPanelRunnearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRunnearMouseClicked
         // TODO add your handling code here
         
-        
-        //Plazas
-        Plazas plazas = new Plazas(jLabelPlazasOcupadas, jLabelPlazasDisponibles);
-
-        //Merienda
-        ListaMonitores monitoresMerienda = new ListaMonitores(jLabelMonitoresMerienda);
-        ListaNiños colaMerienda = new ListaNiños(jLabelColaMerienda);
-        ListaNiños comiendoMerienda = new ListaNiños(jLabelNiñosComiendoMerienda);
-        Merienda merienda = new Merienda(monitoresMerienda, colaMerienda, comiendoMerienda, jLabelBandejasSuciasMerienda, jLabelBandejasLimpiasMerienda);
-
-        //Soga
-        ListaNiños colaSoga = new ListaNiños(jLabelColaSoga);
-        ListaNiños equipo1Soga = new ListaNiños(jLabelEquipo1Soga);
-        ListaNiños equipo2Soga = new ListaNiños(jLabelEquipo2Soga);
-        ListaMonitores monitorSoga = new ListaMonitores(jLabelMonitorSoga);
-        Soga soga = new Soga(monitorSoga, colaSoga, equipo1Soga, equipo2Soga);
-
-        //Tirolina
-        ListaMonitores monitorTirolina = new ListaMonitores(jLabelMonitorTirolina);
-        ListaNiños colaTirolina = new ListaNiños(jLabelColaTirolina);
-        ListaNiños preparacionTirolina = new ListaNiños(jLabelPreparacionTirolina);
-        ListaNiños entirolina = new ListaNiños(jLabelTirolina);
-        ListaNiños finalizacionTirolina = new ListaNiños(jLabelFinalizacionTirolina);     
-        Tirolina tirolina = new Tirolina(monitorTirolina, colaTirolina, preparacionTirolina, entirolina, finalizacionTirolina);
-
-        //Lock explícito y condicion
-        Lock cerrojo = new ReentrantLock();
-        Condition norte = cerrojo.newCondition();
-        Condition sur = cerrojo.newCondition();
-
-        //Zona Comun, Niños y monitores entran primero a la zona comun, y salen desde la zona comun
-        ListaNiños colaNorte = new ListaNiños(jLabelEntradaNorte);
-        ListaNiños colaSur = new ListaNiños(jLabelEntradaSur);
-        ListaMonitores monitoresZonaComun = new ListaMonitores(jLabelMonitoresZonaComun);
-        ListaNiños niñosZonaComun = new ListaNiños(jLabelNiñosZonaComun);  
-        ZonaComun zonaComun = new ZonaComun(monitoresZonaComun, niñosZonaComun, norte, sur, colaNorte, colaSur, merienda, soga, tirolina, plazas);
-
-        //EntradaNorte 
-        EntradaNorte entradaNorte = new EntradaNorte(plazas, colaNorte, zonaComun, cerrojo, norte);
-
-        //EntradaSur 
-        EntradaSur entradaSur = new EntradaSur(plazas, colaSur, zonaComun, cerrojo, norte);
-
-        //Campamento
-        Campamento campamento = new Campamento(merienda, soga, tirolina, zonaComun, entradaNorte, entradaSur, plazas);
-
-        for (int n = 1; n <=2000; n++)
-        {
-            Niño niño = new Niño(n, campamento, entradaNorte, entradaSur,zonaComun,merienda,tirolina,soga);
-            //anonimus runnable
-            niño.start();
-            try
+        Thread anonymousThread = new Thread(){ 	//Creating an object of Anonymous class which extends Thread class and passing this object to the reference of Thread class.
+            public void run()	//Anonymous class overriding run() method of Thread class
             {
-                sleep(2000);
+
+	
+                //Plazas
+                Plazas plazas = new Plazas(jLabelPlazasOcupadas, jLabelPlazasDisponibles);
+
+                //Merienda
+                ListaMonitores monitoresMerienda = new ListaMonitores(jLabelMonitoresMerienda);
+                ListaNiños colaMerienda = new ListaNiños(jLabelColaMerienda);
+                ListaNiños comiendoMerienda = new ListaNiños(jLabelNiñosComiendoMerienda);
+                Merienda merienda = new Merienda(monitoresMerienda, colaMerienda, comiendoMerienda, jLabelBandejasSuciasMerienda, jLabelBandejasLimpiasMerienda);
+
+                //Soga
+                ListaNiños colaSoga = new ListaNiños(jLabelColaSoga);
+                ListaNiños equipo1Soga = new ListaNiños(jLabelEquipo1Soga);
+                ListaNiños equipo2Soga = new ListaNiños(jLabelEquipo2Soga);
+                ListaMonitores monitorSoga = new ListaMonitores(jLabelMonitorSoga);
+                Soga soga = new Soga(monitorSoga, colaSoga, equipo1Soga, equipo2Soga);
+
+                //Tirolina
+                ListaMonitores monitorTirolina = new ListaMonitores(jLabelMonitorTirolina);
+                ListaNiños colaTirolina = new ListaNiños(jLabelColaTirolina);
+                ListaNiños preparacionTirolina = new ListaNiños(jLabelPreparacionTirolina);
+                ListaNiños entirolina = new ListaNiños(jLabelTirolina);
+                ListaNiños finalizacionTirolina = new ListaNiños(jLabelFinalizacionTirolina);     
+                Tirolina tirolina = new Tirolina(monitorTirolina, colaTirolina, preparacionTirolina, entirolina, finalizacionTirolina);
+
+                //Lock explícito y condicion
+                Lock cerrojo = new ReentrantLock();
+                Condition norte = cerrojo.newCondition();
+                Condition sur = cerrojo.newCondition();
+
+                //Zona Comun, Niños y monitores entran primero a la zona comun, y salen desde la zona comun
+                ListaNiños colaNorte = new ListaNiños(jLabelEntradaNorte);
+                ListaNiños colaSur = new ListaNiños(jLabelEntradaSur);
+                ListaMonitores monitoresZonaComun = new ListaMonitores(jLabelMonitoresZonaComun);
+                ListaNiños niñosZonaComun = new ListaNiños(jLabelNiñosZonaComun);  
+                ZonaComun zonaComun = new ZonaComun(monitoresZonaComun, niñosZonaComun, norte, sur, colaNorte, colaSur, merienda, soga, tirolina, plazas);
+
+                //EntradaNorte 
+                EntradaNorte entradaNorte = new EntradaNorte(plazas, colaNorte, zonaComun, cerrojo, norte);
+
+                //EntradaSur 
+                EntradaSur entradaSur = new EntradaSur(plazas, colaSur, zonaComun, cerrojo, norte);
+
+                //Campamento
+                Campamento campamento = new Campamento(merienda, soga, tirolina, zonaComun, entradaNorte, entradaSur, plazas);
+
+                //AlternanciaMonitoresEntrada
+                AtomicInteger alternanciaMonitores = new AtomicInteger(0);
+
+                for (int m = 1; m <= 4; m++)
+                {
+                    Monitor monitor = new Monitor(m, campamento, entradaNorte, entradaSur, alternanciaMonitores,zonaComun,soga,tirolina,merienda);
+                    monitor.start();
+                }
+                
+                for (int n = 1; n <=2000; n++)
+                {
+                    Niño niño = new Niño(n, campamento, entradaNorte, entradaSur,zonaComun,merienda,tirolina,soga);
+                    //anonimus runnable
+                    niño.start();
+                    try
+                    {
+                        sleep(2000);
+                    }
+                    catch(InterruptedException e){}
+                }    
             }
-            catch(InterruptedException e){}
-        }
-
-        //AlternanciaMonitoresEntrada
-        AtomicInteger alternanciaMonitores = new AtomicInteger(0);
-
-        for (int m = 1; m <= 4; m++)
-        {
-            Monitor monitor = new Monitor(m, campamento, entradaNorte, entradaSur, alternanciaMonitores,zonaComun,soga,tirolina,merienda);
-            monitor.start();
-        }
-
+	};
+        anonymousThread.start();
     }//GEN-LAST:event_jPanelRunnearMouseClicked
 
     private void jPanelRunnearMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRunnearMouseEntered
