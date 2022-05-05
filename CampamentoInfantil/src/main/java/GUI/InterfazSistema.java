@@ -127,6 +127,13 @@ public class InterfazSistema extends javax.swing.JFrame {
         jLabel45 = new javax.swing.JLabel();
         jPanel21 = new javax.swing.JPanel();
         jLabelEntradaNorte = new javax.swing.JLabel();
+        jPanelEntradaNorte2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabelPlazasDisponibles = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabelPlazasOcupadas = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -313,7 +320,7 @@ public class InterfazSistema extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("ENTRADA SUR");
-        jPanelEntradaSur.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 500, 40));
+        jPanelEntradaSur.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 40));
 
         jPanel22.setBackground(new java.awt.Color(0, 0, 0));
         jPanel22.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
@@ -321,11 +328,11 @@ public class InterfazSistema extends javax.swing.JFrame {
         jPanel22.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelEntradaSur.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel22.add(jLabelEntradaSur, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 480, 10));
+        jPanel22.add(jLabelEntradaSur, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 410, 10));
 
-        jPanelEntradaSur.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 500, 30));
+        jPanelEntradaSur.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 430, 30));
 
-        jPanelDatos.add(jPanelEntradaSur, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, 520, 80));
+        jPanelDatos.add(jPanelEntradaSur, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 10, 450, 80));
 
         jPanelActividades1.setBackground(new java.awt.Color(39, 43, 51));
         jPanelActividades1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(122, 130, 142)));
@@ -616,7 +623,7 @@ public class InterfazSistema extends javax.swing.JFrame {
         jLabel45.setForeground(new java.awt.Color(255, 255, 255));
         jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel45.setText("ENTRADA NORTE");
-        jPanelEntradaNorte1.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 500, 40));
+        jPanelEntradaNorte1.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 40));
 
         jPanel21.setBackground(new java.awt.Color(0, 0, 0));
         jPanel21.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
@@ -624,11 +631,53 @@ public class InterfazSistema extends javax.swing.JFrame {
         jPanel21.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelEntradaNorte.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel21.add(jLabelEntradaNorte, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 480, 10));
+        jPanel21.add(jLabelEntradaNorte, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 430, 10));
 
-        jPanelEntradaNorte1.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 500, 30));
+        jPanelEntradaNorte1.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 430, 30));
 
-        jPanelDatos.add(jPanelEntradaNorte1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 520, 80));
+        jPanelDatos.add(jPanelEntradaNorte1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 450, 80));
+
+        jPanelEntradaNorte2.setBackground(new java.awt.Color(39, 43, 51));
+        jPanelEntradaNorte2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(122, 130, 142)));
+        jPanelEntradaNorte2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("CAMPAMENTO");
+        jPanelEntradaNorte2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 130, 10));
+
+        jLabel4.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("INFORMACIÓN");
+        jPanelEntradaNorte2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 20));
+
+        jLabelPlazasDisponibles.setFont(new java.awt.Font("Roboto Medium", 0, 10)); // NOI18N
+        jLabelPlazasDisponibles.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPlazasDisponibles.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelPlazasDisponibles.setText("50");
+        jPanelEntradaNorte2.add(jLabelPlazasDisponibles, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 30, 30));
+
+        jLabel42.setFont(new java.awt.Font("Roboto Medium", 0, 10)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel42.setText("Plazas Disponibles:");
+        jPanelEntradaNorte2.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 90, 30));
+
+        jLabel43.setFont(new java.awt.Font("Roboto Medium", 0, 10)); // NOI18N
+        jLabel43.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel43.setText("Plazas Ocupadas:");
+        jPanelEntradaNorte2.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 90, 20));
+
+        jLabelPlazasOcupadas.setFont(new java.awt.Font("Roboto Medium", 0, 10)); // NOI18N
+        jLabelPlazasOcupadas.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPlazasOcupadas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelPlazasOcupadas.setText("0");
+        jPanelEntradaNorte2.add(jLabelPlazasOcupadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 30, 20));
+
+        jPanelDatos.add(jPanelEntradaNorte2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 10, 130, 80));
 
         javax.swing.GroupLayout jPanelVentanaLayout = new javax.swing.GroupLayout(jPanelVentana);
         jPanelVentana.setLayout(jPanelVentanaLayout);
@@ -722,8 +771,8 @@ public class InterfazSistema extends javax.swing.JFrame {
     private void jPanelRunnearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRunnearMouseClicked
         // TODO add your handling code here
         
-        //Ocupacion
-        AtomicInteger ocupacion = new AtomicInteger(0);
+        //Plazas
+        Plazas plazas = new Plazas(jLabelPlazasOcupadas, jLabelPlazasDisponibles);
         
         //Merienda
         ListaMonitores monitoresMerienda = new ListaMonitores(jLabelMonitoresMerienda);
@@ -756,16 +805,16 @@ public class InterfazSistema extends javax.swing.JFrame {
         ListaNiños colaSur = new ListaNiños(jLabelEntradaSur);
         ListaMonitores monitoresZonaComun = new ListaMonitores(jLabelMonitoresZonaComun);
         ListaNiños niñosZonaComun = new ListaNiños(jLabelNiñosZonaComun);  
-        ZonaComun zonaComun = new ZonaComun(monitoresZonaComun, niñosZonaComun, norte, sur, colaNorte, colaSur, merienda, soga, tirolina, ocupacion);
+        ZonaComun zonaComun = new ZonaComun(monitoresZonaComun, niñosZonaComun, norte, sur, colaNorte, colaSur, merienda, soga, tirolina, plazas);
                 
         //EntradaNorte 
-        EntradaNorte entradaNorte = new EntradaNorte(ocupacion, colaNorte, zonaComun, cerrojo, norte);
+        EntradaNorte entradaNorte = new EntradaNorte(plazas, colaNorte, zonaComun, cerrojo, norte);
         
         //EntradaSur 
-        EntradaSur entradaSur = new EntradaSur(ocupacion, colaSur, zonaComun, cerrojo, norte);
+        EntradaSur entradaSur = new EntradaSur(plazas, colaSur, zonaComun, cerrojo, norte);
             
         //Campamento
-        Campamento campamento = new Campamento(merienda, soga, tirolina, zonaComun, entradaNorte, entradaSur, ocupacion);
+        Campamento campamento = new Campamento(merienda, soga, tirolina, zonaComun, entradaNorte, entradaSur, plazas);
         
         for (int n = 1; n <=2000; n++)
         {
@@ -842,12 +891,16 @@ public class InterfazSistema extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
@@ -875,6 +928,8 @@ public class InterfazSistema extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelMonitoresZonaComun;
     private javax.swing.JLabel jLabelNiñosComiendoMerienda;
     private javax.swing.JLabel jLabelNiñosZonaComun;
+    private javax.swing.JLabel jLabelPlazasDisponibles;
+    private javax.swing.JLabel jLabelPlazasOcupadas;
     private javax.swing.JLabel jLabelPreparacionTirolina;
     private javax.swing.JLabel jLabelRunnear;
     private javax.swing.JLabel jLabelStop;
@@ -903,6 +958,7 @@ public class InterfazSistema extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelDatos;
     private javax.swing.JPanel jPanelEntradaNorte;
     private javax.swing.JPanel jPanelEntradaNorte1;
+    private javax.swing.JPanel jPanelEntradaNorte2;
     private javax.swing.JPanel jPanelEntradaNorte4;
     private javax.swing.JPanel jPanelEntradaNorte5;
     private javax.swing.JPanel jPanelEntradaNorte6;

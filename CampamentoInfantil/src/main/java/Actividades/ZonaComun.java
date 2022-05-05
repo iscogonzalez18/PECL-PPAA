@@ -7,6 +7,7 @@ package Actividades;
 
 import GUI.ListaMonitores;
 import GUI.ListaNiños;
+import GUI.Plazas;
 import Threads.Monitor;
 import Threads.Niño;
 import static java.lang.Thread.sleep;
@@ -35,9 +36,9 @@ public class ZonaComun
     private Merienda merienda;
     private Soga soga;
     private Tirolina tirolina;
-    private AtomicInteger ocupacion;
+    private Plazas plazas;
 
-    public ZonaComun(ListaMonitores monitores, ListaNiños niños, Condition norte, Condition sur, ListaNiños colaNorte, ListaNiños colaSur, Merienda merienda, Soga soga, Tirolina tirolina, AtomicInteger ocupacion) 
+    public ZonaComun(ListaMonitores monitores, ListaNiños niños, Condition norte, Condition sur, ListaNiños colaNorte, ListaNiños colaSur, Merienda merienda, Soga soga, Tirolina tirolina, Plazas plazas) 
     {
         this.monitores = monitores;
         this.niños = niños;
@@ -49,7 +50,7 @@ public class ZonaComun
         this.merienda = merienda;
         this.soga = soga;
         this.tirolina = tirolina;
-        this.ocupacion = ocupacion;
+        this.plazas = plazas;
     }
 
     public String entrarNiño(Niño n)
@@ -153,7 +154,7 @@ public class ZonaComun
         try 
         {       
             System.out.println("Niño " + n.getIdentificador() + " SALIENDO.");
-            ocupacion.decrementAndGet();
+            plazas.decrementar();
             if(colaNorte.tamaño() > 0 && colaSur.tamaño() > 0)
             {
                 //personas esperando en las dos entradas (alternancia)

@@ -8,6 +8,7 @@ package Entradas;
 import Actividades.ZonaComun;
 import Clases.Campamento;
 import GUI.ListaNiños;
+import GUI.Plazas;
 import Threads.Monitor;
 import Threads.Niño;
 import java.util.Random;
@@ -24,15 +25,15 @@ import java.util.logging.Logger;
  */
 public class EntradaNorte {
     
-    private AtomicInteger ocupacion;
+    private Plazas plazas;
     private boolean abierto;
     private ListaNiños cola;
     private ZonaComun zonaComun;
     private Lock cerrojo;
     private Condition norte;
 
-    public EntradaNorte(AtomicInteger ocupacion, ListaNiños cola, ZonaComun zonaComun, Lock cerrojo, Condition norte) {
-        this.ocupacion = ocupacion;
+    public EntradaNorte(Plazas plazas, ListaNiños cola, ZonaComun zonaComun, Lock cerrojo, Condition norte) {
+        this.plazas = plazas;
         this.abierto = false;
         this.cola = cola;
         this.zonaComun= zonaComun;
@@ -45,14 +46,14 @@ public class EntradaNorte {
         cerrojo.lock();
         try
         {
-            while(this.ocupacion.get()== 50 || !abierto)
+            while(plazas.getOcupacion()== 50 || !abierto)
             {
                 cola.meter(n);
                 norte.await(); 
             }
             cola.sacar(n);
-            ocupacion.incrementAndGet();
-            System.out.println("Niño " + n.getIdentificador() +" entra por NORTE. Ocupación: " + ocupacion.get() + "\nCola Norte --> " + cola.tamaño());
+            plazas.incrementar();          
+            System.out.println("Niño " + n.getIdentificador() +" entra por NORTE. Ocupación: " + plazas.getOcupacion() + "\nCola Norte --> " + cola.tamaño());
         }
         catch(InterruptedException e){}
         finally{
