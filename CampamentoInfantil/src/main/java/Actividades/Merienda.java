@@ -11,9 +11,6 @@ import Threads.Monitor;
 import Threads.Niño;
 import static java.lang.Thread.sleep;
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JLabel;
@@ -22,19 +19,18 @@ import javax.swing.JLabel;
  *
  * @author Francisco
  */
-public class Merienda {
+public class Merienda 
+{
     
     private ListaMonitores monitores;
-    private int contadorServidas;
     private ListaNiños colaEspera,comiendo;
     private JLabel sucias,limpias;
     private Semaphore sem= new Semaphore(20,true);
-    private Lock cerrojo=new ReentrantLock();
-    private Condition vacio=cerrojo.newCondition();
     private Semaphore bandejasSucias=new Semaphore(25,true);
     private Semaphore bandejasLimpias=new Semaphore(0,true);
 
-    public Merienda(ListaMonitores monitores, ListaNiños colaEspera, ListaNiños comiendo, JLabel sucias, JLabel limpias) {
+    public Merienda(ListaMonitores monitores, ListaNiños colaEspera, ListaNiños comiendo, JLabel sucias, JLabel limpias)
+    {
         this.monitores = monitores;
         this.colaEspera = colaEspera;
         this.comiendo = comiendo;
@@ -64,12 +60,15 @@ public class Merienda {
             sem.release();
             bandejasSucias.release();
             sucias.setText(Integer.toString(bandejasSucias.availablePermits()));
-            if (n.getActividades()>=3){
+            if (n.getActividades()>=3)
+            {
                 n.sumaActividad(1);
                 n.setActividades(0);
             }
             
-        } catch (InterruptedException ex) {
+        } 
+        catch (InterruptedException ex)
+        {
             Logger.getLogger(Merienda.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -79,18 +78,23 @@ public class Merienda {
         monitores.meter(m);
         System.out.println("El monitor "+m.getIdentificador()+" ha entrado en merienda");
         
-        while (m.getContador()<10){
-            try {
+        while (m.getContador()<10)
+        {
+            try 
+            {
                 bandejasSucias.acquire();
                 sucias.setText(Integer.toString(bandejasSucias.availablePermits()));
                 sleep(2000+(int)(Math.random()*3001));
                 bandejasLimpias.release();
                 limpias.setText(Integer.toString(bandejasLimpias.availablePermits()));
                 m.sumaActividad();
-            } catch (InterruptedException ex) {
+            } 
+            catch (InterruptedException ex)
+            {
                 Logger.getLogger(Merienda.class.getName()).log(Level.SEVERE, null, ex);
             }
-            if (m.getContador()==10){
+            if (m.getContador()==10)
+            {
                     System.out.println("El monitor "+m.getIdentificador()+" se va de paseo");
             }
         }

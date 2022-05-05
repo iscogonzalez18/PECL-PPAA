@@ -21,7 +21,8 @@ import java.util.logging.Logger;
  *
  * @author Francisco
  */
-public class ZonaComun {
+public class ZonaComun 
+{
     
     private ListaMonitores monitores;
     private ListaNiños niños;
@@ -55,16 +56,23 @@ public class ZonaComun {
     {
         niños.meter(n);  
         String actividad = "";
-        try {
+        try 
+        {
             sleep(2000+(int) (2001*Math.random()));
-        } catch (InterruptedException ex) {
+        } 
+        catch (InterruptedException ex) 
+        {
             Logger.getLogger(ZonaComun.class.getName()).log(Level.SEVERE, null, ex);
         }
-        if (n.getActividades()>=15){
+        if (n.getActividades()>=15)
+        {
             salirNiñoCampamento(n);
-        }else{
+        }
+        else
+        {
             int x=(int) (3*Math.random());
-            switch (x){
+            switch (x)
+            {
                 case 0:
                     niños.sacar(n);
                     actividad= "Tirolina";
@@ -92,13 +100,17 @@ public class ZonaComun {
         String act="";
         monitores.meter(m);
         m.setContador(0);
-         try {
+        try 
+        {
             sleep(1000+(int)(1001*Math.random()));
-        } catch (InterruptedException ex) {
+        } 
+        catch (InterruptedException ex) 
+        {
             Logger.getLogger(ZonaComun.class.getName()).log(Level.SEVERE, null, ex);
         }
         String nombre=m.getIdentificador();
-        switch (nombre){
+        switch (nombre)
+        {
             case "M1":
                 monitores.sacar(m);
                 act="Merienda";
@@ -138,28 +150,34 @@ public class ZonaComun {
     {
         niños.sacar(n);
         cerrojo.lock();
-        try {       
-            System.out.println("Persona " + n.getIdentificador() + " SALIENDO.");
+        try 
+        {       
+            System.out.println("Niño " + n.getIdentificador() + " SALIENDO.");
             ocupacion.decrementAndGet();
-            if(colaNorte.tamaño() > 0 && colaSur.tamaño() > 0){
+            if(colaNorte.tamaño() > 0 && colaSur.tamaño() > 0)
+            {
                 //personas esperando en las dos entradas (alternancia)
                 if(alternancia == 0)
                 {
                     sur.signal();
                     alternancia = 1;
                 }
-                else{
+                else
+                {
                     norte.signal();
                     alternancia = 0;
                 }
             }
-            else{
+            else
+            {
                 if(colaNorte.tamaño() > 0)
                     norte.signal();
                 else if (colaSur.tamaño() > 0)
                     sur.signal();
             }
-        } finally {
+        } 
+        finally 
+        {
             cerrojo.unlock();
         }
     }

@@ -13,9 +13,6 @@ import static java.lang.Thread.sleep;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -23,67 +20,82 @@ import java.util.logging.Logger;
  *
  * @author Francisco
  */
-public class Soga {
+public class Soga
+{
     
     private ListaMonitores monitor; // Solo un monitor
     private ListaNiños cola;
     private ListaNiños equipo1;
     private ListaNiños equipo2;
-    private int contador=0,cont_1=0,cont_2=0; //Contador de niños en la actividadn en equipo 1 y equipo 2
-    private Lock cerrojo=new ReentrantLock();
-    private Condition lleno=cerrojo.newCondition();
+    private int cont_1=0,cont_2=0; //Contador de niños en la actividadn en equipo 1 y equipo 2
     private CyclicBarrier barrera=new CyclicBarrier(11);
     private Semaphore capacidad=new Semaphore(10,true);
 
-    public Soga(ListaMonitores monitor, ListaNiños cola, ListaNiños equipo1, ListaNiños equipo2) {
+    public Soga(ListaMonitores monitor, ListaNiños cola, ListaNiños equipo1, ListaNiños equipo2) 
+    {
         this.monitor = monitor;
         this.cola=cola;
         this.equipo1 = equipo1;
         this.equipo2 = equipo2;
     }
     
-    public void entrarNiño(Niño n){
+    public void entrarNiño(Niño n)
+    {
         cola.meter(n);
-        try{
+        try
+        {
             System.out.println("El niño "+n.getIdentificador()+" entra en la cola de soga");
             capacidad.acquire();
             barrera.await();//Espera a que haya 10 niños y el monitor esté listo
             barrera.await();//Acaba el juego
             capacidad.release();
         }
-        catch(InterruptedException e){} catch (BrokenBarrierException ex) {
+        catch(InterruptedException e){} catch (BrokenBarrierException ex) 
+        {
             Logger.getLogger(Soga.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
-    public void entrarMonitor(Monitor m){
+    public void entrarMonitor(Monitor m)
+    {
         monitor.meter(m);
         System.out.println("El monitor "+m.getIdentificador()+" entra en soga");            
-        while (m.getContador()<10){
-            try {
+        while (m.getContador()<10)
+        {
+            try 
+            {
                 barrera.await();//El monitor comienza a asignar a los niños de forma aleatoria en los equipos
-                for (int i=0;i<10;i++){
-                    if (cont_1!=5&&cont_2!=5){
-                        if ((int) (Math.random()*2)==0){ 
+                for (int i=0;i<10;i++)
+                {
+                    if (cont_1!=5&&cont_2!=5)
+                    {
+                        if ((int) (Math.random()*2)==0)
+                        { 
                             System.out.println("El niño "+cola.mirar(0).getIdentificador()+" sale de la cola");
                             System.out.println("El niño "+cola.mirar(0).getIdentificador()+" esta en el equipo 1");
                             equipo1.meter(cola.mirar(0));
                             cola.sacar(cola.mirar(0));
                             cont_1++; 
-                        }else{
+                        }
+                        else
+                        {
                             System.out.println("El niño "+cola.mirar(0).getIdentificador()+" sale de la cola");
                             System.out.println("El niño "+cola.mirar(0).getIdentificador()+" esta en el equipo 2");
                             equipo2.meter(cola.mirar(0));
                             cola.sacar(cola.mirar(0));
                             cont_2++;
                         }
-                    }else if(cont_1==5){
+                    }
+                    else if(cont_1==5)
+                    {
                         System.out.println("El niño "+cola.mirar(0).getIdentificador()+" sale de la cola");
                         System.out.println("El niño "+cola.mirar(0).getIdentificador()+" esta en el equipo 2");
                         equipo2.meter(cola.mirar(0));
                         cola.sacar(cola.mirar(0));
                         cont_2++;
-                    }else if(cont_2==5){
+                    }
+                    else if(cont_2==5)
+                    {
                         System.out.println("El niño "+cola.mirar(0).getIdentificador()+" sale de la cola");
                         System.out.println("El niño "+cola.mirar(0).getIdentificador()+" esta en el equipo 1");
                         equipo1.meter(cola.mirar(0));
@@ -97,9 +109,11 @@ public class Soga {
                 sleep(7000);
                 //Fin de juego
                 //Aleatorio el equipo ganador
-                if ((int) (Math.random()*2)==0){
+                if ((int) (Math.random()*2)==0)
+                {
                     System.out.println("En la soga ha ganado el equipo1");
-                    for (int i=0;i<5;i++){
+                    for (int i=0;i<5;i++)
+                    {
                         System.out.println("Al niño "+equipo1.mirar(0).getIdentificador()+" se le suman 2 actividades");
                         System.out.println("Al niño "+equipo2.mirar(0).getIdentificador()+" se le suma 1 actividad");
                         equipo1.mirar(0).sumaActividad(2);
@@ -109,9 +123,12 @@ public class Soga {
                         cont_1--;
                         cont_2--;
                     }  
-                }else{
+                }
+                else
+                {
                     System.out.println("En la soga ha ganado el equipo2");
-                    for (int i=0;i<5;i++){
+                    for (int i=0;i<5;i++)
+                    {
                         System.out.println("Al niño "+equipo1.mirar(0).getIdentificador()+" se le suma 1 actividades");
                         System.out.println("Al niño "+equipo2.mirar(0).getIdentificador()+" se le suman 2 actividades");
                         equipo1.mirar(0).sumaActividad(1);
@@ -124,13 +141,22 @@ public class Soga {
                 }
                 barrera.await();
                 m.sumaActividad(); 
-            } catch (InterruptedException ex) {
+            }
+            catch (InterruptedException ex)
+            {
                 Logger.getLogger(Soga.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (BrokenBarrierException ex) {
+            } 
+            catch (BrokenBarrierException ex)
+            {
                 Logger.getLogger(Soga.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         System.out.println("El monitor "+m.getIdentificador()+" se va de paseo");
         monitor.sacar(m);
+    }
+    
+    public int getContador()
+    {
+        return cont_1+cont_2;
     }
 }

@@ -31,7 +31,8 @@ public class Niño extends Thread {
     private Tirolina tirolina;
     private Soga soga;
 
-    public Niño(int num, Campamento camp, EntradaNorte entradaNorte, EntradaSur entradaSur, ZonaComun zonaComun, Merienda merienda, Tirolina tirolina, Soga soga) {
+    public Niño(int num, Campamento camp, EntradaNorte entradaNorte, EntradaSur entradaSur, ZonaComun zonaComun, Merienda merienda, Tirolina tirolina, Soga soga) 
+    {
         this.identificador = generaNombre(num);
         this.num = num;
         this.camp = camp;
@@ -47,16 +48,23 @@ public class Niño extends Thread {
     public String generaNombre(int n)
     {
         String id;
-        if (n<10){
+        if (n<10)
+        {
             Integer.toString(n);
             id="N000"+n;
-        }else if(n<100){
+        }
+        else if(n<100)
+        {
             Integer.toString(n);
             id="N00"+n;
-        }else if(n<1000){
+        }
+        else if(n<1000)
+        {
             Integer.toString(n);
             id="N0"+n;
-        }else{
+        }
+        else
+        {
             Integer.toString(n);
             id="N"+n;
         }
@@ -94,16 +102,26 @@ public class Niño extends Thread {
         {
             entradaNorte.entrarNiño(this);
         }
-        else if(r==0){
+        else if(r==0)
+        {
             entradaSur.entrarNiño(this);
         }
-        while(contador<15){
+        while(contador<15)
+        {
             String act=zonaComun.entrarNiño(this);
-            if (act.equals("Tirolina")){
+            if (act.equals("Tirolina"))
+            {
                 tirolina.entrarNiño(this);
-            }else if(act.equals("Soga")){
-                soga.entrarNiño(this);
-            }else{
+            }
+            else if(act.equals("Soga"))
+            {
+                if (soga.getContador()!=10)
+                {
+                    soga.entrarNiño(this);
+                }    
+            }
+            else
+            {
                 merienda.entrarNiño(this);
             }
         }

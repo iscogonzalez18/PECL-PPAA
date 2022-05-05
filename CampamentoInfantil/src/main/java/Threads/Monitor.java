@@ -36,7 +36,8 @@ public class Monitor extends Thread{
     private Tirolina tirolina;
     private Merienda merienda;
 
-    public Monitor(int num, Campamento camp, EntradaNorte entradaNorte, EntradaSur entradaSur, AtomicInteger alternanciaMonitores, ZonaComun zonaComun, Soga soga, Tirolina tirolina, Merienda merienda) {
+    public Monitor(int num, Campamento camp, EntradaNorte entradaNorte, EntradaSur entradaSur, AtomicInteger alternanciaMonitores, ZonaComun zonaComun, Soga soga, Tirolina tirolina, Merienda merienda)
+    {
         this.identificador = "M" + Integer.toString(num); //MX
         this.num = num;
         this.camp = camp;
@@ -52,23 +53,28 @@ public class Monitor extends Thread{
     
     
 
-    public String getIdentificador() {
+    public String getIdentificador() 
+    {
         return identificador;
     }
 
-    public int getNum() {
+    public int getNum() 
+    {
         return num;
     }    
 
-    public int getContador() {
+    public int getContador()
+    {
         return contador;
     }
 
-    public void setContador(int contador) {
+    public void setContador(int contador) 
+    {
         this.contador = contador;
     }
     
-    public synchronized void sumaActividad(){
+    public synchronized void sumaActividad()
+    {
         contador++;
     }
     
@@ -93,13 +99,19 @@ public class Monitor extends Thread{
             cerrojo.unlock();
         }     
         
-        while (true){
+        while (true)
+        {
             String act=zonaComun.entrarMonitor(this);
-            if (act.equals("Tirolina")){
+            if (act.equals("Tirolina"))
+            {
                 tirolina.entrarMonitor(this);
-            }else if(act.equals("Soga")){
+            }
+            else if(act.equals("Soga"))
+            {
                 soga.entrarMonitor(this);
-            }else{
+            }
+            else
+            {
                 merienda.entrarMonitor(this);
             }
         }
