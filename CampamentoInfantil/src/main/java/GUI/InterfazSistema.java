@@ -17,10 +17,13 @@ import Threads.Niño;
 import java.awt.Color;
 import java.awt.MouseInfo;
 import java.awt.Point;
+import static java.lang.Thread.sleep;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -767,6 +770,7 @@ public class InterfazSistema extends javax.swing.JFrame {
         for (int n = 1; n <=2000; n++)
         {
             Niño niño = new Niño(n, campamento, entradaNorte, entradaSur,zonaComun,merienda,tirolina,soga);
+            //anonimus runnable
             niño.start();
         }
         
