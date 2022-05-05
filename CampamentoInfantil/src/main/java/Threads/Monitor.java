@@ -85,12 +85,12 @@ public class Monitor extends Thread{
         {
             if(alternanciaMonitores.get() == 1)
             {
-                alternanciaMonitores.getAndAdd(0);
+                alternanciaMonitores.getAndSet(0);
                 entradaNorte.entrarMonitor(this);
             }
             else
             {
-                alternanciaMonitores.getAndAdd(1);
+                alternanciaMonitores.getAndSet(1);
                 entradaSur.entrarMonitor(this);
             }
         }
