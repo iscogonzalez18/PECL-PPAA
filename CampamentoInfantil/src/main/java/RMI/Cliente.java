@@ -56,13 +56,9 @@ public class Cliente extends javax.swing.JFrame {
         jPanelControlVentana = new javax.swing.JPanel();
         jPanelCerrar = new javax.swing.JPanel();
         jLabelCerrar = new javax.swing.JLabel();
-        jPanelStop = new javax.swing.JPanel();
-        jLabelStop = new javax.swing.JLabel();
         jPanelEspaciado = new javax.swing.JPanel();
         jPanelMinimizar = new javax.swing.JPanel();
         jLabelMinimizar = new javax.swing.JLabel();
-        jPanelRunnear = new javax.swing.JPanel();
-        jLabelRunnear = new javax.swing.JLabel();
         jPanelDatos = new javax.swing.JPanel();
         jPanelEntradaNorte = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -72,10 +68,6 @@ public class Cliente extends javax.swing.JFrame {
         jLabelNiñosZonaComun = new javax.swing.JLabel();
         jPanel20 = new javax.swing.JPanel();
         jLabelMonitoresZonaComun = new javax.swing.JLabel();
-        jPanelEntradaSur = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel22 = new javax.swing.JPanel();
-        jLabelEntradaSur = new javax.swing.JLabel();
         jPanelActividades1 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
         jPanelEntradaNorte4 = new javax.swing.JPanel();
@@ -126,17 +118,6 @@ public class Cliente extends javax.swing.JFrame {
         jLabelPreparacionTirolina = new javax.swing.JLabel();
         jPanel27 = new javax.swing.JPanel();
         jLabelMonitorTirolina = new javax.swing.JLabel();
-        jPanelEntradaNorte1 = new javax.swing.JPanel();
-        jLabel45 = new javax.swing.JLabel();
-        jPanel21 = new javax.swing.JPanel();
-        jLabelEntradaNorte = new javax.swing.JLabel();
-        jPanelEntradaNorte2 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabelPlazasDisponibles = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
-        jLabelPlazasOcupadas = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -180,30 +161,6 @@ public class Cliente extends javax.swing.JFrame {
 
         jPanelControlVentana.add(jPanelCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 5, 60, 25));
 
-        jPanelStop.setBackground(new java.awt.Color(39, 43, 51));
-        jPanelStop.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
-        jPanelStop.setPreferredSize(new java.awt.Dimension(60, 30));
-        jPanelStop.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanelStopMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jPanelStopMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jPanelStopMouseExited(evt);
-            }
-        });
-        jPanelStop.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabelStop.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        jLabelStop.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelStop.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelStop.setText("STOP");
-        jPanelStop.add(jLabelStop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 25));
-
-        jPanelControlVentana.add(jPanelStop, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 5, 60, 25));
-
         jPanelEspaciado.setBackground(new java.awt.Color(39, 43, 51));
 
         javax.swing.GroupLayout jPanelEspaciadoLayout = new javax.swing.GroupLayout(jPanelEspaciado);
@@ -242,30 +199,6 @@ public class Cliente extends javax.swing.JFrame {
         jPanelMinimizar.add(jLabelMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 20));
 
         jPanelControlVentana.add(jPanelMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 5, 60, 25));
-
-        jPanelRunnear.setBackground(new java.awt.Color(39, 43, 51));
-        jPanelRunnear.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
-        jPanelRunnear.setPreferredSize(new java.awt.Dimension(60, 30));
-        jPanelRunnear.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanelRunnearMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jPanelRunnearMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jPanelRunnearMouseExited(evt);
-            }
-        });
-        jPanelRunnear.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabelRunnear.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        jLabelRunnear.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelRunnear.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelRunnear.setText("RUN");
-        jPanelRunnear.add(jLabelRunnear, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 25));
-
-        jPanelControlVentana.add(jPanelRunnear, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 5, 60, 25));
 
         jPanelDatos.setBackground(new java.awt.Color(0, 0, 0));
         jPanelDatos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -314,28 +247,6 @@ public class Cliente extends javax.swing.JFrame {
         jPanelEntradaNorte.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 200, 30));
 
         jPanelDatos.add(jPanelEntradaNorte, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 1050, 110));
-
-        jPanelEntradaSur.setBackground(new java.awt.Color(39, 43, 51));
-        jPanelEntradaSur.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(122, 130, 142)));
-        jPanelEntradaSur.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("ENTRADA SUR");
-        jPanelEntradaSur.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 40));
-
-        jPanel22.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel22.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
-        jPanel22.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel22.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabelEntradaSur.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel22.add(jLabelEntradaSur, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 410, 10));
-
-        jPanelEntradaSur.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 430, 30));
-
-        jPanelDatos.add(jPanelEntradaSur, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 10, 450, 80));
 
         jPanelActividades1.setBackground(new java.awt.Color(39, 43, 51));
         jPanelActividades1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(122, 130, 142)));
@@ -618,70 +529,6 @@ public class Cliente extends javax.swing.JFrame {
 
         jPanelDatos.add(jPanelActividades1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 1050, 390));
 
-        jPanelEntradaNorte1.setBackground(new java.awt.Color(39, 43, 51));
-        jPanelEntradaNorte1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(122, 130, 142)));
-        jPanelEntradaNorte1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel45.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        jLabel45.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel45.setText("ENTRADA NORTE");
-        jPanelEntradaNorte1.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 40));
-
-        jPanel21.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel21.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(122, 130, 142), 1, true));
-        jPanel21.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel21.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabelEntradaNorte.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel21.add(jLabelEntradaNorte, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 430, 10));
-
-        jPanelEntradaNorte1.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 430, 30));
-
-        jPanelDatos.add(jPanelEntradaNorte1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 450, 80));
-
-        jPanelEntradaNorte2.setBackground(new java.awt.Color(39, 43, 51));
-        jPanelEntradaNorte2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(122, 130, 142)));
-        jPanelEntradaNorte2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel3.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("CAMPAMENTO");
-        jPanelEntradaNorte2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 130, 10));
-
-        jLabel4.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("INFORMACIÓN");
-        jPanelEntradaNorte2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 20));
-
-        jLabelPlazasDisponibles.setFont(new java.awt.Font("Roboto Medium", 0, 10)); // NOI18N
-        jLabelPlazasDisponibles.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelPlazasDisponibles.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPlazasDisponibles.setText("50");
-        jPanelEntradaNorte2.add(jLabelPlazasDisponibles, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 30, 30));
-
-        jLabel42.setFont(new java.awt.Font("Roboto Medium", 0, 10)); // NOI18N
-        jLabel42.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel42.setText("Plazas Disponibles:");
-        jPanelEntradaNorte2.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 90, 30));
-
-        jLabel43.setFont(new java.awt.Font("Roboto Medium", 0, 10)); // NOI18N
-        jLabel43.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel43.setText("Plazas Ocupadas:");
-        jPanelEntradaNorte2.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 90, 20));
-
-        jLabelPlazasOcupadas.setFont(new java.awt.Font("Roboto Medium", 0, 10)); // NOI18N
-        jLabelPlazasOcupadas.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelPlazasOcupadas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPlazasOcupadas.setText("0");
-        jPanelEntradaNorte2.add(jLabelPlazasOcupadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 30, 20));
-
-        jPanelDatos.add(jPanelEntradaNorte2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 10, 130, 80));
-
         javax.swing.GroupLayout jPanelVentanaLayout = new javax.swing.GroupLayout(jPanelVentana);
         jPanelVentana.setLayout(jPanelVentanaLayout);
         jPanelVentanaLayout.setHorizontalGroup(
@@ -742,20 +589,6 @@ public class Cliente extends javax.swing.JFrame {
         setLocation(point.x - x, point.y - y);
     }//GEN-LAST:event_jPanelControlVentanaMouseDragged
 
-    private void jPanelStopMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelStopMouseEntered
-        // TODO add your handling code here:
-        jPanelStop.setBackground( new Color(122,130,142));
-    }//GEN-LAST:event_jPanelStopMouseEntered
-
-    private void jPanelStopMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelStopMouseExited
-        // TODO add your handling code here:
-        jPanelStop.setBackground( new Color(39,43,51));
-    }//GEN-LAST:event_jPanelStopMouseExited
-
-    private void jPanelStopMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelStopMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPanelStopMouseClicked
-
     private void jPanelMinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelMinimizarMouseClicked
         // TODO add your handling code here:
         this.setState(this.ICONIFIED);
@@ -770,81 +603,6 @@ public class Cliente extends javax.swing.JFrame {
         // TODO add your handling code here:
         jPanelMinimizar.setBackground( new Color(39,43,51));
     }//GEN-LAST:event_jPanelMinimizarMouseExited
-
-    private void jPanelRunnearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRunnearMouseClicked
-        // TODO add your handling code here
-        
-        //Plazas
-        Plazas plazas = new Plazas(jLabelPlazasOcupadas, jLabelPlazasDisponibles);
-        
-        //Merienda
-        ListaMonitores monitoresMerienda = new ListaMonitores(jLabelMonitoresMerienda);
-        ListaNiños colaMerienda = new ListaNiños(jLabelColaMerienda);
-        ListaNiños comiendoMerienda = new ListaNiños(jLabelNiñosComiendoMerienda);
-        Merienda merienda = new Merienda(monitoresMerienda, colaMerienda, comiendoMerienda, jLabelBandejasSuciasMerienda, jLabelBandejasLimpiasMerienda);
-        
-        //Soga
-        ListaNiños colaSoga = new ListaNiños(jLabelColaSoga);
-        ListaNiños equipo1Soga = new ListaNiños(jLabelEquipo1Soga);
-        ListaNiños equipo2Soga = new ListaNiños(jLabelEquipo2Soga);
-        ListaMonitores monitorSoga = new ListaMonitores(jLabelMonitorSoga);
-        Soga soga = new Soga(monitorSoga, colaSoga, equipo1Soga, equipo2Soga);
-        
-        //Tirolina
-        ListaMonitores monitorTirolina = new ListaMonitores(jLabelMonitorTirolina);
-        ListaNiños colaTirolina = new ListaNiños(jLabelColaTirolina);
-        ListaNiños preparacionTirolina = new ListaNiños(jLabelPreparacionTirolina);
-        ListaNiños entirolina = new ListaNiños(jLabelTirolina);
-        ListaNiños finalizacionTirolina = new ListaNiños(jLabelFinalizacionTirolina);     
-        Tirolina tirolina = new Tirolina(monitorTirolina, colaTirolina, preparacionTirolina, entirolina, finalizacionTirolina);
-        
-        //Lock explícito y condicion
-        Lock cerrojo = new ReentrantLock();
-        Condition norte = cerrojo.newCondition();
-        Condition sur = cerrojo.newCondition();
-        
-        //Zona Comun, Niños y monitores entran primero a la zona comun, y salen desde la zona comun
-        ListaNiños colaNorte = new ListaNiños(jLabelEntradaNorte);
-        ListaNiños colaSur = new ListaNiños(jLabelEntradaSur);
-        ListaMonitores monitoresZonaComun = new ListaMonitores(jLabelMonitoresZonaComun);
-        ListaNiños niñosZonaComun = new ListaNiños(jLabelNiñosZonaComun);  
-        ZonaComun zonaComun = new ZonaComun(monitoresZonaComun, niñosZonaComun, norte, sur, colaNorte, colaSur, merienda, soga, tirolina, plazas);
-                
-        //EntradaNorte 
-        EntradaNorte entradaNorte = new EntradaNorte(plazas, colaNorte, zonaComun, cerrojo, norte);
-        
-        //EntradaSur 
-        EntradaSur entradaSur = new EntradaSur(plazas, colaSur, zonaComun, cerrojo, norte);
-            
-        //Campamento
-        Campamento campamento = new Campamento(merienda, soga, tirolina, zonaComun, entradaNorte, entradaSur, plazas);
-        
-        for (int n = 1; n <=2000; n++)
-        {
-            Niño niño = new Niño(n, campamento, entradaNorte, entradaSur,zonaComun,merienda,tirolina,soga);
-            //anonimus runnable
-            niño.start();
-        }
-        
-        //AlternanciaMonitoresEntrada
-        AtomicInteger alternanciaMonitores = new AtomicInteger(0);
-        
-        for (int m = 1; m <= 4; m++)
-        {
-            Monitor monitor = new Monitor(m, campamento, entradaNorte, entradaSur, alternanciaMonitores,zonaComun,soga,tirolina,merienda);
-            monitor.start();
-        }
-    }//GEN-LAST:event_jPanelRunnearMouseClicked
-
-    private void jPanelRunnearMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRunnearMouseEntered
-        // TODO add your handling code here:
-        jPanelRunnear.setBackground( new Color(122,130,142));
-    }//GEN-LAST:event_jPanelRunnearMouseEntered
-
-    private void jPanelRunnearMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRunnearMouseExited
-        // TODO add your handling code here:
-        jPanelRunnear.setBackground( new Color(39,43,51));
-    }//GEN-LAST:event_jPanelRunnearMouseExited
 
     /**
      * @param args the command line arguments
@@ -887,7 +645,6 @@ public class Cliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
@@ -895,17 +652,12 @@ public class Cliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel52;
@@ -920,8 +672,6 @@ public class Cliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelColaMerienda;
     private javax.swing.JLabel jLabelColaSoga;
     private javax.swing.JLabel jLabelColaTirolina;
-    private javax.swing.JLabel jLabelEntradaNorte;
-    private javax.swing.JLabel jLabelEntradaSur;
     private javax.swing.JLabel jLabelEquipo1Soga;
     private javax.swing.JLabel jLabelEquipo2Soga;
     private javax.swing.JLabel jLabelFinalizacionTirolina;
@@ -932,11 +682,7 @@ public class Cliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelMonitoresZonaComun;
     private javax.swing.JLabel jLabelNiñosComiendoMerienda;
     private javax.swing.JLabel jLabelNiñosZonaComun;
-    private javax.swing.JLabel jLabelPlazasDisponibles;
-    private javax.swing.JLabel jLabelPlazasOcupadas;
     private javax.swing.JLabel jLabelPreparacionTirolina;
-    private javax.swing.JLabel jLabelRunnear;
-    private javax.swing.JLabel jLabelStop;
     private javax.swing.JLabel jLabelTirolina;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -949,8 +695,6 @@ public class Cliente extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel21;
-    private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel25;
@@ -961,16 +705,11 @@ public class Cliente extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelControlVentana;
     private javax.swing.JPanel jPanelDatos;
     private javax.swing.JPanel jPanelEntradaNorte;
-    private javax.swing.JPanel jPanelEntradaNorte1;
-    private javax.swing.JPanel jPanelEntradaNorte2;
     private javax.swing.JPanel jPanelEntradaNorte4;
     private javax.swing.JPanel jPanelEntradaNorte5;
     private javax.swing.JPanel jPanelEntradaNorte6;
-    private javax.swing.JPanel jPanelEntradaSur;
     private javax.swing.JPanel jPanelEspaciado;
     private javax.swing.JPanel jPanelMinimizar;
-    private javax.swing.JPanel jPanelRunnear;
-    private javax.swing.JPanel jPanelStop;
     private javax.swing.JPanel jPanelVentana;
     // End of variables declaration//GEN-END:variables
 }

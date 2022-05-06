@@ -789,8 +789,6 @@ public class Servidor extends javax.swing.JFrame {
         Thread anonymousThread = new Thread(){ 	//Creating an object of Anonymous class which extends Thread class and passing this object to the reference of Thread class.
             public void run()	//Anonymous class overriding run() method of Thread class
             {
-
-	
                 //Plazas
                 Plazas plazas = new Plazas(jLabelPlazasOcupadas, jLabelPlazasDisponibles);
 
