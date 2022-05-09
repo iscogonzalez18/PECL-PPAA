@@ -15,6 +15,7 @@ import java.util.concurrent.Semaphore;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JLabel;
+import EscribirLog.Log;
 
 /**
  *
@@ -30,6 +31,7 @@ public class Merienda
     private Semaphore bandejasSucias=new Semaphore(25,true);
     private Semaphore bandejasLimpias=new Semaphore(0,true);
     private Paso paso;
+    
 
     public Merienda(ListaMonitores monitores, ListaNiños colaEspera, ListaNiños comiendo, JLabel sucias, JLabel limpias, Paso paso)
     {
@@ -47,7 +49,7 @@ public class Merienda
     public void entrarNiño(Niño n)
     {
         colaEspera.meter(n);
-        System.out.println("El niño "+n.getIdentificador()+" ha entrado en la cola de merienda");
+        Log.escribirLog("El niño "+n.getIdentificador()+" ha entrado en la cola de merienda");
         paso.mirar();
         try 
         {
@@ -58,12 +60,12 @@ public class Merienda
             paso.mirar();
             colaEspera.sacar(n);
             paso.mirar();
-            System.out.println("El niño "+n.getIdentificador()+" comienza a merendar");
+            Log.escribirLog("El niño "+n.getIdentificador()+" comienza a merendar");
             comiendo.meter(n);
             paso.mirar();
             sleep(7000);
             paso.mirar();
-            System.out.println("El niño "+n.getIdentificador()+" termina de merendar");
+            Log.escribirLog("El niño "+n.getIdentificador()+" termina de merendar");
             comiendo.sacar(n);
             sem.release();
             bandejasSucias.release();
@@ -85,7 +87,7 @@ public class Merienda
     public void entrarMonitor(Monitor m)
     {
         monitores.meter(m);
-        System.out.println("El monitor "+m.getIdentificador()+" ha entrado en merienda");
+        Log.escribirLog("El monitor "+m.getIdentificador()+" ha entrado en merienda");
         paso.mirar();
         while (m.getContador()<10)
         {
@@ -98,6 +100,7 @@ public class Merienda
                 sleep(2000+(int)(Math.random()*3001));
                 paso.mirar();
                 bandejasLimpias.release();
+                Log.escribirLog("El monitor "+m.getIdentificador()+" ha limpiado un plato");
                 limpias.setText(Integer.toString(bandejasLimpias.availablePermits()));
                 m.sumaActividad();
                 paso.mirar();
@@ -108,7 +111,7 @@ public class Merienda
             }
             if (m.getContador()==10)
             {
-                    System.out.println("El monitor "+m.getIdentificador()+" se va de paseo");
+                Log.escribirLog("El monitor "+m.getIdentificador()+" se va de paseo");
             }
         }
         paso.mirar();

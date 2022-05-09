@@ -9,6 +9,7 @@ import Actividades.ZonaComun;
 import Clases.Campamento;
 import ClasesAsociadasJFrame.ListaNiños;
 import ClasesAsociadasJFrame.Plazas;
+import EscribirLog.Log;
 import Threads.Monitor;
 import Threads.Niño;
 import java.util.Random;
@@ -48,7 +49,7 @@ public class EntradaSur {
             }
             cola.sacar(n);
             plazas.incrementar();
-            System.out.println("Niño " + n.getIdentificador() +" entra por SUR. Ocupación: " + plazas.getOcupacion() + "\nCola SUR --> " + cola.tamaño());
+            Log.escribirLog("Niño " + n.getIdentificador() +" entra por SUR. Ocupación: " + plazas.getOcupacion() + "\nCola SUR --> " + cola.tamaño());
             
         }
         catch(InterruptedException e){}
@@ -65,13 +66,13 @@ public class EntradaSur {
             if(!abierto)
             {
                 Random r = new Random();
-                System.out.println("Puerta SUR cerrada, monitor "+m.getIdentificador()+" abriendo...");
+                Log.escribirLog("Puerta SUR cerrada, monitor "+m.getIdentificador()+" abriendo...");
                 Thread.sleep(500+ r.nextInt(1000));
                 abierto = true;
                 sur.signalAll();
             }
             zonaComun.entrarMonitor(m);
-            System.out.println("Monitor "+m.getIdentificador()+" entra por SUR");
+            Log.escribirLog("Monitor "+m.getIdentificador()+" entra por SUR");
         }
         catch(InterruptedException e){}
         finally{

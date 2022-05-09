@@ -7,6 +7,7 @@ package Actividades;
 
 import ClasesAsociadasJFrame.ListaMonitores;
 import ClasesAsociadasJFrame.ListaNiños;
+import EscribirLog.Log;
 import PararReanudar.Paso;
 import Threads.Monitor;
 import Threads.Niño;
@@ -48,7 +49,7 @@ public class Soga
         paso.mirar();
         try
         {
-            System.out.println("El niño "+n.getIdentificador()+" entra en la cola de soga");
+            Log.escribirLog("El niño "+n.getIdentificador()+" entra en la cola de soga");
             capacidad.acquire();
             paso.mirar();
             barrera.await();//Espera a que haya 10 niños y el monitor esté listo
@@ -67,7 +68,7 @@ public class Soga
     {
         monitor.meter(m);
         paso.mirar();
-        System.out.println("El monitor "+m.getIdentificador()+" entra en soga");            
+        Log.escribirLog("El monitor "+m.getIdentificador()+" entra en soga");            
         while (m.getContador()<10)
         {
             paso.mirar();
@@ -84,8 +85,8 @@ public class Soga
                         if ((int) (Math.random()*2)==0)
                         { 
                             paso.mirar();
-                            System.out.println("El niño "+cola.mirar(0).getIdentificador()+" sale de la cola");
-                            System.out.println("El niño "+cola.mirar(0).getIdentificador()+" esta en el equipo 1");
+                            Log.escribirLog("El niño "+cola.mirar(0).getIdentificador()+" sale de la cola");
+                            Log.escribirLog("El niño "+cola.mirar(0).getIdentificador()+" esta en el equipo 1");
                             paso.mirar();
                             equipo1.meter(cola.mirar(0));
                             paso.mirar();
@@ -96,8 +97,8 @@ public class Soga
                         else
                         {
                             paso.mirar();
-                            System.out.println("El niño "+cola.mirar(0).getIdentificador()+" sale de la cola");
-                            System.out.println("El niño "+cola.mirar(0).getIdentificador()+" esta en el equipo 2");
+                            Log.escribirLog("El niño "+cola.mirar(0).getIdentificador()+" sale de la cola");
+                            Log.escribirLog("El niño "+cola.mirar(0).getIdentificador()+" esta en el equipo 2");
                             paso.mirar();
                             equipo2.meter(cola.mirar(0));
                             paso.mirar();
@@ -109,8 +110,8 @@ public class Soga
                     else if(cont_1==5)
                     {
                         paso.mirar();
-                        System.out.println("El niño "+cola.mirar(0).getIdentificador()+" sale de la cola");
-                        System.out.println("El niño "+cola.mirar(0).getIdentificador()+" esta en el equipo 2");
+                        Log.escribirLog("El niño "+cola.mirar(0).getIdentificador()+" sale de la cola");
+                        Log.escribirLog("El niño "+cola.mirar(0).getIdentificador()+" esta en el equipo 2");
                         paso.mirar();
                         equipo2.meter(cola.mirar(0));
                         paso.mirar();
@@ -121,8 +122,8 @@ public class Soga
                     else if(cont_2==5)
                     {
                         paso.mirar();
-                        System.out.println("El niño "+cola.mirar(0).getIdentificador()+" sale de la cola");
-                        System.out.println("El niño "+cola.mirar(0).getIdentificador()+" esta en el equipo 1");
+                        Log.escribirLog("El niño "+cola.mirar(0).getIdentificador()+" sale de la cola");
+                        Log.escribirLog("El niño "+cola.mirar(0).getIdentificador()+" esta en el equipo 1");
                         paso.mirar();
                         equipo1.meter(cola.mirar(0));
                         paso.mirar();
@@ -132,7 +133,7 @@ public class Soga
                     }
                 }
                 //Fin de asignar equipos
-                System.out.println("El monitor "+m.getIdentificador()+" comienza la actividad de soga");
+                Log.escribirLog("El monitor "+m.getIdentificador()+" comienza la actividad de soga");
                 paso.mirar();
                 //Comienza el juego
                 sleep(7000);
@@ -142,11 +143,11 @@ public class Soga
                 if ((int) (Math.random()*2)==0)
                 {
                     paso.mirar();
-                    System.out.println("En la soga ha ganado el equipo1");
+                    Log.escribirLog("En la soga ha ganado el equipo1");
                     for (int i=0;i<5;i++)
                     {
-                        System.out.println("Al niño "+equipo1.mirar(0).getIdentificador()+" se le suman 2 actividades");
-                        System.out.println("Al niño "+equipo2.mirar(0).getIdentificador()+" se le suma 1 actividad");
+                        Log.escribirLog("Al niño "+equipo1.mirar(0).getIdentificador()+" se le suman 2 actividades");
+                        Log.escribirLog("Al niño "+equipo2.mirar(0).getIdentificador()+" se le suma 1 actividad");
                         paso.mirar();
                         equipo1.mirar(0).sumaActividad(2);
                         paso.mirar();
@@ -163,12 +164,12 @@ public class Soga
                 else
                 {
                     paso.mirar();
-                    System.out.println("En la soga ha ganado el equipo2");
+                    Log.escribirLog("En la soga ha ganado el equipo2");
                     for (int i=0;i<5;i++)
                     {
                         paso.mirar();
-                        System.out.println("Al niño "+equipo1.mirar(0).getIdentificador()+" se le suma 1 actividades");
-                        System.out.println("Al niño "+equipo2.mirar(0).getIdentificador()+" se le suman 2 actividades");
+                        Log.escribirLog("Al niño "+equipo1.mirar(0).getIdentificador()+" se le suma 1 actividades");
+                        Log.escribirLog("Al niño "+equipo2.mirar(0).getIdentificador()+" se le suman 2 actividades");
                         paso.mirar();
                         equipo1.mirar(0).sumaActividad(1);
                         paso.mirar();

@@ -8,6 +8,7 @@ package Actividades;
 import ClasesAsociadasJFrame.ListaMonitores;
 import ClasesAsociadasJFrame.ListaNiños;
 import ClasesAsociadasJFrame.Plazas;
+import EscribirLog.Log;
 import PararReanudar.Paso;
 import Threads.Monitor;
 import Threads.Niño;
@@ -182,8 +183,8 @@ public class ZonaComun
         try 
         {
             niños.sacar(n);
-            paso.mirar();
-            System.out.println("Niño " + n.getIdentificador() + " SALIENDO.");
+            paso.mirar(); 
+            Log.escribirLog("Niño " + n.getIdentificador() + " SALIENDO.");
             plazas.decrementar();
             if(colaNorte.tamaño() > 0 && colaSur.tamaño() > 0 && plazas.getOcupacion() == 49)
             {

@@ -9,6 +9,7 @@ import Actividades.ZonaComun;
 import Clases.Campamento;
 import ClasesAsociadasJFrame.ListaNiños;
 import ClasesAsociadasJFrame.Plazas;
+import EscribirLog.Log;
 import Threads.Monitor;
 import Threads.Niño;
 import java.util.Random;
@@ -53,7 +54,7 @@ public class EntradaNorte {
             }
             cola.sacar(n);
             plazas.incrementar();          
-            System.out.println("Niño " + n.getIdentificador() +" entra por NORTE. Ocupación: " + plazas.getOcupacion() + "\nCola Norte --> " + cola.tamaño());
+            Log.escribirLog("Niño " + n.getIdentificador() +" entra por NORTE. Ocupación: " + plazas.getOcupacion() + "\nCola Norte --> " + cola.tamaño());
         }
         catch(InterruptedException e){}
         finally{
@@ -69,12 +70,12 @@ public class EntradaNorte {
             if(!abierto)
             {
                 Random r = new Random();
-                System.out.println("Puerta NORTE cerrada, monitor "+m.getIdentificador()+" abriendo...");
+                Log.escribirLog("Puerta NORTE cerrada, monitor "+m.getIdentificador()+" abriendo...");
                 Thread.sleep(500+ r.nextInt(1000));
                 abierto = true;
                 norte.signalAll();
             }
-            System.out.println("Monitor "+m.getIdentificador()+" entra por NORTE");
+            Log.escribirLog("Monitor "+m.getIdentificador()+" entra por NORTE");
         }
         catch(InterruptedException e){}
         finally{

@@ -7,6 +7,7 @@ package Actividades;
 
 import ClasesAsociadasJFrame.ListaMonitores;
 import ClasesAsociadasJFrame.ListaNiños;
+import EscribirLog.Log;
 import PararReanudar.Paso;
 import Threads.Monitor;
 import Threads.Niño;
@@ -48,26 +49,26 @@ public class Tirolina
         try 
         {
             paso.mirar();
-            System.out.println("Llega el niño "+n.getIdentificador()+" a la cola de la tirolina");
+            Log.escribirLog("Llega el niño "+n.getIdentificador()+" a la cola de la tirolina");
             colaEspera.meter(n);
             paso.mirar();
             sem.acquire();
             paso.mirar();
             colaEspera.sacar(n);
             paso.mirar();
-            System.out.println("Llega el niño "+n.getIdentificador()+" a la tirolina");
+            Log.escribirLog("Llega el niño "+n.getIdentificador()+" a la tirolina");
             preparacion.meter(n);
             paso.mirar();
             barrera.await();
             paso.mirar();
-            System.out.println("El niño "+n.getIdentificador()+" espera a que el monitor lo prepare");
+            Log.escribirLog("El niño "+n.getIdentificador()+" espera a que el monitor lo prepare");
             barrera.await();
             paso.mirar();
             preparacion.sacar(n);
             paso.mirar();
             tirolina.meter(n);
             paso.mirar();
-            System.out.println("El niño "+n.getIdentificador()+" se tira en tirolina");
+            Log.escribirLog("El niño "+n.getIdentificador()+" se tira en tirolina");
             sleep(3000);
             paso.mirar();
             tirolina.sacar(n);
@@ -77,7 +78,7 @@ public class Tirolina
             sleep(500);
             paso.mirar();
             n.sumaActividad(1);
-            System.out.println("El niño "+n.getIdentificador()+" se va de la tirolina");
+            Log.escribirLog("El niño "+n.getIdentificador()+" se va de la tirolina");
             paso.mirar();
             finalizacion.sacar(n);
             paso.mirar();
