@@ -831,7 +831,7 @@ public class Servidor extends javax.swing.JFrame {
                 ListaNiños colaSur = new ListaNiños(jLabelEntradaSur);
                 ListaMonitores monitoresZonaComun = new ListaMonitores(jLabelMonitoresZonaComun);
                 ListaNiños niñosZonaComun = new ListaNiños(jLabelNiñosZonaComun);  
-                ZonaComun zonaComun = new ZonaComun(monitoresZonaComun, niñosZonaComun, norte, sur, colaNorte, colaSur, merienda, soga, tirolina, plazas, paso);
+                ZonaComun zonaComun = new ZonaComun(monitoresZonaComun, niñosZonaComun, cerrojo, norte, sur, colaNorte, colaSur, merienda, soga, tirolina, plazas, paso);
 
                 //EntradaNorte 
                 EntradaNorte entradaNorte = new EntradaNorte(plazas, colaNorte, zonaComun, cerrojo, norte);

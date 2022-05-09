@@ -27,9 +27,9 @@ public class ZonaComun
     
     private ListaMonitores monitores;
     private ListaNiños niños;
-    private Lock cerrojo= new ReentrantLock();
-    private Condition norte;
-    private Condition sur;
+    Lock cerrojo;
+    Condition norte;
+    Condition sur;
     private ListaNiños colaNorte;
     private ListaNiños colaSur;
     private int alternancia; 
@@ -39,12 +39,13 @@ public class ZonaComun
     private Plazas plazas;
     private Paso paso;
 
-    public ZonaComun(ListaMonitores monitores, ListaNiños niños, Condition norte, Condition sur, ListaNiños colaNorte, ListaNiños colaSur, Merienda merienda, Soga soga, Tirolina tirolina, Plazas plazas, Paso paso) 
+    public ZonaComun(ListaMonitores monitores, ListaNiños niños,Lock cerrojo, Condition norte, Condition sur, ListaNiños colaNorte, ListaNiños colaSur, Merienda merienda, Soga soga, Tirolina tirolina, Plazas plazas, Paso paso) 
     {
         this.monitores = monitores;
         this.niños = niños;
         this.norte = norte;
         this.sur = sur;
+        this.cerrojo = cerrojo;
         this.colaNorte = colaNorte;
         this.colaSur = colaSur;
         this.alternancia = 0;
@@ -173,7 +174,7 @@ public class ZonaComun
         return monitores.tamaño();
     }
     
-    public void salirNiñoCampamento(Niño n)
+    public synchronized void salirNiñoCampamento(Niño n)
     {
         niños.sacar(n);
         paso.mirar();

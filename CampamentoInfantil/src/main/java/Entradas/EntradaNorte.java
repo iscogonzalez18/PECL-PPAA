@@ -29,8 +29,8 @@ public class EntradaNorte {
     private boolean abierto;
     private ListaNiños cola;
     private ZonaComun zonaComun;
-    private Lock cerrojo;
-    private Condition norte;
+    Lock cerrojo;
+    Condition norte;
 
     public EntradaNorte(Plazas plazas, ListaNiños cola, ZonaComun zonaComun, Lock cerrojo, Condition norte) {
         this.plazas = plazas;
