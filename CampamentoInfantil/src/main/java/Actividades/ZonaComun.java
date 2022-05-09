@@ -12,6 +12,7 @@ import PararReanudar.Paso;
 import Threads.Monitor;
 import Threads.Niño;
 import static java.lang.Thread.sleep;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -32,7 +33,7 @@ public class ZonaComun
     Condition sur;
     private ListaNiños colaNorte;
     private ListaNiños colaSur;
-    private int alternancia; 
+    private AtomicInteger alternancia = new AtomicInteger(0);
     private Merienda merienda;
     private Soga soga;
     private Tirolina tirolina;
@@ -48,7 +49,6 @@ public class ZonaComun
         this.cerrojo = cerrojo;
         this.colaNorte = colaNorte;
         this.colaSur = colaSur;
-        this.alternancia = 0;
         this.merienda = merienda;
         this.soga = soga;
         this.tirolina = tirolina;
@@ -174,31 +174,35 @@ public class ZonaComun
         return monitores.tamaño();
     }
     
-    public synchronized void salirNiñoCampamento(Niño n)
-    {
-        niños.sacar(n);
+    public void salirNiñoCampamento(Niño n)
+    {      
         paso.mirar();
         cerrojo.lock();
         paso.mirar();
         try 
-        {       
+        {
+            niños.sacar(n);
+            paso.mirar();
             System.out.println("Niño " + n.getIdentificador() + " SALIENDO.");
             plazas.decrementar();
-            if(colaNorte.tamaño() > 0 && colaSur.tamaño() > 0)
+            if(colaNorte.tamaño() > 0 && colaSur.tamaño() > 0 && plazas.getOcupacion() == 49)
             {
+                System.out.println("CAMBIA");
                 //personas esperando en las dos entradas (alternancia)
-                if(alternancia == 0)
+                if(alternancia.get() == 0)
                 {
                     paso.mirar();
                     sur.signal();
-                    alternancia = 1;
+                    alternancia.set(1);
+                    System.out.println("SIGUIENTE NORTE");
                     paso.mirar();
                 }
                 else
                 {
                     paso.mirar();
                     norte.signal();
-                    alternancia = 0;
+                    alternancia.set(0);
+                    System.out.println("SIGUIENTE SUR");
                     paso.mirar();
                 }
             }

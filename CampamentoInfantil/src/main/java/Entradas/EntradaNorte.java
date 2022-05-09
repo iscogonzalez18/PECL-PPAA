@@ -46,9 +46,9 @@ public class EntradaNorte {
         cerrojo.lock();
         try
         {
+            cola.meter(n);
             while(plazas.getOcupacion()== 50 || !abierto)
             {
-                cola.meter(n);
                 norte.await(); 
             }
             cola.sacar(n);

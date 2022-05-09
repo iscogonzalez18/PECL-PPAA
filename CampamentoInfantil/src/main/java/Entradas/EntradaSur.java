@@ -41,10 +41,10 @@ public class EntradaSur {
     {
         cerrojo.lock();
         try{
+            cola.meter(n);
             while(plazas.getOcupacion()== 50 || !abierto)
             {
-                cola.meter(n);
-                sur.await(); 
+                sur.await();
             }
             cola.sacar(n);
             plazas.incrementar();
