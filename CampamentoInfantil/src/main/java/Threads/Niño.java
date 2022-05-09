@@ -12,6 +12,7 @@ import Actividades.ZonaComun;
 import Clases.Campamento;
 import Entradas.EntradaNorte;
 import Entradas.EntradaSur;
+import PararReanudar.Paso;
 import java.util.Random;
 
 /**
@@ -30,8 +31,9 @@ public class Niño extends Thread {
     private Merienda merienda;
     private Tirolina tirolina;
     private Soga soga;
+    private Paso paso;
 
-    public Niño(int num, Campamento camp, EntradaNorte entradaNorte, EntradaSur entradaSur, ZonaComun zonaComun, Merienda merienda, Tirolina tirolina, Soga soga) 
+    public Niño(int num, Campamento camp, EntradaNorte entradaNorte, EntradaSur entradaSur, ZonaComun zonaComun, Merienda merienda, Tirolina tirolina, Soga soga, Paso paso) 
     {
         this.identificador = generaNombre(num);
         this.num = num;
@@ -42,6 +44,7 @@ public class Niño extends Thread {
         this.merienda = merienda;
         this.tirolina = tirolina;
         this.soga = soga;
+        this.paso = paso;
     }
     
     
@@ -97,6 +100,7 @@ public class Niño extends Thread {
     
     public void run()
     {
+        paso.mirar();
         int r = (int) (Math.random()*2);
         if(r==1)
         {
@@ -106,9 +110,12 @@ public class Niño extends Thread {
         {
             entradaSur.entrarNiño(this);
         }
+        paso.mirar();
         while(contador<15)
         {
+            paso.mirar();
             String act=zonaComun.entrarNiño(this);
+            paso.mirar();
             if (act.equals("Tirolina"))
             {
                 tirolina.entrarNiño(this);
@@ -124,6 +131,7 @@ public class Niño extends Thread {
             {
                 merienda.entrarNiño(this);
             }
+            paso.mirar();
         }
         System.out.println("El niño "+this.identificador+ " se va del campamento");
         zonaComun.salirNiñoCampamento(this);

@@ -15,6 +15,7 @@ import Entradas.EntradaSur;
 import ClasesAsociadasJFrame.ListaMonitores;
 import ClasesAsociadasJFrame.ListaNiños;
 import ClasesAsociadasJFrame.Plazas;
+import PararReanudar.Paso;
 import Threads.Monitor;
 import Threads.Niño;
 import java.awt.Color;
@@ -40,16 +41,8 @@ public class Servidor extends javax.swing.JFrame {
     /**
      * Creates new form Servidor
      */
-    private int x,
-
-    /**
-     * Creates new form Cliente
-     */
-
-    /**
-     * Creates new form Servidor
-     */
-    y;
+    private int x, y;
+    private Paso paso;
     
     public Servidor() {
         initComponents();
@@ -212,9 +205,9 @@ public class Servidor extends javax.swing.JFrame {
         jLabelStop.setForeground(new java.awt.Color(255, 255, 255));
         jLabelStop.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelStop.setText("STOP");
-        jPanelStop.add(jLabelStop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 25));
+        jPanelStop.add(jLabelStop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 120, 25));
 
-        jPanelControlVentana.add(jPanelStop, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 5, 60, 25));
+        jPanelControlVentana.add(jPanelStop, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 5, 120, 25));
 
         jPanelEspaciado.setBackground(new java.awt.Color(39, 43, 51));
 
@@ -766,6 +759,16 @@ public class Servidor extends javax.swing.JFrame {
 
     private void jPanelStopMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelStopMouseClicked
         // TODO add your handling code here:
+        if(jLabelStop.getText() == "STOP")
+        {
+            jLabelStop.setText("REANUDAR");
+            paso.cerrar();
+        }
+        else
+        {
+            jLabelStop.setText("STOP");
+            paso.abrir();
+        }
     }//GEN-LAST:event_jPanelStopMouseClicked
 
     private void jPanelMinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelMinimizarMouseClicked
@@ -786,9 +789,14 @@ public class Servidor extends javax.swing.JFrame {
     private void jPanelRunnearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRunnearMouseClicked
         // TODO add your handling code here
         
+        //Boton Stop
+        Paso paso = new Paso();
+        this.paso = paso;
+                
         Thread anonymousThread = new Thread(){ 	//Creating an object of Anonymous class which extends Thread class and passing this object to the reference of Thread class.
             public void run()	//Anonymous class overriding run() method of Thread class
             {
+                
                 //Plazas
                 Plazas plazas = new Plazas(jLabelPlazasOcupadas, jLabelPlazasDisponibles);
 
@@ -796,14 +804,14 @@ public class Servidor extends javax.swing.JFrame {
                 ListaMonitores monitoresMerienda = new ListaMonitores(jLabelMonitoresMerienda);
                 ListaNiños colaMerienda = new ListaNiños(jLabelColaMerienda);
                 ListaNiños comiendoMerienda = new ListaNiños(jLabelNiñosComiendoMerienda);
-                Merienda merienda = new Merienda(monitoresMerienda, colaMerienda, comiendoMerienda, jLabelBandejasSuciasMerienda, jLabelBandejasLimpiasMerienda);
+                Merienda merienda = new Merienda(monitoresMerienda, colaMerienda, comiendoMerienda, jLabelBandejasSuciasMerienda, jLabelBandejasLimpiasMerienda, paso);
 
                 //Soga
                 ListaNiños colaSoga = new ListaNiños(jLabelColaSoga);
                 ListaNiños equipo1Soga = new ListaNiños(jLabelEquipo1Soga);
                 ListaNiños equipo2Soga = new ListaNiños(jLabelEquipo2Soga);
                 ListaMonitores monitorSoga = new ListaMonitores(jLabelMonitorSoga);
-                Soga soga = new Soga(monitorSoga, colaSoga, equipo1Soga, equipo2Soga);
+                Soga soga = new Soga(monitorSoga, colaSoga, equipo1Soga, equipo2Soga, paso);
 
                 //Tirolina
                 ListaMonitores monitorTirolina = new ListaMonitores(jLabelMonitorTirolina);
@@ -811,7 +819,7 @@ public class Servidor extends javax.swing.JFrame {
                 ListaNiños preparacionTirolina = new ListaNiños(jLabelPreparacionTirolina);
                 ListaNiños entirolina = new ListaNiños(jLabelTirolina);
                 ListaNiños finalizacionTirolina = new ListaNiños(jLabelFinalizacionTirolina);     
-                Tirolina tirolina = new Tirolina(monitorTirolina, colaTirolina, preparacionTirolina, entirolina, finalizacionTirolina);
+                Tirolina tirolina = new Tirolina(monitorTirolina, colaTirolina, preparacionTirolina, entirolina, finalizacionTirolina, paso);
 
                 //Lock explícito y condicion
                 Lock cerrojo = new ReentrantLock();
@@ -823,7 +831,7 @@ public class Servidor extends javax.swing.JFrame {
                 ListaNiños colaSur = new ListaNiños(jLabelEntradaSur);
                 ListaMonitores monitoresZonaComun = new ListaMonitores(jLabelMonitoresZonaComun);
                 ListaNiños niñosZonaComun = new ListaNiños(jLabelNiñosZonaComun);  
-                ZonaComun zonaComun = new ZonaComun(monitoresZonaComun, niñosZonaComun, norte, sur, colaNorte, colaSur, merienda, soga, tirolina, plazas);
+                ZonaComun zonaComun = new ZonaComun(monitoresZonaComun, niñosZonaComun, norte, sur, colaNorte, colaSur, merienda, soga, tirolina, plazas, paso);
 
                 //EntradaNorte 
                 EntradaNorte entradaNorte = new EntradaNorte(plazas, colaNorte, zonaComun, cerrojo, norte);
@@ -839,13 +847,13 @@ public class Servidor extends javax.swing.JFrame {
 
                 for (int m = 1; m <= 4; m++)
                 {
-                    Monitor monitor = new Monitor(m, campamento, entradaNorte, entradaSur, alternanciaMonitores,zonaComun,soga,tirolina,merienda);
+                    Monitor monitor = new Monitor(m, campamento, entradaNorte, entradaSur, alternanciaMonitores,zonaComun,soga,tirolina,merienda, paso);
                     monitor.start();
                 }
                 
                 for (int n = 1; n <=2000; n++)
                 {
-                    Niño niño = new Niño(n, campamento, entradaNorte, entradaSur,zonaComun,merienda,tirolina,soga);
+                    Niño niño = new Niño(n, campamento, entradaNorte, entradaSur,zonaComun,merienda,tirolina,soga, paso);
                     //anonimus runnable
                     niño.start();
                     try

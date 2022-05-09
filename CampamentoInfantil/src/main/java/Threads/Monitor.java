@@ -12,6 +12,7 @@ import Actividades.ZonaComun;
 import Clases.Campamento;
 import Entradas.EntradaNorte;
 import Entradas.EntradaSur;
+import PararReanudar.Paso;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
@@ -35,8 +36,9 @@ public class Monitor extends Thread{
     private Soga soga;
     private Tirolina tirolina;
     private Merienda merienda;
+    private Paso paso;
 
-    public Monitor(int num, Campamento camp, EntradaNorte entradaNorte, EntradaSur entradaSur, AtomicInteger alternanciaMonitores, ZonaComun zonaComun, Soga soga, Tirolina tirolina, Merienda merienda)
+    public Monitor(int num, Campamento camp, EntradaNorte entradaNorte, EntradaSur entradaSur, AtomicInteger alternanciaMonitores, ZonaComun zonaComun, Soga soga, Tirolina tirolina, Merienda merienda, Paso paso)
     {
         this.identificador = "M" + Integer.toString(num); //MX
         this.num = num;
@@ -49,6 +51,7 @@ public class Monitor extends Thread{
         this.soga = soga;
         this.tirolina = tirolina;
         this.merienda = merienda;
+        this.paso = paso;
     }
     
     
@@ -101,7 +104,9 @@ public class Monitor extends Thread{
         
         while (true)
         {
+            paso.mirar();
             String act=zonaComun.entrarMonitor(this);
+            paso.mirar();
             if (act.equals("Tirolina"))
             {
                 tirolina.entrarMonitor(this);
@@ -114,6 +119,7 @@ public class Monitor extends Thread{
             {
                 merienda.entrarMonitor(this);
             }
+            paso.mirar();
         }
         
     }
