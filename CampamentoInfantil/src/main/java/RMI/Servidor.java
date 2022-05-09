@@ -847,15 +847,18 @@ public class Servidor extends javax.swing.JFrame {
 
                 for (int m = 1; m <= 4; m++)
                 {
+                    paso.mirar();
                     Monitor monitor = new Monitor(m, campamento, entradaNorte, entradaSur, alternanciaMonitores,zonaComun,soga,tirolina,merienda, paso);
                     monitor.start();
                 }
                 
                 for (int n = 1; n <=2000; n++)
                 {
+                    paso.mirar();
                     Niño niño = new Niño(n, campamento, entradaNorte, entradaSur,zonaComun,merienda,tirolina,soga, paso);
                     //anonimus runnable
                     niño.start();
+                    paso.mirar();
                     try
                     {
                         sleep(2000);
