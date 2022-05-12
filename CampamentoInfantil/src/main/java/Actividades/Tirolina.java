@@ -15,6 +15,8 @@ import static java.lang.Thread.sleep;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -33,6 +35,8 @@ public class Tirolina
     private Semaphore sem=new Semaphore(1,true);
     private CyclicBarrier barrera=new CyclicBarrier(2);
     private Paso paso;
+    private int contN=0,cont=0;
+    private Lock cerrojo=new ReentrantLock();
 
     public Tirolina(ListaMonitores monitor, ListaNiños colaEspera, ListaNiños preparacion, ListaNiños tirolina, ListaNiños finalizacion, Paso paso ) 
     {
@@ -51,6 +55,14 @@ public class Tirolina
             paso.mirar();
             Log.escribirLog("Llega el niño "+n.getIdentificador()+" a la cola de la tirolina");
             colaEspera.meter(n);
+            cerrojo.lock();
+            try
+            {
+                contN++;
+            } 
+            finally {
+                cerrojo.unlock();
+            }
             paso.mirar();
             sem.acquire();
             paso.mirar();
@@ -82,6 +94,8 @@ public class Tirolina
             paso.mirar();
             finalizacion.sacar(n);
             paso.mirar();
+            contN--;
+            cont++;
             sem.release();
         } 
         catch (InterruptedException ex) 
@@ -130,5 +144,13 @@ public class Tirolina
         }
         paso.mirar();
         monitor.sacar(m);
-    }    
+    }
+
+    public int getCont() {
+        return cont;
+    }
+    
+    public int getContN(){
+        return contN;
+    }
 }

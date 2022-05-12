@@ -20,7 +20,10 @@ import Threads.Niño;
 import java.awt.Color;
 import java.awt.MouseInfo;
 import java.awt.Point;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import static java.lang.Thread.sleep;
+import java.rmi.Naming;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -352,7 +355,35 @@ public class Cliente extends javax.swing.JFrame {
                 interfaz.setLocationRelativeTo(null);
                 interfaz.setVisible(true);
                 interfaz.x = interfaz.getX();
-                interfaz.y = interfaz.getY();            
+                interfaz.y = interfaz.getY(); 
+                
+                //Strings de la zona merienda
+                String BLimpias="",BSucias="",contM="";
+                
+                //Strings de la zona tirolina
+                String Veces="",contT="";
+                
+                //String de la zona soga
+                String contS="";
+                
+                try {
+                    BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
+                    //Localiza el objeto distribuido:
+                    InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//127.0.0.1/ObjetoSaluda");
+                    //Merienda
+                    BLimpias = metodos.bandejasLimpiasMerienda(); 
+                    BSucias  = metodos.bandejasSuciasMerienda();
+                    contM = metodos.niñosenMerienda();
+                    //Tirolina
+                    Veces = metodos.vecesTirolina();
+                    contT = metodos.niñosenColaTirolina();
+                    //Soga 
+                    contS = metodos.niñosenColaSoga();
+                    
+                    } catch (Exception e) {
+                    System.out.println("Excepción : " + e.getMessage());
+                    e.printStackTrace();
+                }
             }
         });
     }

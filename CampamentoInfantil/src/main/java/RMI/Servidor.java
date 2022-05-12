@@ -24,6 +24,7 @@ import java.awt.MouseInfo;
 import java.awt.Point;
 import static java.lang.Thread.sleep;
 import java.rmi.Naming;
+import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -32,6 +33,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import RMI.Metodos; 
 
 /**
  *
@@ -796,7 +798,7 @@ public class Servidor extends javax.swing.JFrame {
                 
         Thread anonymousThread = new Thread(){ 	//Creating an object of Anonymous class which extends Thread class and passing this object to the reference of Thread class.
             public void run()	//Anonymous class overriding run() method of Thread class
-            {   
+            {    
                 //Plazas
                 Plazas plazas = new Plazas(jLabelPlazasOcupadas, jLabelPlazasDisponibles);
 
@@ -845,6 +847,19 @@ public class Servidor extends javax.swing.JFrame {
                 //AlternanciaMonitoresEntrada
                 AtomicInteger alternanciaMonitores = new AtomicInteger(0);
 
+                try 
+                {
+                    //Metodos
+                    Metodos metodos = new Metodos(merienda, soga, tirolina);
+                    Registry registry = LocateRegistry.createRegistry(1099);
+                    Naming.rebind("//localhost/ObjetoSaluda", metodos);
+                } 
+                catch (Exception e) 
+                {
+                    System.out.println("Error: " + e.getMessage());
+                    e.printStackTrace();
+                }
+                
                 for (int m = 1; m <= 4; m++)
                 {
                     paso.mirar();
@@ -864,7 +879,8 @@ public class Servidor extends javax.swing.JFrame {
                         sleep(2000);
                     }
                     catch(InterruptedException e){}
-                }    
+                }
+                
             }
 	};
         anonymousThread.start();

@@ -16,6 +16,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JLabel;
 import EscribirLog.Log;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  *
@@ -31,6 +33,8 @@ public class Merienda
     private Semaphore bandejasSucias=new Semaphore(25,true);
     private Semaphore bandejasLimpias=new Semaphore(0,true);
     private Paso paso;
+    private int cont=0;
+    private Lock cerrojo=new ReentrantLock();
     
 
     public Merienda(ListaMonitores monitores, ListaNiños colaEspera, ListaNiños comiendo, JLabel sucias, JLabel limpias, Paso paso)
@@ -53,6 +57,14 @@ public class Merienda
         paso.mirar();
         try 
         {
+            try
+            {
+                cerrojo.lock();
+                cont++;
+            } 
+            finally {
+                cerrojo.unlock();
+            }
             bandejasLimpias.acquire();
             paso.mirar();
             limpias.setText(Integer.toString(bandejasLimpias.availablePermits()));
@@ -77,6 +89,14 @@ public class Merienda
                 n.setActividades(0);
             }
             paso.mirar();
+            try
+            {
+                cerrojo.lock();
+                cont--;
+            } 
+            finally {
+                cerrojo.unlock();
+            }
         } 
         catch (InterruptedException ex)
         {
@@ -117,5 +137,19 @@ public class Merienda
         paso.mirar();
         monitores.sacar(m);
     }
-             
+     
+    public int getBLimpias()
+    {
+        return bandejasLimpias.availablePermits();
+    }
+    
+    public int getBSucias()
+    {
+        return bandejasSucias.availablePermits();
+    }
+    
+    public int getCont()
+    {
+        return cont;
+    }
 }
