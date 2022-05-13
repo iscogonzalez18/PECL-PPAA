@@ -905,14 +905,6 @@ public class Servidor extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        try{
-            
-        }
-        catch (Exception e) 
-        {
-            System.out.println("Error: " + e.getMessage());
-            e.printStackTrace();
-        }
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 Servidor interfaz = new Servidor();
