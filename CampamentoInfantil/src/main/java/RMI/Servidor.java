@@ -34,6 +34,8 @@ import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import RMI.Metodos; 
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -846,6 +848,9 @@ public class Servidor extends javax.swing.JFrame {
 
                 //AlternanciaMonitoresEntrada
                 AtomicInteger alternanciaMonitores = new AtomicInteger(0);
+                
+                //HashMap
+                HashMap<String,Niño> lista=new HashMap<String,Niño>();
 
                 try 
                 {
@@ -853,34 +858,34 @@ public class Servidor extends javax.swing.JFrame {
                     Metodos metodos = new Metodos(merienda, soga, tirolina);
                     Registry registry = LocateRegistry.createRegistry(1099);
                     Naming.rebind("//localhost/ObjetoSaluda", metodos);
+                    for (int m = 1; m <= 4; m++)
+                    {
+                        paso.mirar();
+                        Monitor monitor = new Monitor(m, campamento, entradaNorte, entradaSur, alternanciaMonitores,zonaComun,soga,tirolina,merienda, paso);
+                        monitor.start();
+                    }
+
+                    for (int n = 1; n <=2000; n++)
+                    {
+                        paso.mirar();
+                        Niño niño = new Niño(n, campamento, entradaNorte, entradaSur,zonaComun,merienda,tirolina,soga, paso);
+                        //anonimus runnable
+                        niño.start();
+                        paso.mirar();
+                        lista.put(niño.getIdentificador(), niño);
+                        metodos.setLista(lista);
+                        try
+                        {
+                            sleep(2000);
+                        }
+                        catch(InterruptedException e){}
+                    }
                 } 
                 catch (Exception e) 
                 {
                     System.out.println("Error: " + e.getMessage());
                     e.printStackTrace();
                 }
-                
-                for (int m = 1; m <= 4; m++)
-                {
-                    paso.mirar();
-                    Monitor monitor = new Monitor(m, campamento, entradaNorte, entradaSur, alternanciaMonitores,zonaComun,soga,tirolina,merienda, paso);
-                    monitor.start();
-                }
-                
-                for (int n = 1; n <=2000; n++)
-                {
-                    paso.mirar();
-                    Niño niño = new Niño(n, campamento, entradaNorte, entradaSur,zonaComun,merienda,tirolina,soga, paso);
-                    //anonimus runnable
-                    niño.start();
-                    paso.mirar();
-                    try
-                    {
-                        sleep(2000);
-                    }
-                    catch(InterruptedException e){}
-                }
-                
             }
 	};
         anonymousThread.start();

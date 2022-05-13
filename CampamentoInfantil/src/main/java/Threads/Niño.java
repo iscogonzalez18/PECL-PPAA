@@ -111,7 +111,7 @@ public class Niño extends Thread {
             entradaSur.entrarNiño(this);
         }
         paso.mirar();
-        while(contador<5) //cambiar a 15
+        while(contador<15) //cambiar a 15
         {
             paso.mirar();
             String act=zonaComun.entrarNiño(this);

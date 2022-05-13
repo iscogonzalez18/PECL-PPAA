@@ -21,5 +21,5 @@ public interface InterfaceCampamento extends Remote
     String vecesTirolina() throws RemoteException;
     String bandejasLimpiasMerienda() throws RemoteException;
     String bandejasSuciasMerienda() throws RemoteException;
-    String actividadesNiño(Niño n) throws RemoteException; 
+    String actividadesNiño(String id) throws RemoteException; 
 }

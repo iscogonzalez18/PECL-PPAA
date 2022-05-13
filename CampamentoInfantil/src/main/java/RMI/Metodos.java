@@ -11,6 +11,7 @@ import java.rmi.server.UnicastRemoteObject;
 import Actividades.Merienda;
 import Actividades.Soga;
 import Actividades.Tirolina;
+import java.util.HashMap;
 /**
  *
  * @author Francisco
@@ -20,6 +21,7 @@ public class Metodos extends UnicastRemoteObject implements InterfaceCampamento
     private Merienda merienda;
     private Soga soga;
     private Tirolina tirolina;
+    private HashMap<String,Niño> lista;
 
     public Metodos(Merienda merienda, Soga soga, Tirolina tirolina) throws RemoteException {
         this.merienda = merienda;
@@ -57,9 +59,17 @@ public class Metodos extends UnicastRemoteObject implements InterfaceCampamento
         return ""+merienda.getBSucias();
     }
     
-    public String actividadesNiño(Niño n) throws RemoteException
+    public String actividadesNiño(String id) throws RemoteException
     {
-        return ""+n.getContador();
+        String act="";
+        if(lista.containsKey(id)){
+            act=Integer.toString(lista.get(id).getContador());
+        }
+        return act;
+    }
+
+    public void setLista(HashMap<String, Niño> lista) {
+        this.lista = lista;
     }
     
 }
