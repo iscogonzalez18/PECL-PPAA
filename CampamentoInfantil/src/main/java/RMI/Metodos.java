@@ -65,6 +65,10 @@ public class Metodos extends UnicastRemoteObject implements InterfaceCampamento
         if(lista.containsKey(id)){
             act=Integer.toString(lista.get(id).getContador());
         }
+        else
+        {
+            act="No se ha encontrado ese niño";
+        }
         return act;
     }
 

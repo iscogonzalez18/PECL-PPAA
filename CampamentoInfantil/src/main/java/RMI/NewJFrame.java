@@ -4,7 +4,9 @@
  */
 package RMI;
 
+import java.net.MalformedURLException;
 import java.rmi.Naming;
+import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -15,7 +17,6 @@ import java.util.logging.Logger;
  */
 public class NewJFrame extends javax.swing.JFrame {
 
-    private Metodos metodos;
     public NewJFrame() {
         initComponents();
     }
@@ -138,38 +139,35 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton2)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 36, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jButton1))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jButton3))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jButton6))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jButton5))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jButton4))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton3))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton6))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton5))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton4))
                             .addComponent(jTextField8))
-                        .addContainerGap())))
+                        .addContainerGap(36, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -221,6 +219,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         try{
+            InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//localhost/ObjetoSaluda"); 
             String contM="";
             contM = metodos.niñosenMerienda();
             jTextField1.setText(contM);
@@ -234,6 +233,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         try{
+            InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//localhost/ObjetoSaluda"); 
             String contS="";
             contS = metodos.niñosenColaSoga();
             jTextField2.setText(contS);
@@ -248,6 +248,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         try{
+            InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//localhost/ObjetoSaluda"); 
             String contT="";
             contT = metodos.niñosenColaTirolina();
             jTextField3.setText(contT);
@@ -262,6 +263,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         try{
+            InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//localhost/ObjetoSaluda"); 
             String veces="";
             veces = metodos.vecesTirolina();
             jTextField4.setText(veces);
@@ -276,6 +278,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         try{
+            InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//localhost/ObjetoSaluda"); 
             String BLimpias="";
             BLimpias = metodos.bandejasLimpiasMerienda();
             jTextField5.setText(BLimpias);
@@ -290,6 +293,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         try{
+            InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//localhost/ObjetoSaluda");  
             String BSucias="";
             BSucias = metodos.bandejasSuciasMerienda();
             jTextField6.setText(BSucias);
@@ -305,26 +309,21 @@ public class NewJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         String id=jTextField7.getText();
         try {
+            InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//localhost/ObjetoSaluda");  
             String actividades = metodos.actividadesNiño(id);
             jTextField8.setText(actividades);
-        } catch (RemoteException ex) {
-            Logger.getLogger(NewJFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
+        catch (Exception e) 
+        {
+            System.out.println("Excepción : " + e.getMessage());
+            e.printStackTrace();
+        } 
     }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-         try{
-            //Localiza el objeto distribuido:
-            InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//127.0.0.1/ObjetoSaluda");   
-        }
-        catch (Exception e) 
-        {
-            System.out.println("Excepción : " + e.getMessage());
-            e.printStackTrace();
-        }
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new NewJFrame().setVisible(true);
