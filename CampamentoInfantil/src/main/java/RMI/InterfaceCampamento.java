@@ -8,6 +8,7 @@ package RMI;
 import Threads.Niño;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.util.HashMap;
 
 /**
  *
@@ -22,4 +23,5 @@ public interface InterfaceCampamento extends Remote
     String bandejasLimpiasMerienda() throws RemoteException;
     String bandejasSuciasMerienda() throws RemoteException;
     String actividadesNiño(String id) throws RemoteException; 
+    void setLista(HashMap<String, Niño> lista) throws RemoteException;
 }
