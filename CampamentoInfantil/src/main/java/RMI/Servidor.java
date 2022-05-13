@@ -905,33 +905,14 @@ public class Servidor extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Servidor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Servidor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Servidor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Servidor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        try{
+            
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
+        catch (Exception e) 
+        {
+            System.out.println("Error: " + e.getMessage());
+            e.printStackTrace();
+        }
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 Servidor interfaz = new Servidor();
@@ -939,21 +920,6 @@ public class Servidor extends javax.swing.JFrame {
                 interfaz.setVisible(true);
                 interfaz.x = interfaz.getX();
                 interfaz.y = interfaz.getY(); 
-                
-                //RMI
-                /*
-                try
-                {
-                    Metodos obj = new Metodos(); //Crea una instancia del objeto que implementa la interfaz, como objeto a registrar 
-                    Registry registry = LocateRegistry.createRegistry(1099); //Arranca rmiregistry local en el puerto 1099
-                    Naming.rebind("//localhost/ObjetoSaluda",obj);   //rebind sólo funciona sobre una url del equipo local 
-                    System.out.println("El Objeto Saluda ha quedado registrado");
-                }
-                catch (Exception e)
-                {
-                    System.out.println(" Error: " + e.getMessage());
-                    e.printStackTrace();
-                }*/
             }
         });
     }

@@ -1,0 +1,1242 @@
+may 13, 2022 11:55:22 A. M. EscribirLog.Log escribirLog
+INFO: Puerta SUR cerrada, monitor M1 abriendo...
+may 13, 2022 11:55:25 A. M. EscribirLog.Log escribirLog
+INFO: Monitor M1 entra por SUR
+may 13, 2022 11:55:25 A. M. EscribirLog.Log escribirLog
+INFO: Puerta NORTE cerrada, monitor M2 abriendo...
+may 13, 2022 11:55:26 A. M. EscribirLog.Log escribirLog
+INFO: Monitor M2 entra por NORTE
+may 13, 2022 11:55:26 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha entrado en merienda
+may 13, 2022 11:55:27 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha entrado en merienda
+may 13, 2022 11:55:28 A. M. EscribirLog.Log escribirLog
+INFO: Monitor M4 entra por SUR
+may 13, 2022 11:55:28 A. M. EscribirLog.Log escribirLog
+INFO: Monitor M3 entra por NORTE
+may 13, 2022 11:55:28 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0001 entra por NORTE. Ocupación: 1
+Cola Norte --> 0
+may 13, 2022 11:55:28 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0002 entra por NORTE. Ocupación: 2
+Cola Norte --> 0
+may 13, 2022 11:55:28 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0003 entra por SUR. Ocupación: 3
+Cola SUR --> 0
+may 13, 2022 11:55:28 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0004 entra por SUR. Ocupación: 4
+Cola SUR --> 0
+may 13, 2022 11:55:29 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M4 entra en soga
+may 13, 2022 11:55:30 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0005 entra por SUR. Ocupación: 5
+Cola SUR --> 0
+may 13, 2022 11:55:30 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:55:30 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0002 a la cola de la tirolina
+may 13, 2022 11:55:30 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0002 a la tirolina
+may 13, 2022 11:55:30 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0002 espera a que el monitor lo prepare
+may 13, 2022 11:55:31 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0003 a la cola de la tirolina
+may 13, 2022 11:55:31 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0002 se tira en tirolina
+may 13, 2022 11:55:31 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:55:32 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0001 entra en la cola de soga
+may 13, 2022 11:55:32 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0004 a la cola de la tirolina
+may 13, 2022 11:55:32 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0006 entra por SUR. Ocupación: 6
+Cola SUR --> 0
+may 13, 2022 11:55:34 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 ha entrado en la cola de merienda
+may 13, 2022 11:55:34 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 comienza a merendar
+may 13, 2022 11:55:34 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:55:34 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0007 entra por SUR. Ocupación: 7
+Cola SUR --> 0
+may 13, 2022 11:55:35 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:55:35 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0002 se va de la tirolina
+may 13, 2022 11:55:35 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0003 a la tirolina
+may 13, 2022 11:55:35 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0003 espera a que el monitor lo prepare
+may 13, 2022 11:55:35 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0006 a la cola de la tirolina
+may 13, 2022 11:55:36 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0003 se tira en tirolina
+may 13, 2022 11:55:36 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0008 entra por NORTE. Ocupación: 8
+Cola Norte --> 0
+may 13, 2022 11:55:36 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0007 entra en la cola de soga
+may 13, 2022 11:55:37 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0002 ha entrado en la cola de merienda
+may 13, 2022 11:55:37 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0002 comienza a merendar
+may 13, 2022 11:55:37 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:55:38 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:55:38 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0009 entra por NORTE. Ocupación: 9
+Cola Norte --> 0
+may 13, 2022 11:55:39 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0003 se va de la tirolina
+may 13, 2022 11:55:39 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0004 a la tirolina
+may 13, 2022 11:55:39 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0004 espera a que el monitor lo prepare
+may 13, 2022 11:55:39 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0008 entra en la cola de soga
+may 13, 2022 11:55:40 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:55:40 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0010 entra por SUR. Ocupación: 10
+Cola SUR --> 0
+may 13, 2022 11:55:40 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0009 ha entrado en la cola de merienda
+may 13, 2022 11:55:40 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0009 comienza a merendar
+may 13, 2022 11:55:40 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0004 se tira en tirolina
+may 13, 2022 11:55:41 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 termina de merendar
+may 13, 2022 11:55:42 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:55:42 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0011 entra por SUR. Ocupación: 11
+Cola SUR --> 0
+may 13, 2022 11:55:42 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:55:42 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0003 ha entrado en la cola de merienda
+may 13, 2022 11:55:42 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0003 comienza a merendar
+may 13, 2022 11:55:43 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0010 entra en la cola de soga
+may 13, 2022 11:55:44 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0005 a la cola de la tirolina
+may 13, 2022 11:55:44 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0004 se va de la tirolina
+may 13, 2022 11:55:44 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0006 a la tirolina
+may 13, 2022 11:55:44 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0006 espera a que el monitor lo prepare
+may 13, 2022 11:55:44 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0002 termina de merendar
+may 13, 2022 11:55:44 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0012 entra por SUR. Ocupación: 12
+Cola SUR --> 0
+may 13, 2022 11:55:45 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:55:45 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0006 se tira en tirolina
+may 13, 2022 11:55:45 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:55:46 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0011 a la cola de la tirolina
+may 13, 2022 11:55:46 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0002 ha entrado en la cola de merienda
+may 13, 2022 11:55:46 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0002 comienza a merendar
+may 13, 2022 11:55:46 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0013 entra por NORTE. Ocupación: 13
+Cola Norte --> 0
+may 13, 2022 11:55:47 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:55:47 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0004 entra en la cola de soga
+may 13, 2022 11:55:47 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0009 termina de merendar
+may 13, 2022 11:55:47 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:55:48 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0012 ha entrado en la cola de merienda
+may 13, 2022 11:55:48 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0012 comienza a merendar
+may 13, 2022 11:55:48 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0014 entra por SUR. Ocupación: 14
+Cola SUR --> 0
+may 13, 2022 11:55:48 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0006 se va de la tirolina
+may 13, 2022 11:55:48 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0005 a la tirolina
+may 13, 2022 11:55:48 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 espera a que el monitor lo prepare
+may 13, 2022 11:55:48 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0013 entra en la cola de soga
+may 13, 2022 11:55:49 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0003 termina de merendar
+may 13, 2022 11:55:49 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 se tira en tirolina
+may 13, 2022 11:55:50 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:55:50 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0009 ha entrado en la cola de merienda
+may 13, 2022 11:55:50 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0009 comienza a merendar
+may 13, 2022 11:55:50 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0015 entra por SUR. Ocupación: 15
+Cola SUR --> 0
+may 13, 2022 11:55:50 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:55:50 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0014 ha entrado en la cola de merienda
+may 13, 2022 11:55:50 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0014 comienza a merendar
+may 13, 2022 11:55:51 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0006 entra en la cola de soga
+may 13, 2022 11:55:52 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0016 entra por SUR. Ocupación: 16
+Cola SUR --> 0
+may 13, 2022 11:55:53 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:55:53 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 se va de la tirolina
+may 13, 2022 11:55:53 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0011 a la tirolina
+may 13, 2022 11:55:53 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0011 espera a que el monitor lo prepare
+may 13, 2022 11:55:53 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0003 a la cola de la tirolina
+may 13, 2022 11:55:53 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0002 termina de merendar
+may 13, 2022 11:55:53 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0015 entra en la cola de soga
+may 13, 2022 11:55:54 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0011 se tira en tirolina
+may 13, 2022 11:55:54 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0017 entra por SUR. Ocupación: 17
+Cola SUR --> 0
+may 13, 2022 11:55:54 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:55:55 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 entra en la cola de soga
+may 13, 2022 11:55:55 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0012 termina de merendar
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0002 entra en la cola de soga
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0001 sale de la cola
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0001 esta en el equipo 2
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0007 sale de la cola
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0007 esta en el equipo 1
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0008 sale de la cola
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0008 esta en el equipo 2
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0010 sale de la cola
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0010 esta en el equipo 2
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0004 sale de la cola
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0004 esta en el equipo 2
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0013 sale de la cola
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0013 esta en el equipo 2
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0006 sale de la cola
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0006 esta en el equipo 1
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0015 sale de la cola
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0015 esta en el equipo 1
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 sale de la cola
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 esta en el equipo 1
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0002 sale de la cola
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0016 entra en la cola de soga
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0002 esta en el equipo 1
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M4 comienza la actividad de soga
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0018 entra por SUR. Ocupación: 18
+Cola SUR --> 0
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:55:56 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 se va de paseo
+may 13, 2022 11:55:57 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0009 termina de merendar
+may 13, 2022 11:55:57 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha entrado en merienda
+may 13, 2022 11:55:57 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0011 se va de la tirolina
+may 13, 2022 11:55:57 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0003 a la tirolina
+may 13, 2022 11:55:57 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0003 espera a que el monitor lo prepare
+may 13, 2022 11:55:57 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0017 a la cola de la tirolina
+may 13, 2022 11:55:57 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0014 termina de merendar
+may 13, 2022 11:55:58 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0019 entra por NORTE. Ocupación: 19
+Cola Norte --> 0
+may 13, 2022 11:55:58 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0003 se tira en tirolina
+may 13, 2022 11:55:59 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:55:59 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0011 ha entrado en la cola de merienda
+may 13, 2022 11:55:59 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0011 comienza a merendar
+may 13, 2022 11:55:59 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0018 a la cola de la tirolina
+may 13, 2022 11:55:59 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0014 ha entrado en la cola de merienda
+may 13, 2022 11:55:59 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0014 comienza a merendar
+may 13, 2022 11:56:00 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:56:00 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0020 entra por NORTE. Ocupación: 20
+Cola Norte --> 0
+may 13, 2022 11:56:00 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0012 a la cola de la tirolina
+may 13, 2022 11:56:00 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0009 ha entrado en la cola de merienda
+may 13, 2022 11:56:00 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0009 comienza a merendar
+may 13, 2022 11:56:01 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0019 ha entrado en la cola de merienda
+may 13, 2022 11:56:01 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0019 comienza a merendar
+may 13, 2022 11:56:02 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0003 se va de la tirolina
+may 13, 2022 11:56:02 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0017 a la tirolina
+may 13, 2022 11:56:02 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0017 espera a que el monitor lo prepare
+may 13, 2022 11:56:02 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0021 entra por NORTE. Ocupación: 21
+Cola Norte --> 0
+may 13, 2022 11:56:02 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:56:02 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 se va de paseo
+may 13, 2022 11:56:03 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0017 se tira en tirolina
+may 13, 2022 11:56:03 A. M. EscribirLog.Log escribirLog
+INFO: En la soga ha ganado el equipo1
+may 13, 2022 11:56:03 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0007 se le suman 2 actividades
+may 13, 2022 11:56:03 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0001 se le suma 1 actividad
+may 13, 2022 11:56:03 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0006 se le suman 2 actividades
+may 13, 2022 11:56:03 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0008 se le suma 1 actividad
+may 13, 2022 11:56:03 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0015 se le suman 2 actividades
+may 13, 2022 11:56:03 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0010 se le suma 1 actividad
+may 13, 2022 11:56:03 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0005 se le suman 2 actividades
+may 13, 2022 11:56:03 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0004 se le suma 1 actividad
+may 13, 2022 11:56:03 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0002 se le suman 2 actividades
+may 13, 2022 11:56:03 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0013 se le suma 1 actividad
+may 13, 2022 11:56:04 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha entrado en merienda
+may 13, 2022 11:56:04 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0022 entra por NORTE. Ocupación: 22
+Cola Norte --> 0
+may 13, 2022 11:56:05 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:56:05 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0003 ha entrado en la cola de merienda
+may 13, 2022 11:56:05 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0003 comienza a merendar
+may 13, 2022 11:56:05 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0008 ha entrado en la cola de merienda
+may 13, 2022 11:56:05 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0008 comienza a merendar
+may 13, 2022 11:56:05 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0002 ha entrado en la cola de merienda
+may 13, 2022 11:56:05 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0002 comienza a merendar
+may 13, 2022 11:56:05 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0010 ha entrado en la cola de merienda
+may 13, 2022 11:56:05 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0010 comienza a merendar
+may 13, 2022 11:56:05 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0021 ha entrado en la cola de merienda
+may 13, 2022 11:56:05 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0021 comienza a merendar
+may 13, 2022 11:56:05 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0020 ha entrado en la cola de merienda
+may 13, 2022 11:56:05 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0020 comienza a merendar
+may 13, 2022 11:56:06 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0004 ha entrado en la cola de merienda
+may 13, 2022 11:56:06 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0004 comienza a merendar
+may 13, 2022 11:56:06 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0007 entra en la cola de soga
+may 13, 2022 11:56:06 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0006 entra en la cola de soga
+may 13, 2022 11:56:06 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0023 entra por NORTE. Ocupación: 23
+Cola Norte --> 0
+may 13, 2022 11:56:06 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0017 se va de la tirolina
+may 13, 2022 11:56:06 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0018 a la tirolina
+may 13, 2022 11:56:06 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0018 espera a que el monitor lo prepare
+may 13, 2022 11:56:06 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0015 ha entrado en la cola de merienda
+may 13, 2022 11:56:06 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0015 comienza a merendar
+may 13, 2022 11:56:06 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0001 ha entrado en la cola de merienda
+may 13, 2022 11:56:06 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0001 comienza a merendar
+may 13, 2022 11:56:06 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0011 termina de merendar
+may 13, 2022 11:56:06 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0013 entra en la cola de soga
+may 13, 2022 11:56:06 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0014 termina de merendar
+may 13, 2022 11:56:07 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 entra en la cola de soga
+may 13, 2022 11:56:07 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0018 se tira en tirolina
+may 13, 2022 11:56:07 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0009 termina de merendar
+may 13, 2022 11:56:08 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:56:08 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:56:08 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0022 entra en la cola de soga
+may 13, 2022 11:56:08 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0024 entra por NORTE. Ocupación: 24
+Cola Norte --> 0
+may 13, 2022 11:56:08 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0019 termina de merendar
+may 13, 2022 11:56:09 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0014 ha entrado en la cola de merienda
+may 13, 2022 11:56:09 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0014 comienza a merendar
+may 13, 2022 11:56:09 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0023 a la cola de la tirolina
+may 13, 2022 11:56:10 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0011 ha entrado en la cola de merienda
+may 13, 2022 11:56:10 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0011 comienza a merendar
+may 13, 2022 11:56:10 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0025 entra por SUR. Ocupación: 25
+Cola SUR --> 0
+may 13, 2022 11:56:10 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0024 entra en la cola de soga
+may 13, 2022 11:56:10 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0017 a la cola de la tirolina
+may 13, 2022 11:56:10 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0009 ha entrado en la cola de merienda
+may 13, 2022 11:56:10 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0009 comienza a merendar
+may 13, 2022 11:56:11 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0018 se va de la tirolina
+may 13, 2022 11:56:11 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0012 a la tirolina
+may 13, 2022 11:56:11 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0012 espera a que el monitor lo prepare
+may 13, 2022 11:56:12 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0003 termina de merendar
+may 13, 2022 11:56:12 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0012 se tira en tirolina
+may 13, 2022 11:56:12 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:56:12 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0008 termina de merendar
+may 13, 2022 11:56:12 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:56:12 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0002 termina de merendar
+may 13, 2022 11:56:12 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0026 entra por NORTE. Ocupación: 26
+Cola Norte --> 0
+may 13, 2022 11:56:12 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0010 termina de merendar
+may 13, 2022 11:56:12 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0021 termina de merendar
+may 13, 2022 11:56:12 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0019 ha entrado en la cola de merienda
+may 13, 2022 11:56:12 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0019 comienza a merendar
+may 13, 2022 11:56:12 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0020 termina de merendar
+may 13, 2022 11:56:13 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0004 termina de merendar
+may 13, 2022 11:56:13 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0018 ha entrado en la cola de merienda
+may 13, 2022 11:56:13 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0018 comienza a merendar
+may 13, 2022 11:56:13 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0025 a la cola de la tirolina
+may 13, 2022 11:56:13 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0015 termina de merendar
+may 13, 2022 11:56:13 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0001 termina de merendar
+may 13, 2022 11:56:14 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0027 entra por SUR. Ocupación: 27
+Cola SUR --> 0
+may 13, 2022 11:56:14 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0026 entra en la cola de soga
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0003 entra en la cola de soga
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0010 entra en la cola de soga
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0016 sale de la cola
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0016 esta en el equipo 2
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0007 sale de la cola
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0007 esta en el equipo 1
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0006 sale de la cola
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0006 esta en el equipo 2
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0013 sale de la cola
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0013 esta en el equipo 1
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 sale de la cola
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 esta en el equipo 1
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0022 sale de la cola
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0022 esta en el equipo 1
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0024 sale de la cola
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0024 esta en el equipo 1
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0026 sale de la cola
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0026 esta en el equipo 2
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0003 sale de la cola
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0003 esta en el equipo 2
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0010 sale de la cola
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0010 esta en el equipo 2
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M4 comienza la actividad de soga
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0020 a la cola de la tirolina
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0012 se va de la tirolina
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0023 a la tirolina
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0023 espera a que el monitor lo prepare
+may 13, 2022 11:56:15 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0008 a la cola de la tirolina
+may 13, 2022 11:56:16 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0014 termina de merendar
+may 13, 2022 11:56:16 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0004 ha entrado en la cola de merienda
+may 13, 2022 11:56:16 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:56:16 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0004 comienza a merendar
+may 13, 2022 11:56:16 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0001 a la cola de la tirolina
+may 13, 2022 11:56:16 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:56:16 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0028 entra por NORTE. Ocupación: 28
+Cola Norte --> 0
+may 13, 2022 11:56:16 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0023 se tira en tirolina
+may 13, 2022 11:56:17 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0011 termina de merendar
+may 13, 2022 11:56:17 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0009 termina de merendar
+may 13, 2022 11:56:18 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0029 entra por SUR. Ocupación: 29
+Cola SUR --> 0
+may 13, 2022 11:56:19 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0012 a la cola de la tirolina
+may 13, 2022 11:56:19 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0019 termina de merendar
+may 13, 2022 11:56:20 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0021 a la cola de la tirolina
+may 13, 2022 11:56:20 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0027 ha entrado en la cola de merienda
+may 13, 2022 11:56:20 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0027 comienza a merendar
+may 13, 2022 11:56:20 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0023 se va de la tirolina
+may 13, 2022 11:56:20 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0017 a la tirolina
+may 13, 2022 11:56:20 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0017 espera a que el monitor lo prepare
+may 13, 2022 11:56:20 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0018 termina de merendar
+may 13, 2022 11:56:20 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0011 ha entrado en la cola de merienda
+may 13, 2022 11:56:20 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0030 entra por NORTE. Ocupación: 30
+Cola Norte --> 0
+may 13, 2022 11:56:20 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0002 ha entrado en la cola de merienda
+may 13, 2022 11:56:21 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:56:21 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0011 comienza a merendar
+may 13, 2022 11:56:21 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0017 se tira en tirolina
+may 13, 2022 11:56:21 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:56:21 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0002 comienza a merendar
+may 13, 2022 11:56:22 A. M. EscribirLog.Log escribirLog
+INFO: En la soga ha ganado el equipo2
+may 13, 2022 11:56:22 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0007 se le suma 1 actividades
+may 13, 2022 11:56:22 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0016 se le suman 2 actividades
+may 13, 2022 11:56:22 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0013 se le suma 1 actividades
+may 13, 2022 11:56:22 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0006 se le suman 2 actividades
+may 13, 2022 11:56:22 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0005 se le suma 1 actividades
+may 13, 2022 11:56:22 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0026 se le suman 2 actividades
+may 13, 2022 11:56:22 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0022 se le suma 1 actividades
+may 13, 2022 11:56:22 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0003 se le suman 2 actividades
+may 13, 2022 11:56:22 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0024 se le suma 1 actividades
+may 13, 2022 11:56:22 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0010 se le suman 2 actividades
+may 13, 2022 11:56:22 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0031 entra por NORTE. Ocupación: 31
+Cola Norte --> 0
+may 13, 2022 11:56:22 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0015 ha entrado en la cola de merienda
+may 13, 2022 11:56:22 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0028 a la cola de la tirolina
+may 13, 2022 11:56:22 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0018 a la cola de la tirolina
+may 13, 2022 11:56:23 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0014 entra en la cola de soga
+may 13, 2022 11:56:23 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:56:23 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0015 comienza a merendar
+may 13, 2022 11:56:23 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0004 termina de merendar
+may 13, 2022 11:56:23 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:56:23 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0019 entra en la cola de soga
+may 13, 2022 11:56:23 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0009 entra en la cola de soga
+may 13, 2022 11:56:24 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0023 entra en la cola de soga
+may 13, 2022 11:56:24 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0030 a la cola de la tirolina
+may 13, 2022 11:56:24 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0032 entra por NORTE. Ocupación: 32
+Cola Norte --> 0
+may 13, 2022 11:56:24 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0017 se va de la tirolina
+may 13, 2022 11:56:24 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0013 ha entrado en la cola de merienda
+may 13, 2022 11:56:24 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0025 a la tirolina
+may 13, 2022 11:56:24 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0013 comienza a merendar
+may 13, 2022 11:56:24 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0025 espera a que el monitor lo prepare
+may 13, 2022 11:56:24 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0029 a la cola de la tirolina
+may 13, 2022 11:56:25 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0022 a la cola de la tirolina
+may 13, 2022 11:56:25 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:56:25 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0004 entra en la cola de soga
+may 13, 2022 11:56:25 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0003 a la cola de la tirolina
+may 13, 2022 11:56:25 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0010 ha entrado en la cola de merienda
+may 13, 2022 11:56:25 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0010 comienza a merendar
+may 13, 2022 11:56:25 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0016 entra en la cola de soga
+may 13, 2022 11:56:25 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0025 se tira en tirolina
+may 13, 2022 11:56:25 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 entra en la cola de soga
+may 13, 2022 11:56:25 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0024 ha entrado en la cola de merienda
+may 13, 2022 11:56:26 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0026 a la cola de la tirolina
+may 13, 2022 11:56:26 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0006 a la cola de la tirolina
+may 13, 2022 11:56:26 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0031 entra en la cola de soga
+may 13, 2022 11:56:26 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0007 entra en la cola de soga
+may 13, 2022 11:56:26 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0033 entra por NORTE. Ocupación: 33
+Cola Norte --> 0
+may 13, 2022 11:56:26 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:56:26 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0024 comienza a merendar
+may 13, 2022 11:56:27 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0027 termina de merendar
+may 13, 2022 11:56:27 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0032 ha entrado en la cola de merienda
+may 13, 2022 11:56:28 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0011 termina de merendar
+may 13, 2022 11:56:28 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:56:28 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0032 comienza a merendar
+may 13, 2022 11:56:28 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0017 a la cola de la tirolina
+may 13, 2022 11:56:28 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0002 termina de merendar
+may 13, 2022 11:56:28 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0034 entra por SUR. Ocupación: 34
+Cola SUR --> 0
+may 13, 2022 11:56:29 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0025 se va de la tirolina
+may 13, 2022 11:56:29 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0020 a la tirolina
+may 13, 2022 11:56:29 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0020 espera a que el monitor lo prepare
+may 13, 2022 11:56:29 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0033 a la cola de la tirolina
+may 13, 2022 11:56:29 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0027 entra en la cola de soga
+may 13, 2022 11:56:29 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0014 sale de la cola
+may 13, 2022 11:56:29 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0014 esta en el equipo 1
+may 13, 2022 11:56:29 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0019 sale de la cola
+may 13, 2022 11:56:29 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0019 esta en el equipo 2
+may 13, 2022 11:56:29 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0009 sale de la cola
+may 13, 2022 11:56:29 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0009 esta en el equipo 2
+may 13, 2022 11:56:29 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0023 sale de la cola
+may 13, 2022 11:56:29 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0023 esta en el equipo 2
+may 13, 2022 11:56:29 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0004 sale de la cola
+may 13, 2022 11:56:29 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0004 esta en el equipo 1
+may 13, 2022 11:56:30 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0016 sale de la cola
+may 13, 2022 11:56:30 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0016 esta en el equipo 2
+may 13, 2022 11:56:30 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 sale de la cola
+may 13, 2022 11:56:30 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 esta en el equipo 2
+may 13, 2022 11:56:30 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0031 sale de la cola
+may 13, 2022 11:56:30 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0031 esta en el equipo 1
+may 13, 2022 11:56:30 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0007 sale de la cola
+may 13, 2022 11:56:30 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0007 esta en el equipo 1
+may 13, 2022 11:56:30 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0027 sale de la cola
+may 13, 2022 11:56:30 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0027 esta en el equipo 1
+may 13, 2022 11:56:30 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M4 comienza la actividad de soga
+may 13, 2022 11:56:30 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0015 termina de merendar
+may 13, 2022 11:56:30 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:56:30 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0020 se tira en tirolina
+may 13, 2022 11:56:30 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0035 entra por NORTE. Ocupación: 35
+Cola Norte --> 0
+may 13, 2022 11:56:30 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0034 a la cola de la tirolina
+may 13, 2022 11:56:31 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0011 ha entrado en la cola de merienda
+may 13, 2022 11:56:31 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0011 comienza a merendar
+may 13, 2022 11:56:31 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0013 termina de merendar
+may 13, 2022 11:56:32 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0036 entra por SUR. Ocupación: 36
+Cola SUR --> 0
+may 13, 2022 11:56:32 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0010 termina de merendar
+may 13, 2022 11:56:32 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:56:33 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0035 a la cola de la tirolina
+may 13, 2022 11:56:33 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:56:33 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 se va de paseo
+may 13, 2022 11:56:33 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0024 termina de merendar
+may 13, 2022 11:56:33 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0020 se va de la tirolina
+may 13, 2022 11:56:33 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0008 a la tirolina
+may 13, 2022 11:56:33 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0008 espera a que el monitor lo prepare
+may 13, 2022 11:56:34 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0013 ha entrado en la cola de merienda
+may 13, 2022 11:56:34 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0013 comienza a merendar
+may 13, 2022 11:56:34 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0037 entra por NORTE. Ocupación: 37
+Cola Norte --> 0
+may 13, 2022 11:56:34 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha entrado en merienda
+may 13, 2022 11:56:34 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0008 se tira en tirolina
+may 13, 2022 11:56:35 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0010 a la cola de la tirolina
+may 13, 2022 11:56:35 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0025 a la cola de la tirolina
+may 13, 2022 11:56:35 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0015 a la cola de la tirolina
+may 13, 2022 11:56:35 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0032 termina de merendar
+may 13, 2022 11:56:36 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0024 ha entrado en la cola de merienda
+may 13, 2022 11:56:36 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0024 comienza a merendar
+may 13, 2022 11:56:36 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0038 entra por NORTE. Ocupación: 38
+Cola Norte --> 0
+may 13, 2022 11:56:36 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:56:37 A. M. EscribirLog.Log escribirLog
+INFO: En la soga ha ganado el equipo1
+may 13, 2022 11:56:37 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0014 se le suman 2 actividades
+may 13, 2022 11:56:37 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0019 se le suma 1 actividad
+may 13, 2022 11:56:37 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0004 se le suman 2 actividades
+may 13, 2022 11:56:37 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0009 se le suma 1 actividad
+may 13, 2022 11:56:37 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0031 se le suman 2 actividades
+may 13, 2022 11:56:37 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0023 se le suma 1 actividad
+may 13, 2022 11:56:37 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0007 se le suman 2 actividades
+may 13, 2022 11:56:37 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0016 se le suma 1 actividad
+may 13, 2022 11:56:37 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0027 se le suman 2 actividades
+may 13, 2022 11:56:37 A. M. EscribirLog.Log escribirLog
+INFO: Al niño N0005 se le suma 1 actividad
+may 13, 2022 11:56:37 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0002 entra en la cola de soga
+may 13, 2022 11:56:37 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:56:37 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0020 ha entrado en la cola de merienda
+may 13, 2022 11:56:37 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0020 comienza a merendar
+may 13, 2022 11:56:37 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0037 entra en la cola de soga
+may 13, 2022 11:56:37 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0032 a la cola de la tirolina
+may 13, 2022 11:56:38 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0011 termina de merendar
+may 13, 2022 11:56:38 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0008 se va de la tirolina
+may 13, 2022 11:56:38 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0001 a la tirolina
+may 13, 2022 11:56:38 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0001 espera a que el monitor lo prepare
+may 13, 2022 11:56:38 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0039 entra por NORTE. Ocupación: 39
+Cola Norte --> 0
+may 13, 2022 11:56:38 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0036 entra en la cola de soga
+may 13, 2022 11:56:39 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0004 entra en la cola de soga
+may 13, 2022 11:56:39 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0038 entra en la cola de soga
+may 13, 2022 11:56:39 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0007 ha entrado en la cola de merienda
+may 13, 2022 11:56:39 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0007 comienza a merendar
+may 13, 2022 11:56:39 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0001 se tira en tirolina
+may 13, 2022 11:56:39 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 ha entrado en la cola de merienda
+may 13, 2022 11:56:39 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0014 ha entrado en la cola de merienda
+may 13, 2022 11:56:39 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0027 a la cola de la tirolina
+may 13, 2022 11:56:39 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:56:39 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 comienza a merendar
+may 13, 2022 11:56:39 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0009 entra en la cola de soga
+may 13, 2022 11:56:39 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:56:39 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 se va de paseo
+may 13, 2022 11:56:39 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0014 comienza a merendar
+may 13, 2022 11:56:40 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0016 a la cola de la tirolina
+may 13, 2022 11:56:40 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0031 entra en la cola de soga
+may 13, 2022 11:56:40 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0040 entra por SUR. Ocupación: 40
+Cola SUR --> 0
+may 13, 2022 11:56:40 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0019 ha entrado en la cola de merienda
+may 13, 2022 11:56:40 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0023 entra en la cola de soga
+may 13, 2022 11:56:41 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha entrado en merienda
+may 13, 2022 11:56:41 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0008 ha entrado en la cola de merienda
+may 13, 2022 11:56:41 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0039 ha entrado en la cola de merienda
+may 13, 2022 11:56:41 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0013 termina de merendar
+may 13, 2022 11:56:42 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0011 a la cola de la tirolina
+may 13, 2022 11:56:42 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0041 entra por SUR. Ocupación: 41
+Cola SUR --> 0
+may 13, 2022 11:56:42 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:56:42 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0019 comienza a merendar
+may 13, 2022 11:56:42 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0001 se va de la tirolina
+may 13, 2022 11:56:42 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0012 a la tirolina
+may 13, 2022 11:56:42 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0012 espera a que el monitor lo prepare
+may 13, 2022 11:56:43 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0040 ha entrado en la cola de merienda
+may 13, 2022 11:56:43 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0024 termina de merendar
+may 13, 2022 11:56:43 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0012 se tira en tirolina
+may 13, 2022 11:56:44 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0013 ha entrado en la cola de merienda
+may 13, 2022 11:56:44 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0020 termina de merendar
+may 13, 2022 11:56:44 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0042 entra por SUR. Ocupación: 42
+Cola SUR --> 0
+may 13, 2022 11:56:45 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0001 a la cola de la tirolina
+may 13, 2022 11:56:45 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:56:45 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0008 comienza a merendar
+may 13, 2022 11:56:45 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0041 a la cola de la tirolina
+may 13, 2022 11:56:46 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0007 termina de merendar
+may 13, 2022 11:56:46 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0024 a la cola de la tirolina
+may 13, 2022 11:56:46 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0043 entra por SUR. Ocupación: 43
+Cola SUR --> 0
+may 13, 2022 11:56:46 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:56:46 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0039 comienza a merendar
+may 13, 2022 11:56:46 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 termina de merendar
+may 13, 2022 11:56:47 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0014 termina de merendar
+may 13, 2022 11:56:47 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0012 se va de la tirolina
+may 13, 2022 11:56:47 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0021 a la tirolina
+may 13, 2022 11:56:47 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0021 espera a que el monitor lo prepare
+may 13, 2022 11:56:47 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0020 ha entrado en la cola de merienda
+may 13, 2022 11:56:48 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0042 a la cola de la tirolina
+may 13, 2022 11:56:48 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0021 se tira en tirolina
+may 13, 2022 11:56:48 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0044 entra por SUR. Ocupación: 44
+Cola SUR --> 0
+may 13, 2022 11:56:48 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0043 ha entrado en la cola de merienda
+may 13, 2022 11:56:49 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 ha entrado en la cola de merienda
+may 13, 2022 11:56:49 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0007 a la cola de la tirolina
+may 13, 2022 11:56:49 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:56:49 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0040 comienza a merendar
+may 13, 2022 11:56:49 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0014 entra en la cola de soga
+may 13, 2022 11:56:49 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0012 ha entrado en la cola de merienda
+may 13, 2022 11:56:49 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0019 termina de merendar
+may 13, 2022 11:56:50 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:56:50 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0013 comienza a merendar
+may 13, 2022 11:56:50 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0045 entra por NORTE. Ocupación: 45
+Cola Norte --> 0
+may 13, 2022 11:56:51 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0044 ha entrado en la cola de merienda
+may 13, 2022 11:56:51 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0021 se va de la tirolina
+may 13, 2022 11:56:51 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0028 a la tirolina
+may 13, 2022 11:56:51 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0028 espera a que el monitor lo prepare
+may 13, 2022 11:56:52 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0008 termina de merendar
+may 13, 2022 11:56:52 A. M. EscribirLog.Log escribirLog
+INFO: Niño N0046 entra por SUR. Ocupación: 46
+Cola SUR --> 0
+may 13, 2022 11:56:52 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0028 se tira en tirolina
+may 13, 2022 11:56:53 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 11:56:53 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0020 comienza a merendar
+may 13, 2022 11:56:53 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0019 ha entrado en la cola de merienda
+may 13, 2022 11:56:53 A. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 11:56:53 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0043 comienza a merendar
+may 13, 2022 11:56:53 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0039 termina de merendar
+may 13, 2022 11:56:54 A. M. EscribirLog.Log escribirLog
+INFO: El niño N0021 ha entrado en la cola de merienda
+may 13, 2022 11:56:54 A. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0045 a la cola de la tirolina
+may 13, 2022 5:32:28 P. M. EscribirLog.Log escribirLog
+INFO: Puerta SUR cerrada, monitor M1 abriendo...
+may 13, 2022 5:32:29 P. M. EscribirLog.Log escribirLog
+INFO: Monitor M1 entra por SUR
+may 13, 2022 5:32:29 P. M. EscribirLog.Log escribirLog
+INFO: Puerta NORTE cerrada, monitor M2 abriendo...
+may 13, 2022 5:32:31 P. M. EscribirLog.Log escribirLog
+INFO: Monitor M2 entra por NORTE
+may 13, 2022 5:32:31 P. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha entrado en merienda
+may 13, 2022 5:32:32 P. M. EscribirLog.Log escribirLog
+INFO: Monitor M3 entra por SUR
+may 13, 2022 5:32:32 P. M. EscribirLog.Log escribirLog
+INFO: Monitor M4 entra por NORTE
+may 13, 2022 5:32:32 P. M. EscribirLog.Log escribirLog
+INFO: Niño N0001 entra por SUR. Ocupación: 1
+Cola SUR --> 0
+may 13, 2022 5:32:32 P. M. EscribirLog.Log escribirLog
+INFO: Niño N0002 entra por NORTE. Ocupación: 2
+Cola Norte --> 0
+may 13, 2022 5:32:32 P. M. EscribirLog.Log escribirLog
+INFO: Niño N0003 entra por NORTE. Ocupación: 3
+Cola Norte --> 0
+may 13, 2022 5:32:32 P. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha entrado en merienda
+may 13, 2022 5:32:33 P. M. EscribirLog.Log escribirLog
+INFO: El monitor M4 entra en soga
+may 13, 2022 5:32:34 P. M. EscribirLog.Log escribirLog
+INFO: Niño N0004 entra por NORTE. Ocupación: 4
+Cola Norte --> 0
+may 13, 2022 5:32:35 P. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0001 a la cola de la tirolina
+may 13, 2022 5:32:35 P. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0001 a la tirolina
+may 13, 2022 5:32:35 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0001 espera a que el monitor lo prepare
+may 13, 2022 5:32:35 P. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0003 a la cola de la tirolina
+may 13, 2022 5:32:35 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0002 entra en la cola de soga
+may 13, 2022 5:32:36 P. M. EscribirLog.Log escribirLog
+INFO: Niño N0005 entra por SUR. Ocupación: 5
+Cola SUR --> 0
+may 13, 2022 5:32:36 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0001 se tira en tirolina
+may 13, 2022 5:32:36 P. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 5:32:36 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0004 entra en la cola de soga
+may 13, 2022 5:32:37 P. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 5:32:38 P. M. EscribirLog.Log escribirLog
+INFO: Niño N0006 entra por NORTE. Ocupación: 6
+Cola Norte --> 0
+may 13, 2022 5:32:38 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 ha entrado en la cola de merienda
+may 13, 2022 5:32:38 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 comienza a merendar
+may 13, 2022 5:32:39 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0001 se va de la tirolina
+may 13, 2022 5:32:39 P. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0003 a la tirolina
+may 13, 2022 5:32:39 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0003 espera a que el monitor lo prepare
+may 13, 2022 5:32:40 P. M. EscribirLog.Log escribirLog
+INFO: Niño N0007 entra por SUR. Ocupación: 7
+Cola SUR --> 0
+may 13, 2022 5:32:40 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0006 entra en la cola de soga
+may 13, 2022 5:32:40 P. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 5:32:40 P. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 5:32:40 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0003 se tira en tirolina
+may 13, 2022 5:32:42 P. M. EscribirLog.Log escribirLog
+INFO: Niño N0008 entra por NORTE. Ocupación: 8
+Cola Norte --> 0
+may 13, 2022 5:32:42 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0001 ha entrado en la cola de merienda
+may 13, 2022 5:32:42 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0001 comienza a merendar
+may 13, 2022 5:32:42 P. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 5:32:42 P. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 5:32:42 P. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0007 a la cola de la tirolina
+may 13, 2022 5:32:44 P. M. EscribirLog.Log escribirLog
+INFO: Niño N0009 entra por NORTE. Ocupación: 9
+Cola Norte --> 0
+may 13, 2022 5:32:44 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0003 se va de la tirolina
+may 13, 2022 5:32:44 P. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0007 a la tirolina
+may 13, 2022 5:32:44 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0007 espera a que el monitor lo prepare
+may 13, 2022 5:32:45 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0007 se tira en tirolina
+may 13, 2022 5:32:45 P. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 5:32:45 P. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 5:32:45 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 termina de merendar
+may 13, 2022 5:32:45 P. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0008 a la cola de la tirolina
+may 13, 2022 5:32:46 P. M. EscribirLog.Log escribirLog
+INFO: Niño N0010 entra por NORTE. Ocupación: 10
+Cola Norte --> 0
+may 13, 2022 5:32:47 P. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0005 a la cola de la tirolina
+may 13, 2022 5:32:47 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0009 entra en la cola de soga
+may 13, 2022 5:32:47 P. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 5:32:48 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0003 ha entrado en la cola de merienda
+may 13, 2022 5:32:48 P. M. EscribirLog.Log escribirLog
+INFO: Niño N0011 entra por SUR. Ocupación: 11
+Cola SUR --> 0
+may 13, 2022 5:32:48 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0003 comienza a merendar
+may 13, 2022 5:32:48 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0007 se va de la tirolina
+may 13, 2022 5:32:48 P. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0008 a la tirolina
+may 13, 2022 5:32:48 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0008 espera a que el monitor lo prepare
+may 13, 2022 5:32:49 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0001 termina de merendar
+may 13, 2022 5:32:49 P. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 5:32:49 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0008 se tira en tirolina
+may 13, 2022 5:32:49 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0010 entra en la cola de soga
+may 13, 2022 5:32:50 P. M. EscribirLog.Log escribirLog
+INFO: Niño N0012 entra por NORTE. Ocupación: 12
+Cola Norte --> 0
+may 13, 2022 5:32:51 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0001 ha entrado en la cola de merienda
+may 13, 2022 5:32:51 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0001 comienza a merendar
+may 13, 2022 5:32:51 P. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0011 a la cola de la tirolina
+may 13, 2022 5:32:51 P. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0007 a la cola de la tirolina
+may 13, 2022 5:32:52 P. M. EscribirLog.Log escribirLog
+INFO: El monitor M1 ha limpiado un plato
+may 13, 2022 5:32:52 P. M. EscribirLog.Log escribirLog
+INFO: Niño N0013 entra por NORTE. Ocupación: 13
+Cola Norte --> 0
+may 13, 2022 5:32:52 P. M. EscribirLog.Log escribirLog
+INFO: El monitor M2 ha limpiado un plato
+may 13, 2022 5:32:53 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0008 se va de la tirolina
+may 13, 2022 5:32:53 P. M. EscribirLog.Log escribirLog
+INFO: Llega el niño N0005 a la tirolina
+may 13, 2022 5:32:53 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 espera a que el monitor lo prepare
+may 13, 2022 5:32:54 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0012 ha entrado en la cola de merienda
+may 13, 2022 5:32:54 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0012 comienza a merendar
+may 13, 2022 5:32:54 P. M. EscribirLog.Log escribirLog
+INFO: Niño N0014 entra por SUR. Ocupación: 14
+Cola SUR --> 0
+may 13, 2022 5:32:54 P. M. EscribirLog.Log escribirLog
+INFO: El niño N0005 se tira en tirolina

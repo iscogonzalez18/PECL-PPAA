@@ -4,9 +4,10 @@
  */
 package RMI;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.rmi.Naming;
+import java.rmi.RemoteException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -14,9 +15,7 @@ import java.rmi.Naming;
  */
 public class NewJFrame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form NewJFrame
-     */
+    private Metodos metodos;
     public NewJFrame() {
         initComponents();
     }
@@ -222,9 +221,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         try{
-            BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
-            //Localiza el objeto distribuido:
-            InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//127.0.0.1/ObjetoSaluda"); 
             String contM="";
             contM = metodos.niñosenMerienda();
             jTextField1.setText(contM);
@@ -238,9 +234,6 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         try{
-            BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
-            //Localiza el objeto distribuido:
-            InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//127.0.0.1/ObjetoSaluda"); 
             String contS="";
             contS = metodos.niñosenColaSoga();
             jTextField2.setText(contS);
@@ -255,9 +248,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         try{
-            BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
-            //Localiza el objeto distribuido:
-            InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//127.0.0.1/ObjetoSaluda"); 
             String contT="";
             contT = metodos.niñosenColaTirolina();
             jTextField3.setText(contT);
@@ -272,9 +262,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         try{
-            BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
-            //Localiza el objeto distribuido:
-            InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//127.0.0.1/ObjetoSaluda"); 
             String veces="";
             veces = metodos.vecesTirolina();
             jTextField4.setText(veces);
@@ -289,9 +276,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         try{
-            BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
-            //Localiza el objeto distribuido:
-            InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//127.0.0.1/ObjetoSaluda"); 
             String BLimpias="";
             BLimpias = metodos.bandejasLimpiasMerienda();
             jTextField5.setText(BLimpias);
@@ -306,9 +290,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         try{
-            BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
-            //Localiza el objeto distribuido:
-            InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//127.0.0.1/ObjetoSaluda"); 
             String BSucias="";
             BSucias = metodos.bandejasSuciasMerienda();
             jTextField6.setText(BSucias);
@@ -322,18 +303,12 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        try{
-            BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
-            //Localiza el objeto distribuido:
-            InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//127.0.0.1/ObjetoSaluda"); 
-            String id=jTextField7.getText();
+        String id=jTextField7.getText();
+        try {
             String actividades = metodos.actividadesNiño(id);
             jTextField8.setText(actividades);
-        }
-        catch (Exception e) 
-        {
-            System.out.println("Excepción : " + e.getMessage());
-            e.printStackTrace();
+        } catch (RemoteException ex) {
+            Logger.getLogger(NewJFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -341,30 +316,15 @@ public class NewJFrame extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+         try{
+            //Localiza el objeto distribuido:
+            InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//127.0.0.1/ObjetoSaluda");   
         }
-        //</editor-fold>
-
-        /* Create and display the form */
+        catch (Exception e) 
+        {
+            System.out.println("Excepción : " + e.getMessage());
+            e.printStackTrace();
+        }
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new NewJFrame().setVisible(true);
