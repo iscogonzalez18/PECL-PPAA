@@ -26,7 +26,6 @@ public class ClienteRMI extends javax.swing.JFrame {
     
     public ClienteRMI() {
         initComponents();
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px.png")));
     }
 
     /**
@@ -56,12 +55,15 @@ public class ClienteRMI extends javax.swing.JFrame {
         jLabelUsosTirolina = new javax.swing.JLabel();
         jLabelLupaInfoNiño1 = new javax.swing.JLabel();
         jLabelLupaInfoNiño2 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
         jPanelSoga = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabelNiñosSoga = new javax.swing.JLabel();
         jLabelLupaInfoNiño4 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
         jPanelMerendero = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -80,6 +82,7 @@ public class ClienteRMI extends javax.swing.JFrame {
         jPanelMinimizar = new javax.swing.JPanel();
         jLabelMinimizar = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -120,7 +123,7 @@ public class ClienteRMI extends javax.swing.JFrame {
         jPanelNiño.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
 
         jLabelLupaInfoNiño.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelLupaInfoNiño.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px.png"))); // NOI18N
+        jLabelLupaInfoNiño.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px_1.png"))); // NOI18N
         jLabelLupaInfoNiño.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelLupaInfoNiñoMouseClicked(evt);
@@ -165,7 +168,7 @@ public class ClienteRMI extends javax.swing.JFrame {
         jPanelTirolina.add(jLabelUsosTirolina, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, 60, -1));
 
         jLabelLupaInfoNiño1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelLupaInfoNiño1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px.png"))); // NOI18N
+        jLabelLupaInfoNiño1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px_1.png"))); // NOI18N
         jLabelLupaInfoNiño1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelLupaInfoNiño1MouseClicked(evt);
@@ -180,7 +183,7 @@ public class ClienteRMI extends javax.swing.JFrame {
         jPanelTirolina.add(jLabelLupaInfoNiño1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 35, 24, 30));
 
         jLabelLupaInfoNiño2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelLupaInfoNiño2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px.png"))); // NOI18N
+        jLabelLupaInfoNiño2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px_1.png"))); // NOI18N
         jLabelLupaInfoNiño2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelLupaInfoNiño2MouseClicked(evt);
@@ -193,6 +196,9 @@ public class ClienteRMI extends javax.swing.JFrame {
             }
         });
         jPanelTirolina.add(jLabelLupaInfoNiño2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 65, 24, 30));
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Tirolina (1) (2).png"))); // NOI18N
+        jPanelTirolina.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, -1, 30));
 
         jPanel1.add(jPanelTirolina, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 320, 100));
 
@@ -216,7 +222,7 @@ public class ClienteRMI extends javax.swing.JFrame {
         jPanelSoga.add(jLabelNiñosSoga, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, 60, -1));
 
         jLabelLupaInfoNiño4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelLupaInfoNiño4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px.png"))); // NOI18N
+        jLabelLupaInfoNiño4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px_1.png"))); // NOI18N
         jLabelLupaInfoNiño4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelLupaInfoNiño4MouseClicked(evt);
@@ -230,10 +236,16 @@ public class ClienteRMI extends javax.swing.JFrame {
         });
         jPanelSoga.add(jLabelLupaInfoNiño4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 24, 30));
 
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Soga (1) (1).png"))); // NOI18N
+        jPanelSoga.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, -1, 30));
+
         jPanel1.add(jPanelSoga, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 320, 100));
 
         jPanelMerendero.setBackground(new java.awt.Color(39, 43, 51));
         jPanelMerendero.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Merendero (1) (1).png"))); // NOI18N
+        jPanelMerendero.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, -1, 30));
 
         jLabel5.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
         jLabel5.setForeground(java.awt.Color.white);
@@ -283,7 +295,7 @@ public class ClienteRMI extends javax.swing.JFrame {
         jPanelMerendero.add(jLabelNiñosMerendero, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, 60, -1));
 
         jLabelLupaInfoNiño3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelLupaInfoNiño3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px.png"))); // NOI18N
+        jLabelLupaInfoNiño3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px_1.png"))); // NOI18N
         jLabelLupaInfoNiño3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelLupaInfoNiño3MouseClicked(evt);
@@ -298,7 +310,7 @@ public class ClienteRMI extends javax.swing.JFrame {
         jPanelMerendero.add(jLabelLupaInfoNiño3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, 30));
 
         jLabelLupaInfoNiño5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelLupaInfoNiño5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px.png"))); // NOI18N
+        jLabelLupaInfoNiño5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px_1.png"))); // NOI18N
         jLabelLupaInfoNiño5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelLupaInfoNiño5MouseClicked(evt);
@@ -313,7 +325,7 @@ public class ClienteRMI extends javax.swing.JFrame {
         jPanelMerendero.add(jLabelLupaInfoNiño5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 35, 24, 30));
 
         jLabelLupaInfoNiño6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelLupaInfoNiño6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px.png"))); // NOI18N
+        jLabelLupaInfoNiño6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px_1.png"))); // NOI18N
         jLabelLupaInfoNiño6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelLupaInfoNiño6MouseClicked(evt);
@@ -408,9 +420,12 @@ public class ClienteRMI extends javax.swing.JFrame {
 
         jLabel25.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel25.setText("CONTROL REMOTO DEL CAMPAMENTO");
-        jPanelControlVentana.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 570, 20));
+        jPanelControlVentana.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 490, 20));
+
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Campamento (1) (1).png"))); // NOI18N
+        jPanelControlVentana.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 5, -1, 30));
 
         jPanelVentana.add(jPanelControlVentana, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, 3, 670, -1));
 
@@ -667,7 +682,11 @@ public class ClienteRMI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
