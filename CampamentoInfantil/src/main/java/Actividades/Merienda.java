@@ -71,6 +71,14 @@ public class Merienda
             sem.acquire();
             paso.mirar();
             colaEspera.sacar(n);
+            try
+            {
+                cerrojo.lock();
+                cont--;
+            } 
+            finally {
+                cerrojo.unlock();
+            }
             paso.mirar();
             Log.escribirLog("El niño "+n.getIdentificador()+" comienza a merendar");
             comiendo.meter(n);
@@ -89,14 +97,6 @@ public class Merienda
             }
             n.setActividades(0);
             paso.mirar();
-            try
-            {
-                cerrojo.lock();
-                cont--;
-            } 
-            finally {
-                cerrojo.unlock();
-            }
         } 
         catch (InterruptedException ex)
         {

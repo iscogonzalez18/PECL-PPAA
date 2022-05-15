@@ -82,7 +82,6 @@ public class Servidor extends javax.swing.JFrame {
         jLabelNiñosZonaComun = new javax.swing.JLabel();
         jPanel20 = new javax.swing.JPanel();
         jLabelMonitoresZonaComun = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jPanelEntradaSur = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel22 = new javax.swing.JPanel();
@@ -106,9 +105,7 @@ public class Servidor extends javax.swing.JFrame {
         jLabelBandejasSuciasMerienda = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
         jLabelMonitoresMerienda = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jPanelEntradaNorte5 = new javax.swing.JPanel();
-        jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
@@ -121,10 +118,9 @@ public class Servidor extends javax.swing.JFrame {
         jLabelEquipo1Soga = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
         jLabelEquipo2Soga = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
         jPanelEntradaNorte6 = new javax.swing.JPanel();
         jLabel52 = new javax.swing.JLabel();
-        jLabel53 = new javax.swing.JLabel();
         jLabel54 = new javax.swing.JLabel();
         jLabel55 = new javax.swing.JLabel();
         jLabel56 = new javax.swing.JLabel();
@@ -139,7 +135,7 @@ public class Servidor extends javax.swing.JFrame {
         jLabelPreparacionTirolina = new javax.swing.JLabel();
         jPanel27 = new javax.swing.JPanel();
         jLabelMonitorTirolina = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
         jPanelEntradaNorte1 = new javax.swing.JPanel();
         jLabel45 = new javax.swing.JLabel();
         jPanel21 = new javax.swing.JPanel();
@@ -327,9 +323,6 @@ public class Servidor extends javax.swing.JFrame {
 
         jPanelEntradaNorte.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 200, 30));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ZonaComun (1).png"))); // NOI18N
-        jPanelEntradaNorte.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 0, -1, -1));
-
         jPanelDatos.add(jPanelEntradaNorte, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 1050, 110));
 
         jPanelEntradaSur.setBackground(new java.awt.Color(39, 43, 51));
@@ -363,7 +356,7 @@ public class Servidor extends javax.swing.JFrame {
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel24.setText("ACTIVIDADES");
-        jPanelActividades1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1030, 40));
+        jPanelActividades1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1030, 40));
 
         jPanelEntradaNorte4.setBackground(new java.awt.Color(39, 43, 51));
         jPanelEntradaNorte4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(122, 130, 142)));
@@ -458,20 +451,11 @@ public class Servidor extends javax.swing.JFrame {
 
         jPanelEntradaNorte4.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 80, 30));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Merendero (1) (1).png"))); // NOI18N
-        jPanelEntradaNorte4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 3, -1, -1));
-
         jPanelActividades1.add(jPanelEntradaNorte4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 1030, 150));
 
         jPanelEntradaNorte5.setBackground(new java.awt.Color(39, 43, 51));
         jPanelEntradaNorte5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(122, 130, 142)));
         jPanelEntradaNorte5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel36.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        jLabel36.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel36.setText("SOGA");
-        jPanelEntradaNorte5.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 490, 40));
 
         jLabel37.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
         jLabel37.setForeground(new java.awt.Color(255, 255, 255));
@@ -538,8 +522,11 @@ public class Servidor extends javax.swing.JFrame {
 
         jPanelEntradaNorte5.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, 180, 30));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Soga (1) (1).png"))); // NOI18N
-        jPanelEntradaNorte5.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 3, -1, 30));
+        jLabel36.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel36.setText("SOGA");
+        jPanelEntradaNorte5.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 490, 40));
 
         jPanelActividades1.add(jPanelEntradaNorte5, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 60, 510, 160));
 
@@ -552,12 +539,6 @@ public class Servidor extends javax.swing.JFrame {
         jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel52.setText("Finalizacion");
         jPanelEntradaNorte6.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 120, 80, 30));
-
-        jLabel53.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        jLabel53.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel53.setText("TIROLINA");
-        jPanelEntradaNorte6.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 490, 40));
 
         jLabel54.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
         jLabel54.setForeground(new java.awt.Color(255, 255, 255));
@@ -637,8 +618,11 @@ public class Servidor extends javax.swing.JFrame {
 
         jPanelEntradaNorte6.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 80, 30));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Tirolina (1) (2).png"))); // NOI18N
-        jPanelEntradaNorte6.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 3, -1, -1));
+        jLabel53.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel53.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel53.setText("TIROLINA");
+        jPanelEntradaNorte6.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 490, 40));
 
         jPanelActividades1.add(jPanelEntradaNorte6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 510, 160));
 
@@ -954,16 +938,12 @@ public class Servidor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabelBandejasLimpiasMerienda;
     private javax.swing.JLabel jLabelBandejasSuciasMerienda;
     private javax.swing.JLabel jLabelCerrar;

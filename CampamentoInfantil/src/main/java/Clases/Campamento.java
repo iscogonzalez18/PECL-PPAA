@@ -32,7 +32,6 @@ public class Campamento {
     private Soga soga;
     private Tirolina tirolina;
     private ZonaComun zonaComun;
-    
     private EntradaNorte Norte;
     private EntradaSur Sur;
     

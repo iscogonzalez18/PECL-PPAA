@@ -67,6 +67,14 @@ public class Tirolina
             sem.acquire();
             paso.mirar();
             colaEspera.sacar(n);
+            cerrojo.lock();
+            try
+            {
+                contN--;
+            } 
+            finally {
+                cerrojo.unlock();
+            }
             paso.mirar();
             Log.escribirLog("Llega el niño "+n.getIdentificador()+" a la tirolina");
             preparacion.meter(n);
@@ -94,7 +102,6 @@ public class Tirolina
             paso.mirar();
             finalizacion.sacar(n);
             paso.mirar();
-            contN--;
             cont++;
             sem.release();
         } 

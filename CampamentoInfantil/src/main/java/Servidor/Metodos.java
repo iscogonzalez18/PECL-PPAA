@@ -67,7 +67,7 @@ public class Metodos extends UnicastRemoteObject implements InterfaceCampamento
         }
         else
         {
-            act="No se ha encontrado ese niño";
+            act="ERROR";
         }
         return act;
     }

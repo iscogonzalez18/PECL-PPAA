@@ -41,29 +41,26 @@ public class ClienteRMI extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanelNiño = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabelActividadesTotales = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jLabelLupaInfoNiño = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
         jPanelTirolina = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         jLabelColaTirolina = new javax.swing.JLabel();
         jLabelUsosTirolina = new javax.swing.JLabel();
-        jLabelLupaInfoNiño1 = new javax.swing.JLabel();
-        jLabelLupaInfoNiño2 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
         jPanelSoga = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabelNiñosSoga = new javax.swing.JLabel();
-        jLabelLupaInfoNiño4 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
         jPanelMerendero = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -72,9 +69,9 @@ public class ClienteRMI extends javax.swing.JFrame {
         jLabelBandejasLimpiasMerendero = new javax.swing.JLabel();
         jLabelBandejasSuciasMerendero = new javax.swing.JLabel();
         jLabelNiñosMerendero = new javax.swing.JLabel();
-        jLabelLupaInfoNiño3 = new javax.swing.JLabel();
-        jLabelLupaInfoNiño5 = new javax.swing.JLabel();
-        jLabelLupaInfoNiño6 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
         jPanelControlVentana = new javax.swing.JPanel();
         jPanelCerrar = new javax.swing.JPanel();
         jLabelCerrar = new javax.swing.JLabel();
@@ -82,7 +79,6 @@ public class ClienteRMI extends javax.swing.JFrame {
         jPanelMinimizar = new javax.swing.JPanel();
         jLabelMinimizar = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -102,9 +98,6 @@ public class ClienteRMI extends javax.swing.JFrame {
         jLabel7.setText("Introduce el identificador de un niño:");
         jPanelNiño.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 210, -1));
 
-        jTextField7.setFocusable(false);
-        jPanelNiño.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, 60, 20));
-
         jLabel11.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -117,25 +110,25 @@ public class ClienteRMI extends javax.swing.JFrame {
         jLabel8.setText("Actividades totales:");
         jPanelNiño.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 40, 120, -1));
 
+        jLabelActividadesTotales.setForeground(new java.awt.Color(240, 240, 240));
         jLabelActividadesTotales.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelActividadesTotales.setText("...");
         jPanelNiño.add(jLabelActividadesTotales, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, 60, -1));
         jPanelNiño.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
 
-        jLabelLupaInfoNiño.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelLupaInfoNiño.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px_1.png"))); // NOI18N
-        jLabelLupaInfoNiño.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabelLupaInfoNiñoMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabelLupaInfoNiñoMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabelLupaInfoNiñoMouseExited(evt);
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setForeground(new java.awt.Color(240, 240, 240));
+        jButton1.setText("Consultar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
-        jPanelNiño.add(jLabelLupaInfoNiño, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 35, 24, 30));
+        jPanelNiño.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 90, 20));
+
+        jTextField1.setBackground(new java.awt.Color(0, 0, 0));
+        jTextField1.setForeground(new java.awt.Color(240, 240, 240));
+        jPanelNiño.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, 90, -1));
 
         jPanel1.add(jPanelNiño, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 650, 70));
 
@@ -144,13 +137,43 @@ public class ClienteRMI extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
         jLabel3.setForeground(java.awt.Color.white);
-        jLabel3.setText("Cola de espera:");
-        jPanelTirolina.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 120, -1));
+        jLabel3.setText("Niños en la cola de espera:");
+        jPanelTirolina.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 160, -1));
 
         jLabel4.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
         jLabel4.setForeground(java.awt.Color.white);
         jLabel4.setText("Numero de usos:");
         jPanelTirolina.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 120, -1));
+
+        jLabelColaTirolina.setForeground(new java.awt.Color(240, 240, 240));
+        jLabelColaTirolina.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelColaTirolina.setText("...");
+        jPanelTirolina.add(jLabelColaTirolina, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 40, -1));
+
+        jLabelUsosTirolina.setForeground(new java.awt.Color(240, 240, 240));
+        jLabelUsosTirolina.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelUsosTirolina.setText("...");
+        jPanelTirolina.add(jLabelUsosTirolina, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, 60, -1));
+
+        jButton2.setBackground(new java.awt.Color(0, 0, 0));
+        jButton2.setForeground(new java.awt.Color(240, 240, 240));
+        jButton2.setText("Consultar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanelTirolina.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, 20));
+
+        jButton3.setBackground(new java.awt.Color(0, 0, 0));
+        jButton3.setForeground(new java.awt.Color(240, 240, 240));
+        jButton3.setText("Consultar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanelTirolina.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, 20));
 
         jLabel9.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -159,47 +182,6 @@ public class ClienteRMI extends javax.swing.JFrame {
         jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.white));
         jPanelTirolina.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 30));
 
-        jLabelColaTirolina.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelColaTirolina.setText("...");
-        jPanelTirolina.add(jLabelColaTirolina, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 60, -1));
-
-        jLabelUsosTirolina.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelUsosTirolina.setText("...");
-        jPanelTirolina.add(jLabelUsosTirolina, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, 60, -1));
-
-        jLabelLupaInfoNiño1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelLupaInfoNiño1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px_1.png"))); // NOI18N
-        jLabelLupaInfoNiño1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabelLupaInfoNiño1MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabelLupaInfoNiño1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabelLupaInfoNiño1MouseExited(evt);
-            }
-        });
-        jPanelTirolina.add(jLabelLupaInfoNiño1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 35, 24, 30));
-
-        jLabelLupaInfoNiño2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelLupaInfoNiño2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px_1.png"))); // NOI18N
-        jLabelLupaInfoNiño2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabelLupaInfoNiño2MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabelLupaInfoNiño2MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabelLupaInfoNiño2MouseExited(evt);
-            }
-        });
-        jPanelTirolina.add(jLabelLupaInfoNiño2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 65, 24, 30));
-
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Tirolina (1) (2).png"))); // NOI18N
-        jPanelTirolina.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, -1, 30));
-
         jPanel1.add(jPanelTirolina, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 320, 100));
 
         jPanelSoga.setBackground(new java.awt.Color(39, 43, 51));
@@ -207,8 +189,8 @@ public class ClienteRMI extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
         jLabel2.setForeground(java.awt.Color.white);
-        jLabel2.setText("Niños en soga:");
-        jPanelSoga.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 130, -1));
+        jLabel2.setText("Niños en la cola de espera:");
+        jPanelSoga.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 150, -1));
 
         jLabel10.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
@@ -217,35 +199,25 @@ public class ClienteRMI extends javax.swing.JFrame {
         jLabel10.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.white));
         jPanelSoga.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 30));
 
+        jLabelNiñosSoga.setForeground(new java.awt.Color(240, 240, 240));
         jLabelNiñosSoga.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelNiñosSoga.setText("...");
         jPanelSoga.add(jLabelNiñosSoga, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, 60, -1));
 
-        jLabelLupaInfoNiño4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelLupaInfoNiño4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px_1.png"))); // NOI18N
-        jLabelLupaInfoNiño4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabelLupaInfoNiño4MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabelLupaInfoNiño4MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabelLupaInfoNiño4MouseExited(evt);
+        jButton4.setBackground(new java.awt.Color(0, 0, 0));
+        jButton4.setForeground(new java.awt.Color(240, 240, 240));
+        jButton4.setText("Consultar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
             }
         });
-        jPanelSoga.add(jLabelLupaInfoNiño4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 24, 30));
-
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Soga (1) (1).png"))); // NOI18N
-        jPanelSoga.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, -1, 30));
+        jPanelSoga.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, 20));
 
         jPanel1.add(jPanelSoga, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 320, 100));
 
         jPanelMerendero.setBackground(new java.awt.Color(39, 43, 51));
         jPanelMerendero.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Merendero (1) (1).png"))); // NOI18N
-        jPanelMerendero.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, -1, 30));
 
         jLabel5.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
         jLabel5.setForeground(java.awt.Color.white);
@@ -259,7 +231,7 @@ public class ClienteRMI extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
         jLabel1.setForeground(java.awt.Color.white);
-        jLabel1.setText("Niños en el merendero: ");
+        jLabel1.setText("Niños en la cola de espera:");
         jPanelMerendero.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 150, -1));
 
         jLabel12.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
@@ -282,62 +254,50 @@ public class ClienteRMI extends javax.swing.JFrame {
 
         jPanelMerendero.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, 20, 30));
 
+        jLabelBandejasLimpiasMerendero.setForeground(new java.awt.Color(240, 240, 240));
         jLabelBandejasLimpiasMerendero.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelBandejasLimpiasMerendero.setText("...");
         jPanelMerendero.add(jLabelBandejasLimpiasMerendero, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, 60, -1));
 
+        jLabelBandejasSuciasMerendero.setForeground(new java.awt.Color(240, 240, 240));
         jLabelBandejasSuciasMerendero.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelBandejasSuciasMerendero.setText("...");
         jPanelMerendero.add(jLabelBandejasSuciasMerendero, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 70, 60, -1));
 
+        jLabelNiñosMerendero.setForeground(new java.awt.Color(240, 240, 240));
         jLabelNiñosMerendero.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelNiñosMerendero.setText("...");
         jPanelMerendero.add(jLabelNiñosMerendero, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, 60, -1));
 
-        jLabelLupaInfoNiño3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelLupaInfoNiño3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px_1.png"))); // NOI18N
-        jLabelLupaInfoNiño3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabelLupaInfoNiño3MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabelLupaInfoNiño3MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabelLupaInfoNiño3MouseExited(evt);
+        jButton5.setBackground(new java.awt.Color(0, 0, 0));
+        jButton5.setForeground(new java.awt.Color(240, 240, 240));
+        jButton5.setText("Consultar");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
             }
         });
-        jPanelMerendero.add(jLabelLupaInfoNiño3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, 30));
+        jPanelMerendero.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, 20));
 
-        jLabelLupaInfoNiño5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelLupaInfoNiño5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px_1.png"))); // NOI18N
-        jLabelLupaInfoNiño5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabelLupaInfoNiño5MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabelLupaInfoNiño5MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabelLupaInfoNiño5MouseExited(evt);
+        jButton6.setBackground(new java.awt.Color(0, 0, 0));
+        jButton6.setForeground(new java.awt.Color(240, 240, 240));
+        jButton6.setText("Consultar");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
             }
         });
-        jPanelMerendero.add(jLabelLupaInfoNiño5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 35, 24, 30));
+        jPanelMerendero.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, -1, 20));
 
-        jLabelLupaInfoNiño6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelLupaInfoNiño6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lupa20px_1.png"))); // NOI18N
-        jLabelLupaInfoNiño6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabelLupaInfoNiño6MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabelLupaInfoNiño6MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabelLupaInfoNiño6MouseExited(evt);
+        jButton7.setBackground(new java.awt.Color(0, 0, 0));
+        jButton7.setForeground(new java.awt.Color(240, 240, 240));
+        jButton7.setText("Consultar");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
             }
         });
-        jPanelMerendero.add(jLabelLupaInfoNiño6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 65, 24, 30));
+        jPanelMerendero.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 70, -1, 20));
 
         jPanel1.add(jPanelMerendero, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 650, 100));
 
@@ -424,9 +384,6 @@ public class ClienteRMI extends javax.swing.JFrame {
         jLabel25.setText("CONTROL REMOTO DEL CAMPAMENTO");
         jPanelControlVentana.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 490, 20));
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Campamento (1) (1).png"))); // NOI18N
-        jPanelControlVentana.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 5, -1, 30));
-
         jPanelVentana.add(jPanelControlVentana, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, 3, 670, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -487,32 +444,22 @@ public class ClienteRMI extends javax.swing.JFrame {
         y = evt.getY();
     }//GEN-LAST:event_jPanelControlVentanaMousePressed
 
-    private void jLabelLupaInfoNiñoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLupaInfoNiñoMouseClicked
-        // TODO add your handling code here:
-        String id=jTextField7.getText();
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+         // TODO add your handling code here:
+        String id=jTextField1.getText();
         try {
-            InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//localhost/ObjetoSaluda");  
+            InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//localhost/ObjetoSaluda");
             String actividades = metodos.actividadesNiño(id);
             jLabelActividadesTotales.setText(actividades);
         }
-        catch (Exception e) 
+        catch (Exception e)
         {
             System.out.println("Excepción : " + e.getMessage());
             e.printStackTrace();
         }
-    }//GEN-LAST:event_jLabelLupaInfoNiñoMouseClicked
+    }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jLabelLupaInfoNiñoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLupaInfoNiñoMouseEntered
-        // TODO add your handling code here:
-        jLabelLupaInfoNiño.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-    }//GEN-LAST:event_jLabelLupaInfoNiñoMouseEntered
-
-    private void jLabelLupaInfoNiñoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLupaInfoNiñoMouseExited
-        // TODO add your handling code here:
-        jLabelLupaInfoNiño.setVerticalAlignment(javax.swing.SwingConstants.CENTER);
-    }//GEN-LAST:event_jLabelLupaInfoNiñoMouseExited
-
-    private void jLabelLupaInfoNiño1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLupaInfoNiño1MouseClicked
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         try{
             InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//localhost/ObjetoSaluda"); 
@@ -525,19 +472,9 @@ public class ClienteRMI extends javax.swing.JFrame {
             System.out.println("Excepción : " + e.getMessage());
             e.printStackTrace();
         }
-    }//GEN-LAST:event_jLabelLupaInfoNiño1MouseClicked
+    }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jLabelLupaInfoNiño1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLupaInfoNiño1MouseEntered
-        // TODO add your handling code here:
-        jLabelLupaInfoNiño.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-    }//GEN-LAST:event_jLabelLupaInfoNiño1MouseEntered
-
-    private void jLabelLupaInfoNiño1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLupaInfoNiño1MouseExited
-        // TODO add your handling code here:
-        jLabelLupaInfoNiño.setVerticalAlignment(javax.swing.SwingConstants.CENTER);
-    }//GEN-LAST:event_jLabelLupaInfoNiño1MouseExited
-
-    private void jLabelLupaInfoNiño2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLupaInfoNiño2MouseClicked
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         try{
             InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//localhost/ObjetoSaluda"); 
@@ -550,44 +487,9 @@ public class ClienteRMI extends javax.swing.JFrame {
             System.out.println("Excepción : " + e.getMessage());
             e.printStackTrace();
         }
-    }//GEN-LAST:event_jLabelLupaInfoNiño2MouseClicked
+    }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jLabelLupaInfoNiño2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLupaInfoNiño2MouseEntered
-        // TODO add your handling code here:
-        jLabelLupaInfoNiño.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-    }//GEN-LAST:event_jLabelLupaInfoNiño2MouseEntered
-
-    private void jLabelLupaInfoNiño2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLupaInfoNiño2MouseExited
-        // TODO add your handling code here:
-        jLabelLupaInfoNiño.setVerticalAlignment(javax.swing.SwingConstants.CENTER);
-    }//GEN-LAST:event_jLabelLupaInfoNiño2MouseExited
-
-    private void jLabelLupaInfoNiño3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLupaInfoNiño3MouseClicked
-        // TODO add your handling code here:
-        try{
-            InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//localhost/ObjetoSaluda"); 
-            String contM="";
-            contM = metodos.niñosenMerienda();
-            jLabelNiñosMerendero.setText(contM);
-        }
-        catch (Exception e) 
-        {
-            System.out.println("Excepción : " + e.getMessage());
-            e.printStackTrace();
-        }
-    }//GEN-LAST:event_jLabelLupaInfoNiño3MouseClicked
-
-    private void jLabelLupaInfoNiño3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLupaInfoNiño3MouseEntered
-        // TODO add your handling code here:
-        jLabelLupaInfoNiño.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-    }//GEN-LAST:event_jLabelLupaInfoNiño3MouseEntered
-
-    private void jLabelLupaInfoNiño3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLupaInfoNiño3MouseExited
-        // TODO add your handling code here:
-        jLabelLupaInfoNiño.setVerticalAlignment(javax.swing.SwingConstants.CENTER);
-    }//GEN-LAST:event_jLabelLupaInfoNiño3MouseExited
-
-    private void jLabelLupaInfoNiño4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLupaInfoNiño4MouseClicked
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         try{
             InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//localhost/ObjetoSaluda"); 
@@ -600,19 +502,24 @@ public class ClienteRMI extends javax.swing.JFrame {
             System.out.println("Excepción : " + e.getMessage());
             e.printStackTrace();
         }
-    }//GEN-LAST:event_jLabelLupaInfoNiño4MouseClicked
+    }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jLabelLupaInfoNiño4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLupaInfoNiño4MouseEntered
-        // TODO add your handling code here:
-        jLabelLupaInfoNiño.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-    }//GEN-LAST:event_jLabelLupaInfoNiño4MouseEntered
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+         // TODO add your handling code here:
+        try{
+            InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//localhost/ObjetoSaluda"); 
+            String contM="";
+            contM = metodos.niñosenMerienda();
+            jLabelNiñosMerendero.setText(contM);
+        }
+        catch (Exception e) 
+        {
+            System.out.println("Excepción : " + e.getMessage());
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton5ActionPerformed
 
-    private void jLabelLupaInfoNiño4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLupaInfoNiño4MouseExited
-        // TODO add your handling code here:
-        jLabelLupaInfoNiño.setVerticalAlignment(javax.swing.SwingConstants.CENTER);
-    }//GEN-LAST:event_jLabelLupaInfoNiño4MouseExited
-
-    private void jLabelLupaInfoNiño5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLupaInfoNiño5MouseClicked
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
         try{
             InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//localhost/ObjetoSaluda"); 
@@ -625,19 +532,9 @@ public class ClienteRMI extends javax.swing.JFrame {
             System.out.println("Excepción : " + e.getMessage());
             e.printStackTrace();
         }
-    }//GEN-LAST:event_jLabelLupaInfoNiño5MouseClicked
+    }//GEN-LAST:event_jButton6ActionPerformed
 
-    private void jLabelLupaInfoNiño5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLupaInfoNiño5MouseEntered
-        // TODO add your handling code here:
-        jLabelLupaInfoNiño.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-    }//GEN-LAST:event_jLabelLupaInfoNiño5MouseEntered
-
-    private void jLabelLupaInfoNiño5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLupaInfoNiño5MouseExited
-        // TODO add your handling code here:
-        jLabelLupaInfoNiño.setVerticalAlignment(javax.swing.SwingConstants.CENTER);
-    }//GEN-LAST:event_jLabelLupaInfoNiño5MouseExited
-
-    private void jLabelLupaInfoNiño6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLupaInfoNiño6MouseClicked
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
         try{
             InterfaceCampamento metodos = (InterfaceCampamento) Naming.lookup("//localhost/ObjetoSaluda");  
@@ -650,17 +547,7 @@ public class ClienteRMI extends javax.swing.JFrame {
             System.out.println("Excepción : " + e.getMessage());
             e.printStackTrace();
         }
-    }//GEN-LAST:event_jLabelLupaInfoNiño6MouseClicked
-
-    private void jLabelLupaInfoNiño6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLupaInfoNiño6MouseEntered
-        // TODO add your handling code here:
-        jLabelLupaInfoNiño.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-    }//GEN-LAST:event_jLabelLupaInfoNiño6MouseEntered
-
-    private void jLabelLupaInfoNiño6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLupaInfoNiño6MouseExited
-        // TODO add your handling code here:
-        jLabelLupaInfoNiño.setVerticalAlignment(javax.swing.SwingConstants.CENTER);
-    }//GEN-LAST:event_jLabelLupaInfoNiño6MouseExited
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -678,15 +565,18 @@ public class ClienteRMI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
@@ -701,13 +591,6 @@ public class ClienteRMI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelBandejasSuciasMerendero;
     private javax.swing.JLabel jLabelCerrar;
     private javax.swing.JLabel jLabelColaTirolina;
-    private javax.swing.JLabel jLabelLupaInfoNiño;
-    private javax.swing.JLabel jLabelLupaInfoNiño1;
-    private javax.swing.JLabel jLabelLupaInfoNiño2;
-    private javax.swing.JLabel jLabelLupaInfoNiño3;
-    private javax.swing.JLabel jLabelLupaInfoNiño4;
-    private javax.swing.JLabel jLabelLupaInfoNiño5;
-    private javax.swing.JLabel jLabelLupaInfoNiño6;
     private javax.swing.JLabel jLabelMinimizar;
     private javax.swing.JLabel jLabelNiñosMerendero;
     private javax.swing.JLabel jLabelNiñosSoga;
@@ -723,6 +606,6 @@ public class ClienteRMI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelSoga;
     private javax.swing.JPanel jPanelTirolina;
     private javax.swing.JPanel jPanelVentana;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

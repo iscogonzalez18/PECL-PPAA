@@ -63,8 +63,6 @@ public class Soga
             paso.mirar();
             barrera.await();//Espera a que haya 10 niños y el monitor esté listo
             paso.mirar();
-            barrera.await();//Acaba el juego
-            paso.mirar();
             cerrojo.lock();
             try 
             {
@@ -74,6 +72,8 @@ public class Soga
             {
                 cerrojo.unlock();
             }
+            barrera.await();//Acaba el juego
+            paso.mirar();
         }
         catch(InterruptedException e){} catch (BrokenBarrierException ex) 
         {
