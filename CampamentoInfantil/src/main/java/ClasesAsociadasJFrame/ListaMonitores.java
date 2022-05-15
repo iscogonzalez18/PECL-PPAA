@@ -13,8 +13,8 @@ import javax.swing.JLabel;
  * @author Edu
  */
 public class ListaMonitores {
-    ArrayList<Monitor> lista;
-    JLabel label;
+    private ArrayList<Monitor> lista;
+    private JLabel label;
     
     public ListaMonitores(JLabel label)
     {

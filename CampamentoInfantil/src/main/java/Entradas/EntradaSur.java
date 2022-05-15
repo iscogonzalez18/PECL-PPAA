@@ -27,8 +27,8 @@ public class EntradaSur {
     private boolean abierto;
     private ListaNiños cola;
     private ZonaComun zonaComun;
-    Lock cerrojo;
-    Condition sur;
+    private Lock cerrojo;
+    private Condition sur;
 
     public EntradaSur(Plazas plazas, ListaNiños cola, ZonaComun zonaComun, Lock cerrojo, Condition sur) {
         this.plazas = plazas;

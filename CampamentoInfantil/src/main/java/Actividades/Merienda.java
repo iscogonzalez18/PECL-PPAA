@@ -86,8 +86,8 @@ public class Merienda
             if (n.getActividades()>=3)
             {
                 n.sumaActividad(1);
-                n.setActividades(0);
             }
+            n.setActividades(0);
             paso.mirar();
             try
             {

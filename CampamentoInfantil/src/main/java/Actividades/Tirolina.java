@@ -121,7 +121,7 @@ public class Tirolina
             {
                 barrera.await();
                 paso.mirar();
-                System.out.println("El monitor "+m.getIdentificador()+" prepara la tirolina");
+                Log.escribirLog("El monitor "+m.getIdentificador()+" prepara la tirolina");
                 sleep(1000);
                 paso.mirar();
                 barrera.await();
@@ -130,7 +130,7 @@ public class Tirolina
                 if (m.getContador()==10)
                 {
                     paso.mirar();
-                    System.out.println("El monitor "+m.getIdentificador()+" se va de paseo");
+                    Log.escribirLog("El monitor "+m.getIdentificador()+" se va de paseo");
                 }
             } 
             catch (InterruptedException ex) 

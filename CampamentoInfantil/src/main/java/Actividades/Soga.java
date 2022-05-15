@@ -14,7 +14,6 @@ import Threads.Niño;
 import static java.lang.Thread.sleep;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
-import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
@@ -33,7 +32,6 @@ public class Soga
     private ListaNiños equipo2;
     private int cont_1=0,cont_2=0,cont=0; //Contador de niños en la actividadn en equipo 1 y equipo 2
     private CyclicBarrier barrera=new CyclicBarrier(11);
-    private Semaphore capacidad=new Semaphore(10,true);
     private Paso paso;
     private Lock cerrojo= new ReentrantLock();
 
@@ -62,13 +60,11 @@ public class Soga
                 cerrojo.unlock();
             }
             Log.escribirLog("El niño "+n.getIdentificador()+" entra en la cola de soga");
-            capacidad.acquire();
             paso.mirar();
             barrera.await();//Espera a que haya 10 niños y el monitor esté listo
             paso.mirar();
             barrera.await();//Acaba el juego
             paso.mirar();
-            capacidad.release();
             cerrojo.lock();
             try 
             {

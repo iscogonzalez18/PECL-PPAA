@@ -29,9 +29,9 @@ public class ZonaComun
     
     private ListaMonitores monitores;
     private ListaNiños niños;
-    Lock cerrojo;
-    Condition norte;
-    Condition sur;
+    private Lock cerrojo;
+    private Condition norte;
+    private Condition sur;
     private ListaNiños colaNorte;
     private ListaNiños colaSur;
     private AtomicInteger alternancia = new AtomicInteger(0);
@@ -104,12 +104,6 @@ public class ZonaComun
         return actividad;
     }
     
-    public void salirNiño(Niño n)
-    {
-        paso.mirar();
-        niños.sacar(n);     
-        paso.mirar();
-    }
     
     public String entrarMonitor(Monitor m)
     {
@@ -157,13 +151,6 @@ public class ZonaComun
         }
         return act;
     }
-    
-    public void salirMonitor(Monitor m)
-    {
-        paso.mirar();
-        monitores.sacar(m); 
-        paso.mirar();
-    }
    
     public int tamañoNiños()
     {
@@ -188,14 +175,12 @@ public class ZonaComun
             plazas.decrementar();
             if(colaNorte.tamaño() > 0 && colaSur.tamaño() > 0 && plazas.getOcupacion() == 49)
             {
-                System.out.println("CAMBIA");
                 //personas esperando en las dos entradas (alternancia)
                 if(alternancia.get() == 0)
                 {
                     paso.mirar();
                     sur.signal();
                     alternancia.set(1);
-                    System.out.println("SIGUIENTE NORTE");
                     paso.mirar();
                 }
                 else
@@ -203,7 +188,6 @@ public class ZonaComun
                     paso.mirar();
                     norte.signal();
                     alternancia.set(0);
-                    System.out.println("SIGUIENTE SUR");
                     paso.mirar();
                 }
             }
