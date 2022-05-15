@@ -429,12 +429,12 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Img/lupa20px.png"/>
+                      <Image iconType="3" name="/Images/LupaChiquita.png"/>
                     </Property>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="20" y="90" width="30" height="40"/>
+                      <AbsoluteConstraints x="20" y="100" width="30" height="30"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -442,7 +442,7 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Img/lupa20px.png"/>
+                      <Image iconType="3" name="/Images/LupaChiquita.png"/>
                     </Property>
                   </Properties>
                   <Constraints>

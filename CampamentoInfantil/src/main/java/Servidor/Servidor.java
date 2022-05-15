@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package RMI;
+package Servidor;
 
 import Actividades.Merienda;
 import Actividades.Soga;
@@ -33,7 +33,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import RMI.Metodos; 
+import Servidor.Metodos; 
 import java.util.HashMap;
 import java.util.Map;
 

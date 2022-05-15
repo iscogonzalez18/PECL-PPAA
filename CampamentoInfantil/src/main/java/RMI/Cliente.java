@@ -15,6 +15,7 @@ import Actividades.ZonaComun;
 import Clases.Campamento;
 import Entradas.EntradaNorte;
 import Entradas.EntradaSur;
+import Servidor.InterfaceCampamento;
 import Threads.Monitor;
 import Threads.Niño;
 import java.awt.Color;
@@ -230,11 +231,11 @@ public class Cliente extends javax.swing.JFrame {
         jPanelActividades2.add(jLabelColaEsperaTirolina, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 60, 30, 20));
 
         jLabelLupaUsosTirolina.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelLupaUsosTirolina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/lupa20px.png"))); // NOI18N
-        jPanelActividades2.add(jLabelLupaUsosTirolina, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 30, 40));
+        jLabelLupaUsosTirolina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LupaChiquita.png"))); // NOI18N
+        jPanelActividades2.add(jLabelLupaUsosTirolina, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 30, 30));
 
         jLabelLupaColaEsperaTirolina.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelLupaColaEsperaTirolina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/lupa20px.png"))); // NOI18N
+        jLabelLupaColaEsperaTirolina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LupaChiquita.png"))); // NOI18N
         jPanelActividades2.add(jLabelLupaColaEsperaTirolina, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 30, 40));
 
         jPanelDatos.add(jPanelActividades2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 270, 150));
@@ -345,6 +346,12 @@ public class Cliente extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
